@@ -1,0 +1,29 @@
+version: "3.9"
+services:
+  chat:
+    build: ./service/chat/
+    ports:
+      - "${PORT_CHAT}:${PORT_CHAT}"
+    env_file:
+      - ".env"
+
+  pokefumi:
+    build: ./service/pokefumi/
+    ports:
+      - "${PORT_POKEFUMI}:${PORT_POKEFUMI}"
+    env_file:
+      - ".env"
+
+  shop:
+    build: ./service/shop/
+    ports:
+      - "${PORT_SHOP}:${PORT_SHOP}"
+    env_file:
+      - ".env"
+
+  statistics:
+    build: ./service/statistics/
+    ports:
+      - "${PORT_STATS}:${PORT_STATS}"
+    env_file:
+      - ".env"

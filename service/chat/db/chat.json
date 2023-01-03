@@ -1,0 +1,12 @@
+{
+	"chat": [
+		{
+			"uuid": "123456789",
+			"users": ["bob", "alice"],
+			"messages": [
+				{ "username": "bob", "text": "hello world" },
+				{ "username": "alice", "text": "hello bob" }
+			]
+		}
+	]
+}

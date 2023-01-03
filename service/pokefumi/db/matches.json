@@ -1,0 +1,20 @@
+{
+	"matches": [
+		{
+			"current_round": {
+				"player1_item_used": null,
+				"player2_item_used": null,
+				"winner": null
+			},
+			"match_id": "78498930828",
+			"players": {
+				"player1": "Matteo",
+				"player2": "Octave"
+			},
+			"round_history": [],
+			"status": "CREATED",
+			"winner": null
+		}
+	],
+	"past_matches": []
+}

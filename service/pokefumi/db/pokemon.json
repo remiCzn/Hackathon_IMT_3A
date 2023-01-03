@@ -1,0 +1,4732 @@
+[
+	{
+		"item_id": "1",
+		"stats": { "s_type": "poison", "pv": 45, "f_type": "grass", "power": 49 },
+		"name": "bulbasaur"
+	},
+	{
+		"item_id": "2",
+		"stats": { "s_type": "poison", "pv": 60, "f_type": "grass", "power": 62 },
+		"name": "ivysaur"
+	},
+	{
+		"item_id": "3",
+		"stats": { "s_type": "poison", "pv": 80, "f_type": "grass", "power": 82 },
+		"name": "venusaur"
+	},
+	{
+		"item_id": "4",
+		"stats": { "s_type": null, "pv": 39, "f_type": "fire", "power": 52 },
+		"name": "charmander"
+	},
+	{
+		"item_id": "5",
+		"stats": { "s_type": null, "pv": 58, "f_type": "fire", "power": 64 },
+		"name": "charmeleon"
+	},
+	{
+		"item_id": "6",
+		"stats": { "s_type": "flying", "pv": 78, "f_type": "fire", "power": 84 },
+		"name": "charizard"
+	},
+	{
+		"item_id": "7",
+		"stats": { "s_type": null, "pv": 44, "f_type": "water", "power": 48 },
+		"name": "squirtle"
+	},
+	{
+		"item_id": "8",
+		"stats": { "s_type": null, "pv": 59, "f_type": "water", "power": 63 },
+		"name": "wartortle"
+	},
+	{
+		"item_id": "9",
+		"stats": { "s_type": null, "pv": 79, "f_type": "water", "power": 83 },
+		"name": "blastoise"
+	},
+	{
+		"item_id": "10",
+		"stats": { "s_type": null, "pv": 45, "f_type": "bug", "power": 30 },
+		"name": "caterpie"
+	},
+	{
+		"item_id": "11",
+		"stats": { "s_type": null, "pv": 50, "f_type": "bug", "power": 20 },
+		"name": "metapod"
+	},
+	{
+		"item_id": "12",
+		"stats": { "s_type": "flying", "pv": 60, "f_type": "bug", "power": 45 },
+		"name": "butterfree"
+	},
+	{
+		"item_id": "13",
+		"stats": { "s_type": "poison", "pv": 40, "f_type": "bug", "power": 35 },
+		"name": "weedle"
+	},
+	{
+		"item_id": "14",
+		"stats": { "s_type": "poison", "pv": 45, "f_type": "bug", "power": 25 },
+		"name": "kakuna"
+	},
+	{
+		"item_id": "15",
+		"stats": { "s_type": "poison", "pv": 65, "f_type": "bug", "power": 90 },
+		"name": "beedrill"
+	},
+	{
+		"item_id": "16",
+		"stats": { "s_type": "flying", "pv": 40, "f_type": "normal", "power": 45 },
+		"name": "pidgey"
+	},
+	{
+		"item_id": "17",
+		"stats": { "s_type": "flying", "pv": 63, "f_type": "normal", "power": 60 },
+		"name": "pidgeotto"
+	},
+	{
+		"item_id": "18",
+		"stats": { "s_type": "flying", "pv": 83, "f_type": "normal", "power": 80 },
+		"name": "pidgeot"
+	},
+	{
+		"item_id": "19",
+		"stats": { "s_type": null, "pv": 30, "f_type": "normal", "power": 56 },
+		"name": "rattata"
+	},
+	{
+		"item_id": "20",
+		"stats": { "s_type": null, "pv": 55, "f_type": "normal", "power": 81 },
+		"name": "raticate"
+	},
+	{
+		"item_id": "21",
+		"stats": { "s_type": "flying", "pv": 40, "f_type": "normal", "power": 60 },
+		"name": "spearow"
+	},
+	{
+		"item_id": "22",
+		"stats": { "s_type": "flying", "pv": 65, "f_type": "normal", "power": 90 },
+		"name": "fearow"
+	},
+	{
+		"item_id": "23",
+		"stats": { "s_type": null, "pv": 35, "f_type": "poison", "power": 60 },
+		"name": "ekans"
+	},
+	{
+		"item_id": "24",
+		"stats": { "s_type": null, "pv": 60, "f_type": "poison", "power": 95 },
+		"name": "arbok"
+	},
+	{
+		"item_id": "25",
+		"stats": { "s_type": null, "pv": 35, "f_type": "electric", "power": 55 },
+		"name": "pikachu"
+	},
+	{
+		"item_id": "26",
+		"stats": { "s_type": null, "pv": 60, "f_type": "electric", "power": 90 },
+		"name": "raichu"
+	},
+	{
+		"item_id": "27",
+		"stats": { "s_type": null, "pv": 50, "f_type": "ground", "power": 75 },
+		"name": "sandshrew"
+	},
+	{
+		"item_id": "28",
+		"stats": { "s_type": null, "pv": 75, "f_type": "ground", "power": 100 },
+		"name": "sandslash"
+	},
+	{
+		"item_id": "29",
+		"stats": { "s_type": null, "pv": 55, "f_type": "poison", "power": 47 },
+		"name": "nidoran-f"
+	},
+	{
+		"item_id": "30",
+		"stats": { "s_type": null, "pv": 70, "f_type": "poison", "power": 62 },
+		"name": "nidorina"
+	},
+	{
+		"item_id": "31",
+		"stats": { "s_type": "ground", "pv": 90, "f_type": "poison", "power": 92 },
+		"name": "nidoqueen"
+	},
+	{
+		"item_id": "32",
+		"stats": { "s_type": null, "pv": 46, "f_type": "poison", "power": 57 },
+		"name": "nidoran-m"
+	},
+	{
+		"item_id": "33",
+		"stats": { "s_type": null, "pv": 61, "f_type": "poison", "power": 72 },
+		"name": "nidorino"
+	},
+	{
+		"item_id": "34",
+		"stats": { "s_type": "ground", "pv": 81, "f_type": "poison", "power": 102 },
+		"name": "nidoking"
+	},
+	{
+		"item_id": "35",
+		"stats": { "s_type": null, "pv": 70, "f_type": "fairy", "power": 45 },
+		"name": "clefairy"
+	},
+	{
+		"item_id": "36",
+		"stats": { "s_type": null, "pv": 95, "f_type": "fairy", "power": 70 },
+		"name": "clefable"
+	},
+	{
+		"item_id": "37",
+		"stats": { "s_type": null, "pv": 38, "f_type": "fire", "power": 41 },
+		"name": "vulpix"
+	},
+	{
+		"item_id": "38",
+		"stats": { "s_type": null, "pv": 73, "f_type": "fire", "power": 76 },
+		"name": "ninetales"
+	},
+	{
+		"item_id": "39",
+		"stats": { "s_type": "fairy", "pv": 115, "f_type": "normal", "power": 45 },
+		"name": "jigglypuff"
+	},
+	{
+		"item_id": "40",
+		"stats": { "s_type": "fairy", "pv": 140, "f_type": "normal", "power": 70 },
+		"name": "wigglytuff"
+	},
+	{
+		"item_id": "41",
+		"stats": { "s_type": "flying", "pv": 40, "f_type": "poison", "power": 45 },
+		"name": "zubat"
+	},
+	{
+		"item_id": "42",
+		"stats": { "s_type": "flying", "pv": 75, "f_type": "poison", "power": 80 },
+		"name": "golbat"
+	},
+	{
+		"item_id": "43",
+		"stats": { "s_type": "poison", "pv": 45, "f_type": "grass", "power": 50 },
+		"name": "oddish"
+	},
+	{
+		"item_id": "44",
+		"stats": { "s_type": "poison", "pv": 60, "f_type": "grass", "power": 65 },
+		"name": "gloom"
+	},
+	{
+		"item_id": "45",
+		"stats": { "s_type": "poison", "pv": 75, "f_type": "grass", "power": 80 },
+		"name": "vileplume"
+	},
+	{
+		"item_id": "46",
+		"stats": { "s_type": "grass", "pv": 35, "f_type": "bug", "power": 70 },
+		"name": "paras"
+	},
+	{
+		"item_id": "47",
+		"stats": { "s_type": "grass", "pv": 60, "f_type": "bug", "power": 95 },
+		"name": "parasect"
+	},
+	{
+		"item_id": "48",
+		"stats": { "s_type": "poison", "pv": 60, "f_type": "bug", "power": 55 },
+		"name": "venonat"
+	},
+	{
+		"item_id": "49",
+		"stats": { "s_type": "poison", "pv": 70, "f_type": "bug", "power": 65 },
+		"name": "venomoth"
+	},
+	{
+		"item_id": "50",
+		"stats": { "s_type": null, "pv": 10, "f_type": "ground", "power": 55 },
+		"name": "diglett"
+	},
+	{
+		"item_id": "51",
+		"stats": { "s_type": null, "pv": 35, "f_type": "ground", "power": 100 },
+		"name": "dugtrio"
+	},
+	{
+		"item_id": "52",
+		"stats": { "s_type": null, "pv": 40, "f_type": "normal", "power": 45 },
+		"name": "meowth"
+	},
+	{
+		"item_id": "53",
+		"stats": { "s_type": null, "pv": 65, "f_type": "normal", "power": 70 },
+		"name": "persian"
+	},
+	{
+		"item_id": "54",
+		"stats": { "s_type": null, "pv": 50, "f_type": "water", "power": 52 },
+		"name": "psyduck"
+	},
+	{
+		"item_id": "55",
+		"stats": { "s_type": null, "pv": 80, "f_type": "water", "power": 82 },
+		"name": "golduck"
+	},
+	{
+		"item_id": "56",
+		"stats": { "s_type": null, "pv": 40, "f_type": "fighting", "power": 80 },
+		"name": "mankey"
+	},
+	{
+		"item_id": "57",
+		"stats": { "s_type": null, "pv": 65, "f_type": "fighting", "power": 105 },
+		"name": "primeape"
+	},
+	{
+		"item_id": "58",
+		"stats": { "s_type": null, "pv": 55, "f_type": "fire", "power": 70 },
+		"name": "growlithe"
+	},
+	{
+		"item_id": "59",
+		"stats": { "s_type": null, "pv": 90, "f_type": "fire", "power": 110 },
+		"name": "arcanine"
+	},
+	{
+		"item_id": "60",
+		"stats": { "s_type": null, "pv": 40, "f_type": "water", "power": 50 },
+		"name": "poliwag"
+	},
+	{
+		"item_id": "61",
+		"stats": { "s_type": null, "pv": 65, "f_type": "water", "power": 65 },
+		"name": "poliwhirl"
+	},
+	{
+		"item_id": "62",
+		"stats": { "s_type": "fighting", "pv": 90, "f_type": "water", "power": 95 },
+		"name": "poliwrath"
+	},
+	{
+		"item_id": "63",
+		"stats": { "s_type": null, "pv": 25, "f_type": "psychic", "power": 20 },
+		"name": "abra"
+	},
+	{
+		"item_id": "64",
+		"stats": { "s_type": null, "pv": 40, "f_type": "psychic", "power": 35 },
+		"name": "kadabra"
+	},
+	{
+		"item_id": "65",
+		"stats": { "s_type": null, "pv": 55, "f_type": "psychic", "power": 50 },
+		"name": "alakazam"
+	},
+	{
+		"item_id": "66",
+		"stats": { "s_type": null, "pv": 70, "f_type": "fighting", "power": 80 },
+		"name": "machop"
+	},
+	{
+		"item_id": "67",
+		"stats": { "s_type": null, "pv": 80, "f_type": "fighting", "power": 100 },
+		"name": "machoke"
+	},
+	{
+		"item_id": "68",
+		"stats": { "s_type": null, "pv": 90, "f_type": "fighting", "power": 130 },
+		"name": "machamp"
+	},
+	{
+		"item_id": "69",
+		"stats": { "s_type": "poison", "pv": 50, "f_type": "grass", "power": 75 },
+		"name": "bellsprout"
+	},
+	{
+		"item_id": "70",
+		"stats": { "s_type": "poison", "pv": 65, "f_type": "grass", "power": 90 },
+		"name": "weepinbell"
+	},
+	{
+		"item_id": "71",
+		"stats": { "s_type": "poison", "pv": 80, "f_type": "grass", "power": 105 },
+		"name": "victreebel"
+	},
+	{
+		"item_id": "72",
+		"stats": { "s_type": "poison", "pv": 40, "f_type": "water", "power": 40 },
+		"name": "tentacool"
+	},
+	{
+		"item_id": "73",
+		"stats": { "s_type": "poison", "pv": 80, "f_type": "water", "power": 70 },
+		"name": "tentacruel"
+	},
+	{
+		"item_id": "74",
+		"stats": { "s_type": "ground", "pv": 40, "f_type": "rock", "power": 80 },
+		"name": "geodude"
+	},
+	{
+		"item_id": "75",
+		"stats": { "s_type": "ground", "pv": 55, "f_type": "rock", "power": 95 },
+		"name": "graveler"
+	},
+	{
+		"item_id": "76",
+		"stats": { "s_type": "ground", "pv": 80, "f_type": "rock", "power": 120 },
+		"name": "golem"
+	},
+	{
+		"item_id": "77",
+		"stats": { "s_type": null, "pv": 50, "f_type": "fire", "power": 85 },
+		"name": "ponyta"
+	},
+	{
+		"item_id": "78",
+		"stats": { "s_type": null, "pv": 65, "f_type": "fire", "power": 100 },
+		"name": "rapidash"
+	},
+	{
+		"item_id": "79",
+		"stats": { "s_type": "psychic", "pv": 90, "f_type": "water", "power": 65 },
+		"name": "slowpoke"
+	},
+	{
+		"item_id": "80",
+		"stats": { "s_type": "psychic", "pv": 95, "f_type": "water", "power": 75 },
+		"name": "slowbro"
+	},
+	{
+		"item_id": "81",
+		"stats": { "s_type": "steel", "pv": 25, "f_type": "electric", "power": 35 },
+		"name": "magnemite"
+	},
+	{
+		"item_id": "82",
+		"stats": { "s_type": "steel", "pv": 50, "f_type": "electric", "power": 60 },
+		"name": "magneton"
+	},
+	{
+		"item_id": "83",
+		"stats": { "s_type": "flying", "pv": 52, "f_type": "normal", "power": 90 },
+		"name": "farfetchd"
+	},
+	{
+		"item_id": "84",
+		"stats": { "s_type": "flying", "pv": 35, "f_type": "normal", "power": 85 },
+		"name": "doduo"
+	},
+	{
+		"item_id": "85",
+		"stats": { "s_type": "flying", "pv": 60, "f_type": "normal", "power": 110 },
+		"name": "dodrio"
+	},
+	{
+		"item_id": "86",
+		"stats": { "s_type": null, "pv": 65, "f_type": "water", "power": 45 },
+		"name": "seel"
+	},
+	{
+		"item_id": "87",
+		"stats": { "s_type": "ice", "pv": 90, "f_type": "water", "power": 70 },
+		"name": "dewgong"
+	},
+	{
+		"item_id": "88",
+		"stats": { "s_type": null, "pv": 80, "f_type": "poison", "power": 80 },
+		"name": "grimer"
+	},
+	{
+		"item_id": "89",
+		"stats": { "s_type": null, "pv": 105, "f_type": "poison", "power": 105 },
+		"name": "muk"
+	},
+	{
+		"item_id": "90",
+		"stats": { "s_type": null, "pv": 30, "f_type": "water", "power": 65 },
+		"name": "shellder"
+	},
+	{
+		"item_id": "91",
+		"stats": { "s_type": "ice", "pv": 50, "f_type": "water", "power": 95 },
+		"name": "cloyster"
+	},
+	{
+		"item_id": "92",
+		"stats": { "s_type": "poison", "pv": 30, "f_type": "ghost", "power": 35 },
+		"name": "gastly"
+	},
+	{
+		"item_id": "93",
+		"stats": { "s_type": "poison", "pv": 45, "f_type": "ghost", "power": 50 },
+		"name": "haunter"
+	},
+	{
+		"item_id": "94",
+		"stats": { "s_type": "poison", "pv": 60, "f_type": "ghost", "power": 65 },
+		"name": "gengar"
+	},
+	{
+		"item_id": "95",
+		"stats": { "s_type": "ground", "pv": 35, "f_type": "rock", "power": 45 },
+		"name": "onix"
+	},
+	{
+		"item_id": "96",
+		"stats": { "s_type": null, "pv": 60, "f_type": "psychic", "power": 48 },
+		"name": "drowzee"
+	},
+	{
+		"item_id": "97",
+		"stats": { "s_type": null, "pv": 85, "f_type": "psychic", "power": 73 },
+		"name": "hypno"
+	},
+	{
+		"item_id": "98",
+		"stats": { "s_type": null, "pv": 30, "f_type": "water", "power": 105 },
+		"name": "krabby"
+	},
+	{
+		"item_id": "99",
+		"stats": { "s_type": null, "pv": 55, "f_type": "water", "power": 130 },
+		"name": "kingler"
+	},
+	{
+		"item_id": "100",
+		"stats": { "s_type": null, "pv": 40, "f_type": "electric", "power": 30 },
+		"name": "voltorb"
+	},
+	{
+		"item_id": "101",
+		"stats": { "s_type": null, "pv": 60, "f_type": "electric", "power": 50 },
+		"name": "electrode"
+	},
+	{
+		"item_id": "102",
+		"stats": { "s_type": "psychic", "pv": 60, "f_type": "grass", "power": 40 },
+		"name": "exeggcute"
+	},
+	{
+		"item_id": "103",
+		"stats": { "s_type": "psychic", "pv": 95, "f_type": "grass", "power": 95 },
+		"name": "exeggutor"
+	},
+	{
+		"item_id": "104",
+		"stats": { "s_type": null, "pv": 50, "f_type": "ground", "power": 50 },
+		"name": "cubone"
+	},
+	{
+		"item_id": "105",
+		"stats": { "s_type": null, "pv": 60, "f_type": "ground", "power": 80 },
+		"name": "marowak"
+	},
+	{
+		"item_id": "106",
+		"stats": { "s_type": null, "pv": 50, "f_type": "fighting", "power": 120 },
+		"name": "hitmonlee"
+	},
+	{
+		"item_id": "107",
+		"stats": { "s_type": null, "pv": 50, "f_type": "fighting", "power": 105 },
+		"name": "hitmonchan"
+	},
+	{
+		"item_id": "108",
+		"stats": { "s_type": null, "pv": 90, "f_type": "normal", "power": 55 },
+		"name": "lickitung"
+	},
+	{
+		"item_id": "109",
+		"stats": { "s_type": null, "pv": 40, "f_type": "poison", "power": 65 },
+		"name": "koffing"
+	},
+	{
+		"item_id": "110",
+		"stats": { "s_type": null, "pv": 65, "f_type": "poison", "power": 90 },
+		"name": "weezing"
+	},
+	{
+		"item_id": "111",
+		"stats": { "s_type": "rock", "pv": 80, "f_type": "ground", "power": 85 },
+		"name": "rhyhorn"
+	},
+	{
+		"item_id": "112",
+		"stats": { "s_type": "rock", "pv": 105, "f_type": "ground", "power": 130 },
+		"name": "rhydon"
+	},
+	{
+		"item_id": "113",
+		"stats": { "s_type": null, "pv": 250, "f_type": "normal", "power": 5 },
+		"name": "chansey"
+	},
+	{
+		"item_id": "114",
+		"stats": { "s_type": null, "pv": 65, "f_type": "grass", "power": 55 },
+		"name": "tangela"
+	},
+	{
+		"item_id": "115",
+		"stats": { "s_type": null, "pv": 105, "f_type": "normal", "power": 95 },
+		"name": "kangaskhan"
+	},
+	{
+		"item_id": "116",
+		"stats": { "s_type": null, "pv": 30, "f_type": "water", "power": 40 },
+		"name": "horsea"
+	},
+	{
+		"item_id": "117",
+		"stats": { "s_type": null, "pv": 55, "f_type": "water", "power": 65 },
+		"name": "seadra"
+	},
+	{
+		"item_id": "118",
+		"stats": { "s_type": null, "pv": 45, "f_type": "water", "power": 67 },
+		"name": "goldeen"
+	},
+	{
+		"item_id": "119",
+		"stats": { "s_type": null, "pv": 80, "f_type": "water", "power": 92 },
+		"name": "seaking"
+	},
+	{
+		"item_id": "120",
+		"stats": { "s_type": null, "pv": 30, "f_type": "water", "power": 45 },
+		"name": "staryu"
+	},
+	{
+		"item_id": "121",
+		"stats": { "s_type": "psychic", "pv": 60, "f_type": "water", "power": 75 },
+		"name": "starmie"
+	},
+	{
+		"item_id": "122",
+		"stats": { "s_type": "fairy", "pv": 40, "f_type": "psychic", "power": 45 },
+		"name": "mr-mime"
+	},
+	{
+		"item_id": "123",
+		"stats": { "s_type": "flying", "pv": 70, "f_type": "bug", "power": 110 },
+		"name": "scyther"
+	},
+	{
+		"item_id": "124",
+		"stats": { "s_type": "psychic", "pv": 65, "f_type": "ice", "power": 50 },
+		"name": "jynx"
+	},
+	{
+		"item_id": "125",
+		"stats": { "s_type": null, "pv": 65, "f_type": "electric", "power": 83 },
+		"name": "electabuzz"
+	},
+	{
+		"item_id": "126",
+		"stats": { "s_type": null, "pv": 65, "f_type": "fire", "power": 95 },
+		"name": "magmar"
+	},
+	{
+		"item_id": "127",
+		"stats": { "s_type": null, "pv": 65, "f_type": "bug", "power": 125 },
+		"name": "pinsir"
+	},
+	{
+		"item_id": "128",
+		"stats": { "s_type": null, "pv": 75, "f_type": "normal", "power": 100 },
+		"name": "tauros"
+	},
+	{
+		"item_id": "129",
+		"stats": { "s_type": null, "pv": 20, "f_type": "water", "power": 10 },
+		"name": "magikarp"
+	},
+	{
+		"item_id": "130",
+		"stats": { "s_type": "flying", "pv": 95, "f_type": "water", "power": 125 },
+		"name": "gyarados"
+	},
+	{
+		"item_id": "131",
+		"stats": { "s_type": "ice", "pv": 130, "f_type": "water", "power": 85 },
+		"name": "lapras"
+	},
+	{
+		"item_id": "132",
+		"stats": { "s_type": null, "pv": 48, "f_type": "normal", "power": 48 },
+		"name": "ditto"
+	},
+	{
+		"item_id": "133",
+		"stats": { "s_type": null, "pv": 55, "f_type": "normal", "power": 55 },
+		"name": "eevee"
+	},
+	{
+		"item_id": "134",
+		"stats": { "s_type": null, "pv": 130, "f_type": "water", "power": 65 },
+		"name": "vaporeon"
+	},
+	{
+		"item_id": "135",
+		"stats": { "s_type": null, "pv": 65, "f_type": "electric", "power": 65 },
+		"name": "jolteon"
+	},
+	{
+		"item_id": "136",
+		"stats": { "s_type": null, "pv": 65, "f_type": "fire", "power": 130 },
+		"name": "flareon"
+	},
+	{
+		"item_id": "137",
+		"stats": { "s_type": null, "pv": 65, "f_type": "normal", "power": 60 },
+		"name": "porygon"
+	},
+	{
+		"item_id": "138",
+		"stats": { "s_type": "water", "pv": 35, "f_type": "rock", "power": 40 },
+		"name": "omanyte"
+	},
+	{
+		"item_id": "139",
+		"stats": { "s_type": "water", "pv": 70, "f_type": "rock", "power": 60 },
+		"name": "omastar"
+	},
+	{
+		"item_id": "140",
+		"stats": { "s_type": "water", "pv": 30, "f_type": "rock", "power": 80 },
+		"name": "kabuto"
+	},
+	{
+		"item_id": "141",
+		"stats": { "s_type": "water", "pv": 60, "f_type": "rock", "power": 115 },
+		"name": "kabutops"
+	},
+	{
+		"item_id": "142",
+		"stats": { "s_type": "flying", "pv": 80, "f_type": "rock", "power": 105 },
+		"name": "aerodactyl"
+	},
+	{
+		"item_id": "143",
+		"stats": { "s_type": null, "pv": 160, "f_type": "normal", "power": 110 },
+		"name": "snorlax"
+	},
+	{
+		"item_id": "144",
+		"stats": { "s_type": "flying", "pv": 90, "f_type": "ice", "power": 85 },
+		"name": "articuno"
+	},
+	{
+		"item_id": "145",
+		"stats": {
+			"s_type": "flying",
+			"pv": 90,
+			"f_type": "electric",
+			"power": 90
+		},
+		"name": "zapdos"
+	},
+	{
+		"item_id": "146",
+		"stats": { "s_type": "flying", "pv": 90, "f_type": "fire", "power": 100 },
+		"name": "moltres"
+	},
+	{
+		"item_id": "147",
+		"stats": { "s_type": null, "pv": 41, "f_type": "dragon", "power": 64 },
+		"name": "dratini"
+	},
+	{
+		"item_id": "148",
+		"stats": { "s_type": null, "pv": 61, "f_type": "dragon", "power": 84 },
+		"name": "dragonair"
+	},
+	{
+		"item_id": "149",
+		"stats": { "s_type": "flying", "pv": 91, "f_type": "dragon", "power": 134 },
+		"name": "dragonite"
+	},
+	{
+		"item_id": "150",
+		"stats": { "s_type": null, "pv": 106, "f_type": "psychic", "power": 110 },
+		"name": "mewtwo"
+	},
+	{
+		"item_id": "151",
+		"stats": { "s_type": null, "pv": 100, "f_type": "psychic", "power": 100 },
+		"name": "mew"
+	},
+	{
+		"item_id": "152",
+		"stats": { "s_type": null, "pv": 45, "f_type": "grass", "power": 49 },
+		"name": "chikorita"
+	},
+	{
+		"item_id": "153",
+		"stats": { "s_type": null, "pv": 60, "f_type": "grass", "power": 62 },
+		"name": "bayleef"
+	},
+	{
+		"item_id": "154",
+		"stats": { "s_type": null, "pv": 80, "f_type": "grass", "power": 82 },
+		"name": "meganium"
+	},
+	{
+		"item_id": "155",
+		"stats": { "s_type": null, "pv": 39, "f_type": "fire", "power": 52 },
+		"name": "cyndaquil"
+	},
+	{
+		"item_id": "156",
+		"stats": { "s_type": null, "pv": 58, "f_type": "fire", "power": 64 },
+		"name": "quilava"
+	},
+	{
+		"item_id": "157",
+		"stats": { "s_type": null, "pv": 78, "f_type": "fire", "power": 84 },
+		"name": "typhlosion"
+	},
+	{
+		"item_id": "158",
+		"stats": { "s_type": null, "pv": 50, "f_type": "water", "power": 65 },
+		"name": "totodile"
+	},
+	{
+		"item_id": "159",
+		"stats": { "s_type": null, "pv": 65, "f_type": "water", "power": 80 },
+		"name": "croconaw"
+	},
+	{
+		"item_id": "160",
+		"stats": { "s_type": null, "pv": 85, "f_type": "water", "power": 105 },
+		"name": "feraligatr"
+	},
+	{
+		"item_id": "161",
+		"stats": { "s_type": null, "pv": 35, "f_type": "normal", "power": 46 },
+		"name": "sentret"
+	},
+	{
+		"item_id": "162",
+		"stats": { "s_type": null, "pv": 85, "f_type": "normal", "power": 76 },
+		"name": "furret"
+	},
+	{
+		"item_id": "163",
+		"stats": { "s_type": "flying", "pv": 60, "f_type": "normal", "power": 30 },
+		"name": "hoothoot"
+	},
+	{
+		"item_id": "164",
+		"stats": { "s_type": "flying", "pv": 100, "f_type": "normal", "power": 50 },
+		"name": "noctowl"
+	},
+	{
+		"item_id": "165",
+		"stats": { "s_type": "flying", "pv": 40, "f_type": "bug", "power": 20 },
+		"name": "ledyba"
+	},
+	{
+		"item_id": "166",
+		"stats": { "s_type": "flying", "pv": 55, "f_type": "bug", "power": 35 },
+		"name": "ledian"
+	},
+	{
+		"item_id": "167",
+		"stats": { "s_type": "poison", "pv": 40, "f_type": "bug", "power": 60 },
+		"name": "spinarak"
+	},
+	{
+		"item_id": "168",
+		"stats": { "s_type": "poison", "pv": 70, "f_type": "bug", "power": 90 },
+		"name": "ariados"
+	},
+	{
+		"item_id": "169",
+		"stats": { "s_type": "flying", "pv": 85, "f_type": "poison", "power": 90 },
+		"name": "crobat"
+	},
+	{
+		"item_id": "170",
+		"stats": { "s_type": "electric", "pv": 75, "f_type": "water", "power": 38 },
+		"name": "chinchou"
+	},
+	{
+		"item_id": "171",
+		"stats": {
+			"s_type": "electric",
+			"pv": 125,
+			"f_type": "water",
+			"power": 58
+		},
+		"name": "lanturn"
+	},
+	{
+		"item_id": "172",
+		"stats": { "s_type": null, "pv": 20, "f_type": "electric", "power": 40 },
+		"name": "pichu"
+	},
+	{
+		"item_id": "173",
+		"stats": { "s_type": null, "pv": 50, "f_type": "fairy", "power": 25 },
+		"name": "cleffa"
+	},
+	{
+		"item_id": "174",
+		"stats": { "s_type": "fairy", "pv": 90, "f_type": "normal", "power": 30 },
+		"name": "igglybuff"
+	},
+	{
+		"item_id": "175",
+		"stats": { "s_type": null, "pv": 35, "f_type": "fairy", "power": 20 },
+		"name": "togepi"
+	},
+	{
+		"item_id": "176",
+		"stats": { "s_type": "flying", "pv": 55, "f_type": "fairy", "power": 40 },
+		"name": "togetic"
+	},
+	{
+		"item_id": "177",
+		"stats": { "s_type": "flying", "pv": 40, "f_type": "psychic", "power": 50 },
+		"name": "natu"
+	},
+	{
+		"item_id": "178",
+		"stats": { "s_type": "flying", "pv": 65, "f_type": "psychic", "power": 75 },
+		"name": "xatu"
+	},
+	{
+		"item_id": "179",
+		"stats": { "s_type": null, "pv": 55, "f_type": "electric", "power": 40 },
+		"name": "mareep"
+	},
+	{
+		"item_id": "180",
+		"stats": { "s_type": null, "pv": 70, "f_type": "electric", "power": 55 },
+		"name": "flaaffy"
+	},
+	{
+		"item_id": "181",
+		"stats": { "s_type": null, "pv": 90, "f_type": "electric", "power": 75 },
+		"name": "ampharos"
+	},
+	{
+		"item_id": "182",
+		"stats": { "s_type": null, "pv": 75, "f_type": "grass", "power": 80 },
+		"name": "bellossom"
+	},
+	{
+		"item_id": "183",
+		"stats": { "s_type": "fairy", "pv": 70, "f_type": "water", "power": 20 },
+		"name": "marill"
+	},
+	{
+		"item_id": "184",
+		"stats": { "s_type": "fairy", "pv": 100, "f_type": "water", "power": 50 },
+		"name": "azumarill"
+	},
+	{
+		"item_id": "185",
+		"stats": { "s_type": null, "pv": 70, "f_type": "rock", "power": 100 },
+		"name": "sudowoodo"
+	},
+	{
+		"item_id": "186",
+		"stats": { "s_type": null, "pv": 90, "f_type": "water", "power": 75 },
+		"name": "politoed"
+	},
+	{
+		"item_id": "187",
+		"stats": { "s_type": "flying", "pv": 35, "f_type": "grass", "power": 35 },
+		"name": "hoppip"
+	},
+	{
+		"item_id": "188",
+		"stats": { "s_type": "flying", "pv": 55, "f_type": "grass", "power": 45 },
+		"name": "skiploom"
+	},
+	{
+		"item_id": "189",
+		"stats": { "s_type": "flying", "pv": 75, "f_type": "grass", "power": 55 },
+		"name": "jumpluff"
+	},
+	{
+		"item_id": "190",
+		"stats": { "s_type": null, "pv": 55, "f_type": "normal", "power": 70 },
+		"name": "aipom"
+	},
+	{
+		"item_id": "191",
+		"stats": { "s_type": null, "pv": 30, "f_type": "grass", "power": 30 },
+		"name": "sunkern"
+	},
+	{
+		"item_id": "192",
+		"stats": { "s_type": null, "pv": 75, "f_type": "grass", "power": 75 },
+		"name": "sunflora"
+	},
+	{
+		"item_id": "193",
+		"stats": { "s_type": "flying", "pv": 65, "f_type": "bug", "power": 65 },
+		"name": "yanma"
+	},
+	{
+		"item_id": "194",
+		"stats": { "s_type": "ground", "pv": 55, "f_type": "water", "power": 45 },
+		"name": "wooper"
+	},
+	{
+		"item_id": "195",
+		"stats": { "s_type": "ground", "pv": 95, "f_type": "water", "power": 85 },
+		"name": "quagsire"
+	},
+	{
+		"item_id": "196",
+		"stats": { "s_type": null, "pv": 65, "f_type": "psychic", "power": 65 },
+		"name": "espeon"
+	},
+	{
+		"item_id": "197",
+		"stats": { "s_type": null, "pv": 95, "f_type": "dark", "power": 65 },
+		"name": "umbreon"
+	},
+	{
+		"item_id": "198",
+		"stats": { "s_type": "flying", "pv": 60, "f_type": "dark", "power": 85 },
+		"name": "murkrow"
+	},
+	{
+		"item_id": "199",
+		"stats": { "s_type": "psychic", "pv": 95, "f_type": "water", "power": 75 },
+		"name": "slowking"
+	},
+	{
+		"item_id": "200",
+		"stats": { "s_type": null, "pv": 60, "f_type": "ghost", "power": 60 },
+		"name": "misdreavus"
+	},
+	{
+		"item_id": "201",
+		"stats": { "s_type": null, "pv": 48, "f_type": "psychic", "power": 72 },
+		"name": "unown"
+	},
+	{
+		"item_id": "202",
+		"stats": { "s_type": null, "pv": 190, "f_type": "psychic", "power": 33 },
+		"name": "wobbuffet"
+	},
+	{
+		"item_id": "203",
+		"stats": { "s_type": "psychic", "pv": 70, "f_type": "normal", "power": 80 },
+		"name": "girafarig"
+	},
+	{
+		"item_id": "204",
+		"stats": { "s_type": null, "pv": 50, "f_type": "bug", "power": 65 },
+		"name": "pineco"
+	},
+	{
+		"item_id": "205",
+		"stats": { "s_type": "steel", "pv": 75, "f_type": "bug", "power": 90 },
+		"name": "forretress"
+	},
+	{
+		"item_id": "206",
+		"stats": { "s_type": null, "pv": 100, "f_type": "normal", "power": 70 },
+		"name": "dunsparce"
+	},
+	{
+		"item_id": "207",
+		"stats": { "s_type": "flying", "pv": 65, "f_type": "ground", "power": 75 },
+		"name": "gligar"
+	},
+	{
+		"item_id": "208",
+		"stats": { "s_type": "ground", "pv": 75, "f_type": "steel", "power": 85 },
+		"name": "steelix"
+	},
+	{
+		"item_id": "209",
+		"stats": { "s_type": null, "pv": 60, "f_type": "fairy", "power": 80 },
+		"name": "snubbull"
+	},
+	{
+		"item_id": "210",
+		"stats": { "s_type": null, "pv": 90, "f_type": "fairy", "power": 120 },
+		"name": "granbull"
+	},
+	{
+		"item_id": "211",
+		"stats": { "s_type": "poison", "pv": 65, "f_type": "water", "power": 95 },
+		"name": "qwilfish"
+	},
+	{
+		"item_id": "212",
+		"stats": { "s_type": "steel", "pv": 70, "f_type": "bug", "power": 130 },
+		"name": "scizor"
+	},
+	{
+		"item_id": "213",
+		"stats": { "s_type": "rock", "pv": 20, "f_type": "bug", "power": 10 },
+		"name": "shuckle"
+	},
+	{
+		"item_id": "214",
+		"stats": { "s_type": "fighting", "pv": 80, "f_type": "bug", "power": 125 },
+		"name": "heracross"
+	},
+	{
+		"item_id": "215",
+		"stats": { "s_type": "ice", "pv": 55, "f_type": "dark", "power": 95 },
+		"name": "sneasel"
+	},
+	{
+		"item_id": "216",
+		"stats": { "s_type": null, "pv": 60, "f_type": "normal", "power": 80 },
+		"name": "teddiursa"
+	},
+	{
+		"item_id": "217",
+		"stats": { "s_type": null, "pv": 90, "f_type": "normal", "power": 130 },
+		"name": "ursaring"
+	},
+	{
+		"item_id": "218",
+		"stats": { "s_type": null, "pv": 40, "f_type": "fire", "power": 40 },
+		"name": "slugma"
+	},
+	{
+		"item_id": "219",
+		"stats": { "s_type": "rock", "pv": 60, "f_type": "fire", "power": 50 },
+		"name": "magcargo"
+	},
+	{
+		"item_id": "220",
+		"stats": { "s_type": "ground", "pv": 50, "f_type": "ice", "power": 50 },
+		"name": "swinub"
+	},
+	{
+		"item_id": "221",
+		"stats": { "s_type": "ground", "pv": 100, "f_type": "ice", "power": 100 },
+		"name": "piloswine"
+	},
+	{
+		"item_id": "222",
+		"stats": { "s_type": "rock", "pv": 65, "f_type": "water", "power": 55 },
+		"name": "corsola"
+	},
+	{
+		"item_id": "223",
+		"stats": { "s_type": null, "pv": 35, "f_type": "water", "power": 65 },
+		"name": "remoraid"
+	},
+	{
+		"item_id": "224",
+		"stats": { "s_type": null, "pv": 75, "f_type": "water", "power": 105 },
+		"name": "octillery"
+	},
+	{
+		"item_id": "225",
+		"stats": { "s_type": "flying", "pv": 45, "f_type": "ice", "power": 55 },
+		"name": "delibird"
+	},
+	{
+		"item_id": "226",
+		"stats": { "s_type": "flying", "pv": 85, "f_type": "water", "power": 40 },
+		"name": "mantine"
+	},
+	{
+		"item_id": "227",
+		"stats": { "s_type": "flying", "pv": 65, "f_type": "steel", "power": 80 },
+		"name": "skarmory"
+	},
+	{
+		"item_id": "228",
+		"stats": { "s_type": "fire", "pv": 45, "f_type": "dark", "power": 60 },
+		"name": "houndour"
+	},
+	{
+		"item_id": "229",
+		"stats": { "s_type": "fire", "pv": 75, "f_type": "dark", "power": 90 },
+		"name": "houndoom"
+	},
+	{
+		"item_id": "230",
+		"stats": { "s_type": "dragon", "pv": 75, "f_type": "water", "power": 95 },
+		"name": "kingdra"
+	},
+	{
+		"item_id": "231",
+		"stats": { "s_type": null, "pv": 90, "f_type": "ground", "power": 60 },
+		"name": "phanpy"
+	},
+	{
+		"item_id": "232",
+		"stats": { "s_type": null, "pv": 90, "f_type": "ground", "power": 120 },
+		"name": "donphan"
+	},
+	{
+		"item_id": "233",
+		"stats": { "s_type": null, "pv": 85, "f_type": "normal", "power": 80 },
+		"name": "porygon2"
+	},
+	{
+		"item_id": "234",
+		"stats": { "s_type": null, "pv": 73, "f_type": "normal", "power": 95 },
+		"name": "stantler"
+	},
+	{
+		"item_id": "235",
+		"stats": { "s_type": null, "pv": 55, "f_type": "normal", "power": 20 },
+		"name": "smeargle"
+	},
+	{
+		"item_id": "236",
+		"stats": { "s_type": null, "pv": 35, "f_type": "fighting", "power": 35 },
+		"name": "tyrogue"
+	},
+	{
+		"item_id": "237",
+		"stats": { "s_type": null, "pv": 50, "f_type": "fighting", "power": 95 },
+		"name": "hitmontop"
+	},
+	{
+		"item_id": "238",
+		"stats": { "s_type": "psychic", "pv": 45, "f_type": "ice", "power": 30 },
+		"name": "smoochum"
+	},
+	{
+		"item_id": "239",
+		"stats": { "s_type": null, "pv": 45, "f_type": "electric", "power": 63 },
+		"name": "elekid"
+	},
+	{
+		"item_id": "240",
+		"stats": { "s_type": null, "pv": 45, "f_type": "fire", "power": 75 },
+		"name": "magby"
+	},
+	{
+		"item_id": "241",
+		"stats": { "s_type": null, "pv": 95, "f_type": "normal", "power": 80 },
+		"name": "miltank"
+	},
+	{
+		"item_id": "242",
+		"stats": { "s_type": null, "pv": 255, "f_type": "normal", "power": 10 },
+		"name": "blissey"
+	},
+	{
+		"item_id": "243",
+		"stats": { "s_type": null, "pv": 90, "f_type": "electric", "power": 85 },
+		"name": "raikou"
+	},
+	{
+		"item_id": "244",
+		"stats": { "s_type": null, "pv": 115, "f_type": "fire", "power": 115 },
+		"name": "entei"
+	},
+	{
+		"item_id": "245",
+		"stats": { "s_type": null, "pv": 100, "f_type": "water", "power": 75 },
+		"name": "suicune"
+	},
+	{
+		"item_id": "246",
+		"stats": { "s_type": "ground", "pv": 50, "f_type": "rock", "power": 64 },
+		"name": "larvitar"
+	},
+	{
+		"item_id": "247",
+		"stats": { "s_type": "ground", "pv": 70, "f_type": "rock", "power": 84 },
+		"name": "pupitar"
+	},
+	{
+		"item_id": "248",
+		"stats": { "s_type": "dark", "pv": 100, "f_type": "rock", "power": 134 },
+		"name": "tyranitar"
+	},
+	{
+		"item_id": "249",
+		"stats": {
+			"s_type": "flying",
+			"pv": 106,
+			"f_type": "psychic",
+			"power": 90
+		},
+		"name": "lugia"
+	},
+	{
+		"item_id": "250",
+		"stats": { "s_type": "flying", "pv": 106, "f_type": "fire", "power": 130 },
+		"name": "ho-oh"
+	},
+	{
+		"item_id": "251",
+		"stats": {
+			"s_type": "grass",
+			"pv": 100,
+			"f_type": "psychic",
+			"power": 100
+		},
+		"name": "celebi"
+	},
+	{
+		"item_id": "252",
+		"stats": { "s_type": null, "pv": 40, "f_type": "grass", "power": 45 },
+		"name": "treecko"
+	},
+	{
+		"item_id": "253",
+		"stats": { "s_type": null, "pv": 50, "f_type": "grass", "power": 65 },
+		"name": "grovyle"
+	},
+	{
+		"item_id": "254",
+		"stats": { "s_type": null, "pv": 70, "f_type": "grass", "power": 85 },
+		"name": "sceptile"
+	},
+	{
+		"item_id": "255",
+		"stats": { "s_type": null, "pv": 45, "f_type": "fire", "power": 60 },
+		"name": "torchic"
+	},
+	{
+		"item_id": "256",
+		"stats": { "s_type": "fighting", "pv": 60, "f_type": "fire", "power": 85 },
+		"name": "combusken"
+	},
+	{
+		"item_id": "257",
+		"stats": { "s_type": "fighting", "pv": 80, "f_type": "fire", "power": 120 },
+		"name": "blaziken"
+	},
+	{
+		"item_id": "258",
+		"stats": { "s_type": null, "pv": 50, "f_type": "water", "power": 70 },
+		"name": "mudkip"
+	},
+	{
+		"item_id": "259",
+		"stats": { "s_type": "ground", "pv": 70, "f_type": "water", "power": 85 },
+		"name": "marshtomp"
+	},
+	{
+		"item_id": "260",
+		"stats": { "s_type": "ground", "pv": 100, "f_type": "water", "power": 110 },
+		"name": "swampert"
+	},
+	{
+		"item_id": "261",
+		"stats": { "s_type": null, "pv": 35, "f_type": "dark", "power": 55 },
+		"name": "poochyena"
+	},
+	{
+		"item_id": "262",
+		"stats": { "s_type": null, "pv": 70, "f_type": "dark", "power": 90 },
+		"name": "mightyena"
+	},
+	{
+		"item_id": "263",
+		"stats": { "s_type": null, "pv": 38, "f_type": "normal", "power": 30 },
+		"name": "zigzagoon"
+	},
+	{
+		"item_id": "264",
+		"stats": { "s_type": null, "pv": 78, "f_type": "normal", "power": 70 },
+		"name": "linoone"
+	},
+	{
+		"item_id": "265",
+		"stats": { "s_type": null, "pv": 45, "f_type": "bug", "power": 45 },
+		"name": "wurmple"
+	},
+	{
+		"item_id": "266",
+		"stats": { "s_type": null, "pv": 50, "f_type": "bug", "power": 35 },
+		"name": "silcoon"
+	},
+	{
+		"item_id": "267",
+		"stats": { "s_type": "flying", "pv": 60, "f_type": "bug", "power": 70 },
+		"name": "beautifly"
+	},
+	{
+		"item_id": "268",
+		"stats": { "s_type": null, "pv": 50, "f_type": "bug", "power": 35 },
+		"name": "cascoon"
+	},
+	{
+		"item_id": "269",
+		"stats": { "s_type": "poison", "pv": 60, "f_type": "bug", "power": 50 },
+		"name": "dustox"
+	},
+	{
+		"item_id": "270",
+		"stats": { "s_type": "grass", "pv": 40, "f_type": "water", "power": 30 },
+		"name": "lotad"
+	},
+	{
+		"item_id": "271",
+		"stats": { "s_type": "grass", "pv": 60, "f_type": "water", "power": 50 },
+		"name": "lombre"
+	},
+	{
+		"item_id": "272",
+		"stats": { "s_type": "grass", "pv": 80, "f_type": "water", "power": 70 },
+		"name": "ludicolo"
+	},
+	{
+		"item_id": "273",
+		"stats": { "s_type": null, "pv": 40, "f_type": "grass", "power": 40 },
+		"name": "seedot"
+	},
+	{
+		"item_id": "274",
+		"stats": { "s_type": "dark", "pv": 70, "f_type": "grass", "power": 70 },
+		"name": "nuzleaf"
+	},
+	{
+		"item_id": "275",
+		"stats": { "s_type": "dark", "pv": 90, "f_type": "grass", "power": 100 },
+		"name": "shiftry"
+	},
+	{
+		"item_id": "276",
+		"stats": { "s_type": "flying", "pv": 40, "f_type": "normal", "power": 55 },
+		"name": "taillow"
+	},
+	{
+		"item_id": "277",
+		"stats": { "s_type": "flying", "pv": 60, "f_type": "normal", "power": 85 },
+		"name": "swellow"
+	},
+	{
+		"item_id": "278",
+		"stats": { "s_type": "flying", "pv": 40, "f_type": "water", "power": 30 },
+		"name": "wingull"
+	},
+	{
+		"item_id": "279",
+		"stats": { "s_type": "flying", "pv": 60, "f_type": "water", "power": 50 },
+		"name": "pelipper"
+	},
+	{
+		"item_id": "280",
+		"stats": { "s_type": "fairy", "pv": 28, "f_type": "psychic", "power": 25 },
+		"name": "ralts"
+	},
+	{
+		"item_id": "281",
+		"stats": { "s_type": "fairy", "pv": 38, "f_type": "psychic", "power": 35 },
+		"name": "kirlia"
+	},
+	{
+		"item_id": "282",
+		"stats": { "s_type": "fairy", "pv": 68, "f_type": "psychic", "power": 65 },
+		"name": "gardevoir"
+	},
+	{
+		"item_id": "283",
+		"stats": { "s_type": "water", "pv": 40, "f_type": "bug", "power": 30 },
+		"name": "surskit"
+	},
+	{
+		"item_id": "284",
+		"stats": { "s_type": "flying", "pv": 70, "f_type": "bug", "power": 60 },
+		"name": "masquerain"
+	},
+	{
+		"item_id": "285",
+		"stats": { "s_type": null, "pv": 60, "f_type": "grass", "power": 40 },
+		"name": "shroomish"
+	},
+	{
+		"item_id": "286",
+		"stats": {
+			"s_type": "fighting",
+			"pv": 60,
+			"f_type": "grass",
+			"power": 130
+		},
+		"name": "breloom"
+	},
+	{
+		"item_id": "287",
+		"stats": { "s_type": null, "pv": 60, "f_type": "normal", "power": 60 },
+		"name": "slakoth"
+	},
+	{
+		"item_id": "288",
+		"stats": { "s_type": null, "pv": 80, "f_type": "normal", "power": 80 },
+		"name": "vigoroth"
+	},
+	{
+		"item_id": "289",
+		"stats": { "s_type": null, "pv": 150, "f_type": "normal", "power": 160 },
+		"name": "slaking"
+	},
+	{
+		"item_id": "290",
+		"stats": { "s_type": "ground", "pv": 31, "f_type": "bug", "power": 45 },
+		"name": "nincada"
+	},
+	{
+		"item_id": "291",
+		"stats": { "s_type": "flying", "pv": 61, "f_type": "bug", "power": 90 },
+		"name": "ninjask"
+	},
+	{
+		"item_id": "292",
+		"stats": { "s_type": "ghost", "pv": 1, "f_type": "bug", "power": 90 },
+		"name": "shedinja"
+	},
+	{
+		"item_id": "293",
+		"stats": { "s_type": null, "pv": 64, "f_type": "normal", "power": 51 },
+		"name": "whismur"
+	},
+	{
+		"item_id": "294",
+		"stats": { "s_type": null, "pv": 84, "f_type": "normal", "power": 71 },
+		"name": "loudred"
+	},
+	{
+		"item_id": "295",
+		"stats": { "s_type": null, "pv": 104, "f_type": "normal", "power": 91 },
+		"name": "exploud"
+	},
+	{
+		"item_id": "296",
+		"stats": { "s_type": null, "pv": 72, "f_type": "fighting", "power": 60 },
+		"name": "makuhita"
+	},
+	{
+		"item_id": "297",
+		"stats": { "s_type": null, "pv": 144, "f_type": "fighting", "power": 120 },
+		"name": "hariyama"
+	},
+	{
+		"item_id": "298",
+		"stats": { "s_type": "fairy", "pv": 50, "f_type": "normal", "power": 20 },
+		"name": "azurill"
+	},
+	{
+		"item_id": "299",
+		"stats": { "s_type": null, "pv": 30, "f_type": "rock", "power": 45 },
+		"name": "nosepass"
+	},
+	{
+		"item_id": "300",
+		"stats": { "s_type": null, "pv": 50, "f_type": "normal", "power": 45 },
+		"name": "skitty"
+	},
+	{
+		"item_id": "301",
+		"stats": { "s_type": null, "pv": 70, "f_type": "normal", "power": 65 },
+		"name": "delcatty"
+	},
+	{
+		"item_id": "302",
+		"stats": { "s_type": "ghost", "pv": 50, "f_type": "dark", "power": 75 },
+		"name": "sableye"
+	},
+	{
+		"item_id": "303",
+		"stats": { "s_type": "fairy", "pv": 50, "f_type": "steel", "power": 85 },
+		"name": "mawile"
+	},
+	{
+		"item_id": "304",
+		"stats": { "s_type": "rock", "pv": 50, "f_type": "steel", "power": 70 },
+		"name": "aron"
+	},
+	{
+		"item_id": "305",
+		"stats": { "s_type": "rock", "pv": 60, "f_type": "steel", "power": 90 },
+		"name": "lairon"
+	},
+	{
+		"item_id": "306",
+		"stats": { "s_type": "rock", "pv": 70, "f_type": "steel", "power": 110 },
+		"name": "aggron"
+	},
+	{
+		"item_id": "307",
+		"stats": {
+			"s_type": "psychic",
+			"pv": 30,
+			"f_type": "fighting",
+			"power": 40
+		},
+		"name": "meditite"
+	},
+	{
+		"item_id": "308",
+		"stats": {
+			"s_type": "psychic",
+			"pv": 60,
+			"f_type": "fighting",
+			"power": 60
+		},
+		"name": "medicham"
+	},
+	{
+		"item_id": "309",
+		"stats": { "s_type": null, "pv": 40, "f_type": "electric", "power": 45 },
+		"name": "electrike"
+	},
+	{
+		"item_id": "310",
+		"stats": { "s_type": null, "pv": 70, "f_type": "electric", "power": 75 },
+		"name": "manectric"
+	},
+	{
+		"item_id": "311",
+		"stats": { "s_type": null, "pv": 60, "f_type": "electric", "power": 50 },
+		"name": "plusle"
+	},
+	{
+		"item_id": "312",
+		"stats": { "s_type": null, "pv": 60, "f_type": "electric", "power": 40 },
+		"name": "minun"
+	},
+	{
+		"item_id": "313",
+		"stats": { "s_type": null, "pv": 65, "f_type": "bug", "power": 73 },
+		"name": "volbeat"
+	},
+	{
+		"item_id": "314",
+		"stats": { "s_type": null, "pv": 65, "f_type": "bug", "power": 47 },
+		"name": "illumise"
+	},
+	{
+		"item_id": "315",
+		"stats": { "s_type": "poison", "pv": 50, "f_type": "grass", "power": 60 },
+		"name": "roselia"
+	},
+	{
+		"item_id": "316",
+		"stats": { "s_type": null, "pv": 70, "f_type": "poison", "power": 43 },
+		"name": "gulpin"
+	},
+	{
+		"item_id": "317",
+		"stats": { "s_type": null, "pv": 100, "f_type": "poison", "power": 73 },
+		"name": "swalot"
+	},
+	{
+		"item_id": "318",
+		"stats": { "s_type": "dark", "pv": 45, "f_type": "water", "power": 90 },
+		"name": "carvanha"
+	},
+	{
+		"item_id": "319",
+		"stats": { "s_type": "dark", "pv": 70, "f_type": "water", "power": 120 },
+		"name": "sharpedo"
+	},
+	{
+		"item_id": "320",
+		"stats": { "s_type": null, "pv": 130, "f_type": "water", "power": 70 },
+		"name": "wailmer"
+	},
+	{
+		"item_id": "321",
+		"stats": { "s_type": null, "pv": 170, "f_type": "water", "power": 90 },
+		"name": "wailord"
+	},
+	{
+		"item_id": "322",
+		"stats": { "s_type": "ground", "pv": 60, "f_type": "fire", "power": 60 },
+		"name": "numel"
+	},
+	{
+		"item_id": "323",
+		"stats": { "s_type": "ground", "pv": 70, "f_type": "fire", "power": 100 },
+		"name": "camerupt"
+	},
+	{
+		"item_id": "324",
+		"stats": { "s_type": null, "pv": 70, "f_type": "fire", "power": 85 },
+		"name": "torkoal"
+	},
+	{
+		"item_id": "325",
+		"stats": { "s_type": null, "pv": 60, "f_type": "psychic", "power": 25 },
+		"name": "spoink"
+	},
+	{
+		"item_id": "326",
+		"stats": { "s_type": null, "pv": 80, "f_type": "psychic", "power": 45 },
+		"name": "grumpig"
+	},
+	{
+		"item_id": "327",
+		"stats": { "s_type": null, "pv": 60, "f_type": "normal", "power": 60 },
+		"name": "spinda"
+	},
+	{
+		"item_id": "328",
+		"stats": { "s_type": null, "pv": 45, "f_type": "ground", "power": 100 },
+		"name": "trapinch"
+	},
+	{
+		"item_id": "329",
+		"stats": { "s_type": "dragon", "pv": 50, "f_type": "ground", "power": 70 },
+		"name": "vibrava"
+	},
+	{
+		"item_id": "330",
+		"stats": { "s_type": "dragon", "pv": 80, "f_type": "ground", "power": 100 },
+		"name": "flygon"
+	},
+	{
+		"item_id": "331",
+		"stats": { "s_type": null, "pv": 50, "f_type": "grass", "power": 85 },
+		"name": "cacnea"
+	},
+	{
+		"item_id": "332",
+		"stats": { "s_type": "dark", "pv": 70, "f_type": "grass", "power": 115 },
+		"name": "cacturne"
+	},
+	{
+		"item_id": "333",
+		"stats": { "s_type": "flying", "pv": 45, "f_type": "normal", "power": 40 },
+		"name": "swablu"
+	},
+	{
+		"item_id": "334",
+		"stats": { "s_type": "flying", "pv": 75, "f_type": "dragon", "power": 70 },
+		"name": "altaria"
+	},
+	{
+		"item_id": "335",
+		"stats": { "s_type": null, "pv": 73, "f_type": "normal", "power": 115 },
+		"name": "zangoose"
+	},
+	{
+		"item_id": "336",
+		"stats": { "s_type": null, "pv": 73, "f_type": "poison", "power": 100 },
+		"name": "seviper"
+	},
+	{
+		"item_id": "337",
+		"stats": { "s_type": "psychic", "pv": 90, "f_type": "rock", "power": 55 },
+		"name": "lunatone"
+	},
+	{
+		"item_id": "338",
+		"stats": { "s_type": "psychic", "pv": 90, "f_type": "rock", "power": 95 },
+		"name": "solrock"
+	},
+	{
+		"item_id": "339",
+		"stats": { "s_type": "ground", "pv": 50, "f_type": "water", "power": 48 },
+		"name": "barboach"
+	},
+	{
+		"item_id": "340",
+		"stats": { "s_type": "ground", "pv": 110, "f_type": "water", "power": 78 },
+		"name": "whiscash"
+	},
+	{
+		"item_id": "341",
+		"stats": { "s_type": null, "pv": 43, "f_type": "water", "power": 80 },
+		"name": "corphish"
+	},
+	{
+		"item_id": "342",
+		"stats": { "s_type": "dark", "pv": 63, "f_type": "water", "power": 120 },
+		"name": "crawdaunt"
+	},
+	{
+		"item_id": "343",
+		"stats": { "s_type": "psychic", "pv": 40, "f_type": "ground", "power": 40 },
+		"name": "baltoy"
+	},
+	{
+		"item_id": "344",
+		"stats": { "s_type": "psychic", "pv": 60, "f_type": "ground", "power": 70 },
+		"name": "claydol"
+	},
+	{
+		"item_id": "345",
+		"stats": { "s_type": "grass", "pv": 66, "f_type": "rock", "power": 41 },
+		"name": "lileep"
+	},
+	{
+		"item_id": "346",
+		"stats": { "s_type": "grass", "pv": 86, "f_type": "rock", "power": 81 },
+		"name": "cradily"
+	},
+	{
+		"item_id": "347",
+		"stats": { "s_type": "bug", "pv": 45, "f_type": "rock", "power": 95 },
+		"name": "anorith"
+	},
+	{
+		"item_id": "348",
+		"stats": { "s_type": "bug", "pv": 75, "f_type": "rock", "power": 125 },
+		"name": "armaldo"
+	},
+	{
+		"item_id": "349",
+		"stats": { "s_type": null, "pv": 20, "f_type": "water", "power": 15 },
+		"name": "feebas"
+	},
+	{
+		"item_id": "350",
+		"stats": { "s_type": null, "pv": 95, "f_type": "water", "power": 60 },
+		"name": "milotic"
+	},
+	{
+		"item_id": "351",
+		"stats": { "s_type": null, "pv": 70, "f_type": "normal", "power": 70 },
+		"name": "castform"
+	},
+	{
+		"item_id": "352",
+		"stats": { "s_type": null, "pv": 60, "f_type": "normal", "power": 90 },
+		"name": "kecleon"
+	},
+	{
+		"item_id": "353",
+		"stats": { "s_type": null, "pv": 44, "f_type": "ghost", "power": 75 },
+		"name": "shuppet"
+	},
+	{
+		"item_id": "354",
+		"stats": { "s_type": null, "pv": 64, "f_type": "ghost", "power": 115 },
+		"name": "banette"
+	},
+	{
+		"item_id": "355",
+		"stats": { "s_type": null, "pv": 20, "f_type": "ghost", "power": 40 },
+		"name": "duskull"
+	},
+	{
+		"item_id": "356",
+		"stats": { "s_type": null, "pv": 40, "f_type": "ghost", "power": 70 },
+		"name": "dusclops"
+	},
+	{
+		"item_id": "357",
+		"stats": { "s_type": "flying", "pv": 99, "f_type": "grass", "power": 68 },
+		"name": "tropius"
+	},
+	{
+		"item_id": "358",
+		"stats": { "s_type": null, "pv": 75, "f_type": "psychic", "power": 50 },
+		"name": "chimecho"
+	},
+	{
+		"item_id": "359",
+		"stats": { "s_type": null, "pv": 65, "f_type": "dark", "power": 130 },
+		"name": "absol"
+	},
+	{
+		"item_id": "360",
+		"stats": { "s_type": null, "pv": 95, "f_type": "psychic", "power": 23 },
+		"name": "wynaut"
+	},
+	{
+		"item_id": "361",
+		"stats": { "s_type": null, "pv": 50, "f_type": "ice", "power": 50 },
+		"name": "snorunt"
+	},
+	{
+		"item_id": "362",
+		"stats": { "s_type": null, "pv": 80, "f_type": "ice", "power": 80 },
+		"name": "glalie"
+	},
+	{
+		"item_id": "363",
+		"stats": { "s_type": "water", "pv": 70, "f_type": "ice", "power": 40 },
+		"name": "spheal"
+	},
+	{
+		"item_id": "364",
+		"stats": { "s_type": "water", "pv": 90, "f_type": "ice", "power": 60 },
+		"name": "sealeo"
+	},
+	{
+		"item_id": "365",
+		"stats": { "s_type": "water", "pv": 110, "f_type": "ice", "power": 80 },
+		"name": "walrein"
+	},
+	{
+		"item_id": "366",
+		"stats": { "s_type": null, "pv": 35, "f_type": "water", "power": 64 },
+		"name": "clamperl"
+	},
+	{
+		"item_id": "367",
+		"stats": { "s_type": null, "pv": 55, "f_type": "water", "power": 104 },
+		"name": "huntail"
+	},
+	{
+		"item_id": "368",
+		"stats": { "s_type": null, "pv": 55, "f_type": "water", "power": 84 },
+		"name": "gorebyss"
+	},
+	{
+		"item_id": "369",
+		"stats": { "s_type": "rock", "pv": 100, "f_type": "water", "power": 90 },
+		"name": "relicanth"
+	},
+	{
+		"item_id": "370",
+		"stats": { "s_type": null, "pv": 43, "f_type": "water", "power": 30 },
+		"name": "luvdisc"
+	},
+	{
+		"item_id": "371",
+		"stats": { "s_type": null, "pv": 45, "f_type": "dragon", "power": 75 },
+		"name": "bagon"
+	},
+	{
+		"item_id": "372",
+		"stats": { "s_type": null, "pv": 65, "f_type": "dragon", "power": 95 },
+		"name": "shelgon"
+	},
+	{
+		"item_id": "373",
+		"stats": { "s_type": "flying", "pv": 95, "f_type": "dragon", "power": 135 },
+		"name": "salamence"
+	},
+	{
+		"item_id": "374",
+		"stats": { "s_type": "psychic", "pv": 40, "f_type": "steel", "power": 55 },
+		"name": "beldum"
+	},
+	{
+		"item_id": "375",
+		"stats": { "s_type": "psychic", "pv": 60, "f_type": "steel", "power": 75 },
+		"name": "metang"
+	},
+	{
+		"item_id": "376",
+		"stats": { "s_type": "psychic", "pv": 80, "f_type": "steel", "power": 135 },
+		"name": "metagross"
+	},
+	{
+		"item_id": "377",
+		"stats": { "s_type": null, "pv": 80, "f_type": "rock", "power": 100 },
+		"name": "regirock"
+	},
+	{
+		"item_id": "378",
+		"stats": { "s_type": null, "pv": 80, "f_type": "ice", "power": 50 },
+		"name": "regice"
+	},
+	{
+		"item_id": "379",
+		"stats": { "s_type": null, "pv": 80, "f_type": "steel", "power": 75 },
+		"name": "registeel"
+	},
+	{
+		"item_id": "380",
+		"stats": { "s_type": "psychic", "pv": 80, "f_type": "dragon", "power": 80 },
+		"name": "latias"
+	},
+	{
+		"item_id": "381",
+		"stats": { "s_type": "psychic", "pv": 80, "f_type": "dragon", "power": 90 },
+		"name": "latios"
+	},
+	{
+		"item_id": "382",
+		"stats": { "s_type": null, "pv": 100, "f_type": "water", "power": 100 },
+		"name": "kyogre"
+	},
+	{
+		"item_id": "383",
+		"stats": { "s_type": null, "pv": 100, "f_type": "ground", "power": 150 },
+		"name": "groudon"
+	},
+	{
+		"item_id": "384",
+		"stats": {
+			"s_type": "flying",
+			"pv": 105,
+			"f_type": "dragon",
+			"power": 150
+		},
+		"name": "rayquaza"
+	},
+	{
+		"item_id": "385",
+		"stats": {
+			"s_type": "psychic",
+			"pv": 100,
+			"f_type": "steel",
+			"power": 100
+		},
+		"name": "jirachi"
+	},
+	{
+		"item_id": "386",
+		"stats": { "s_type": null, "pv": 50, "f_type": "psychic", "power": 150 },
+		"name": "deoxys-normal"
+	},
+	{
+		"item_id": "387",
+		"stats": { "s_type": null, "pv": 55, "f_type": "grass", "power": 68 },
+		"name": "turtwig"
+	},
+	{
+		"item_id": "388",
+		"stats": { "s_type": null, "pv": 75, "f_type": "grass", "power": 89 },
+		"name": "grotle"
+	},
+	{
+		"item_id": "389",
+		"stats": { "s_type": "ground", "pv": 95, "f_type": "grass", "power": 109 },
+		"name": "torterra"
+	},
+	{
+		"item_id": "390",
+		"stats": { "s_type": null, "pv": 44, "f_type": "fire", "power": 58 },
+		"name": "chimchar"
+	},
+	{
+		"item_id": "391",
+		"stats": { "s_type": "fighting", "pv": 64, "f_type": "fire", "power": 78 },
+		"name": "monferno"
+	},
+	{
+		"item_id": "392",
+		"stats": { "s_type": "fighting", "pv": 76, "f_type": "fire", "power": 104 },
+		"name": "infernape"
+	},
+	{
+		"item_id": "393",
+		"stats": { "s_type": null, "pv": 53, "f_type": "water", "power": 51 },
+		"name": "piplup"
+	},
+	{
+		"item_id": "394",
+		"stats": { "s_type": null, "pv": 64, "f_type": "water", "power": 66 },
+		"name": "prinplup"
+	},
+	{
+		"item_id": "395",
+		"stats": { "s_type": "steel", "pv": 84, "f_type": "water", "power": 86 },
+		"name": "empoleon"
+	},
+	{
+		"item_id": "396",
+		"stats": { "s_type": "flying", "pv": 40, "f_type": "normal", "power": 55 },
+		"name": "starly"
+	},
+	{
+		"item_id": "397",
+		"stats": { "s_type": "flying", "pv": 55, "f_type": "normal", "power": 75 },
+		"name": "staravia"
+	},
+	{
+		"item_id": "398",
+		"stats": { "s_type": "flying", "pv": 85, "f_type": "normal", "power": 120 },
+		"name": "staraptor"
+	},
+	{
+		"item_id": "399",
+		"stats": { "s_type": null, "pv": 59, "f_type": "normal", "power": 45 },
+		"name": "bidoof"
+	},
+	{
+		"item_id": "400",
+		"stats": { "s_type": "water", "pv": 79, "f_type": "normal", "power": 85 },
+		"name": "bibarel"
+	},
+	{
+		"item_id": "401",
+		"stats": { "s_type": null, "pv": 37, "f_type": "bug", "power": 25 },
+		"name": "kricketot"
+	},
+	{
+		"item_id": "402",
+		"stats": { "s_type": null, "pv": 77, "f_type": "bug", "power": 85 },
+		"name": "kricketune"
+	},
+	{
+		"item_id": "403",
+		"stats": { "s_type": null, "pv": 45, "f_type": "electric", "power": 65 },
+		"name": "shinx"
+	},
+	{
+		"item_id": "404",
+		"stats": { "s_type": null, "pv": 60, "f_type": "electric", "power": 85 },
+		"name": "luxio"
+	},
+	{
+		"item_id": "405",
+		"stats": { "s_type": null, "pv": 80, "f_type": "electric", "power": 120 },
+		"name": "luxray"
+	},
+	{
+		"item_id": "406",
+		"stats": { "s_type": "poison", "pv": 40, "f_type": "grass", "power": 30 },
+		"name": "budew"
+	},
+	{
+		"item_id": "407",
+		"stats": { "s_type": "poison", "pv": 60, "f_type": "grass", "power": 70 },
+		"name": "roserade"
+	},
+	{
+		"item_id": "408",
+		"stats": { "s_type": null, "pv": 67, "f_type": "rock", "power": 125 },
+		"name": "cranidos"
+	},
+	{
+		"item_id": "409",
+		"stats": { "s_type": null, "pv": 97, "f_type": "rock", "power": 165 },
+		"name": "rampardos"
+	},
+	{
+		"item_id": "410",
+		"stats": { "s_type": "steel", "pv": 30, "f_type": "rock", "power": 42 },
+		"name": "shieldon"
+	},
+	{
+		"item_id": "411",
+		"stats": { "s_type": "steel", "pv": 60, "f_type": "rock", "power": 52 },
+		"name": "bastiodon"
+	},
+	{
+		"item_id": "412",
+		"stats": { "s_type": null, "pv": 40, "f_type": "bug", "power": 29 },
+		"name": "burmy"
+	},
+	{
+		"item_id": "413",
+		"stats": { "s_type": "grass", "pv": 60, "f_type": "bug", "power": 59 },
+		"name": "wormadam-plant"
+	},
+	{
+		"item_id": "414",
+		"stats": { "s_type": "flying", "pv": 70, "f_type": "bug", "power": 94 },
+		"name": "mothim"
+	},
+	{
+		"item_id": "415",
+		"stats": { "s_type": "flying", "pv": 30, "f_type": "bug", "power": 30 },
+		"name": "combee"
+	},
+	{
+		"item_id": "416",
+		"stats": { "s_type": "flying", "pv": 70, "f_type": "bug", "power": 80 },
+		"name": "vespiquen"
+	},
+	{
+		"item_id": "417",
+		"stats": { "s_type": null, "pv": 60, "f_type": "electric", "power": 45 },
+		"name": "pachirisu"
+	},
+	{
+		"item_id": "418",
+		"stats": { "s_type": null, "pv": 55, "f_type": "water", "power": 65 },
+		"name": "buizel"
+	},
+	{
+		"item_id": "419",
+		"stats": { "s_type": null, "pv": 85, "f_type": "water", "power": 105 },
+		"name": "floatzel"
+	},
+	{
+		"item_id": "420",
+		"stats": { "s_type": null, "pv": 45, "f_type": "grass", "power": 35 },
+		"name": "cherubi"
+	},
+	{
+		"item_id": "421",
+		"stats": { "s_type": null, "pv": 70, "f_type": "grass", "power": 60 },
+		"name": "cherrim"
+	},
+	{
+		"item_id": "422",
+		"stats": { "s_type": null, "pv": 76, "f_type": "water", "power": 48 },
+		"name": "shellos"
+	},
+	{
+		"item_id": "423",
+		"stats": { "s_type": "ground", "pv": 111, "f_type": "water", "power": 83 },
+		"name": "gastrodon"
+	},
+	{
+		"item_id": "424",
+		"stats": { "s_type": null, "pv": 75, "f_type": "normal", "power": 100 },
+		"name": "ambipom"
+	},
+	{
+		"item_id": "425",
+		"stats": { "s_type": "flying", "pv": 90, "f_type": "ghost", "power": 50 },
+		"name": "drifloon"
+	},
+	{
+		"item_id": "426",
+		"stats": { "s_type": "flying", "pv": 150, "f_type": "ghost", "power": 80 },
+		"name": "drifblim"
+	},
+	{
+		"item_id": "427",
+		"stats": { "s_type": null, "pv": 55, "f_type": "normal", "power": 66 },
+		"name": "buneary"
+	},
+	{
+		"item_id": "428",
+		"stats": { "s_type": null, "pv": 65, "f_type": "normal", "power": 76 },
+		"name": "lopunny"
+	},
+	{
+		"item_id": "429",
+		"stats": { "s_type": null, "pv": 60, "f_type": "ghost", "power": 60 },
+		"name": "mismagius"
+	},
+	{
+		"item_id": "430",
+		"stats": { "s_type": "flying", "pv": 100, "f_type": "dark", "power": 125 },
+		"name": "honchkrow"
+	},
+	{
+		"item_id": "431",
+		"stats": { "s_type": null, "pv": 49, "f_type": "normal", "power": 55 },
+		"name": "glameow"
+	},
+	{
+		"item_id": "432",
+		"stats": { "s_type": null, "pv": 71, "f_type": "normal", "power": 82 },
+		"name": "purugly"
+	},
+	{
+		"item_id": "433",
+		"stats": { "s_type": null, "pv": 45, "f_type": "psychic", "power": 30 },
+		"name": "chingling"
+	},
+	{
+		"item_id": "434",
+		"stats": { "s_type": "dark", "pv": 63, "f_type": "poison", "power": 63 },
+		"name": "stunky"
+	},
+	{
+		"item_id": "435",
+		"stats": { "s_type": "dark", "pv": 103, "f_type": "poison", "power": 93 },
+		"name": "skuntank"
+	},
+	{
+		"item_id": "436",
+		"stats": { "s_type": "psychic", "pv": 57, "f_type": "steel", "power": 24 },
+		"name": "bronzor"
+	},
+	{
+		"item_id": "437",
+		"stats": { "s_type": "psychic", "pv": 67, "f_type": "steel", "power": 89 },
+		"name": "bronzong"
+	},
+	{
+		"item_id": "438",
+		"stats": { "s_type": null, "pv": 50, "f_type": "rock", "power": 80 },
+		"name": "bonsly"
+	},
+	{
+		"item_id": "439",
+		"stats": { "s_type": "fairy", "pv": 20, "f_type": "psychic", "power": 25 },
+		"name": "mime-jr"
+	},
+	{
+		"item_id": "440",
+		"stats": { "s_type": null, "pv": 100, "f_type": "normal", "power": 5 },
+		"name": "happiny"
+	},
+	{
+		"item_id": "441",
+		"stats": { "s_type": "flying", "pv": 76, "f_type": "normal", "power": 65 },
+		"name": "chatot"
+	},
+	{
+		"item_id": "442",
+		"stats": { "s_type": "dark", "pv": 50, "f_type": "ghost", "power": 92 },
+		"name": "spiritomb"
+	},
+	{
+		"item_id": "443",
+		"stats": { "s_type": "ground", "pv": 58, "f_type": "dragon", "power": 70 },
+		"name": "gible"
+	},
+	{
+		"item_id": "444",
+		"stats": { "s_type": "ground", "pv": 68, "f_type": "dragon", "power": 90 },
+		"name": "gabite"
+	},
+	{
+		"item_id": "445",
+		"stats": {
+			"s_type": "ground",
+			"pv": 108,
+			"f_type": "dragon",
+			"power": 130
+		},
+		"name": "garchomp"
+	},
+	{
+		"item_id": "446",
+		"stats": { "s_type": null, "pv": 135, "f_type": "normal", "power": 85 },
+		"name": "munchlax"
+	},
+	{
+		"item_id": "447",
+		"stats": { "s_type": null, "pv": 40, "f_type": "fighting", "power": 70 },
+		"name": "riolu"
+	},
+	{
+		"item_id": "448",
+		"stats": {
+			"s_type": "steel",
+			"pv": 70,
+			"f_type": "fighting",
+			"power": 110
+		},
+		"name": "lucario"
+	},
+	{
+		"item_id": "449",
+		"stats": { "s_type": null, "pv": 68, "f_type": "ground", "power": 72 },
+		"name": "hippopotas"
+	},
+	{
+		"item_id": "450",
+		"stats": { "s_type": null, "pv": 108, "f_type": "ground", "power": 112 },
+		"name": "hippowdon"
+	},
+	{
+		"item_id": "451",
+		"stats": { "s_type": "bug", "pv": 40, "f_type": "poison", "power": 50 },
+		"name": "skorupi"
+	},
+	{
+		"item_id": "452",
+		"stats": { "s_type": "dark", "pv": 70, "f_type": "poison", "power": 90 },
+		"name": "drapion"
+	},
+	{
+		"item_id": "453",
+		"stats": {
+			"s_type": "fighting",
+			"pv": 48,
+			"f_type": "poison",
+			"power": 61
+		},
+		"name": "croagunk"
+	},
+	{
+		"item_id": "454",
+		"stats": {
+			"s_type": "fighting",
+			"pv": 83,
+			"f_type": "poison",
+			"power": 106
+		},
+		"name": "toxicroak"
+	},
+	{
+		"item_id": "455",
+		"stats": { "s_type": null, "pv": 74, "f_type": "grass", "power": 100 },
+		"name": "carnivine"
+	},
+	{
+		"item_id": "456",
+		"stats": { "s_type": null, "pv": 49, "f_type": "water", "power": 49 },
+		"name": "finneon"
+	},
+	{
+		"item_id": "457",
+		"stats": { "s_type": null, "pv": 69, "f_type": "water", "power": 69 },
+		"name": "lumineon"
+	},
+	{
+		"item_id": "458",
+		"stats": { "s_type": "flying", "pv": 45, "f_type": "water", "power": 20 },
+		"name": "mantyke"
+	},
+	{
+		"item_id": "459",
+		"stats": { "s_type": "ice", "pv": 60, "f_type": "grass", "power": 62 },
+		"name": "snover"
+	},
+	{
+		"item_id": "460",
+		"stats": { "s_type": "ice", "pv": 90, "f_type": "grass", "power": 92 },
+		"name": "abomasnow"
+	},
+	{
+		"item_id": "461",
+		"stats": { "s_type": "ice", "pv": 70, "f_type": "dark", "power": 120 },
+		"name": "weavile"
+	},
+	{
+		"item_id": "462",
+		"stats": { "s_type": "steel", "pv": 70, "f_type": "electric", "power": 70 },
+		"name": "magnezone"
+	},
+	{
+		"item_id": "463",
+		"stats": { "s_type": null, "pv": 110, "f_type": "normal", "power": 85 },
+		"name": "lickilicky"
+	},
+	{
+		"item_id": "464",
+		"stats": { "s_type": "rock", "pv": 115, "f_type": "ground", "power": 140 },
+		"name": "rhyperior"
+	},
+	{
+		"item_id": "465",
+		"stats": { "s_type": null, "pv": 100, "f_type": "grass", "power": 100 },
+		"name": "tangrowth"
+	},
+	{
+		"item_id": "466",
+		"stats": { "s_type": null, "pv": 75, "f_type": "electric", "power": 123 },
+		"name": "electivire"
+	},
+	{
+		"item_id": "467",
+		"stats": { "s_type": null, "pv": 75, "f_type": "fire", "power": 95 },
+		"name": "magmortar"
+	},
+	{
+		"item_id": "468",
+		"stats": { "s_type": "flying", "pv": 85, "f_type": "fairy", "power": 50 },
+		"name": "togekiss"
+	},
+	{
+		"item_id": "469",
+		"stats": { "s_type": "flying", "pv": 86, "f_type": "bug", "power": 76 },
+		"name": "yanmega"
+	},
+	{
+		"item_id": "470",
+		"stats": { "s_type": null, "pv": 65, "f_type": "grass", "power": 110 },
+		"name": "leafeon"
+	},
+	{
+		"item_id": "471",
+		"stats": { "s_type": null, "pv": 65, "f_type": "ice", "power": 60 },
+		"name": "glaceon"
+	},
+	{
+		"item_id": "472",
+		"stats": { "s_type": "flying", "pv": 75, "f_type": "ground", "power": 95 },
+		"name": "gliscor"
+	},
+	{
+		"item_id": "473",
+		"stats": { "s_type": "ground", "pv": 110, "f_type": "ice", "power": 130 },
+		"name": "mamoswine"
+	},
+	{
+		"item_id": "474",
+		"stats": { "s_type": null, "pv": 85, "f_type": "normal", "power": 80 },
+		"name": "porygon-z"
+	},
+	{
+		"item_id": "475",
+		"stats": {
+			"s_type": "fighting",
+			"pv": 68,
+			"f_type": "psychic",
+			"power": 125
+		},
+		"name": "gallade"
+	},
+	{
+		"item_id": "476",
+		"stats": { "s_type": "steel", "pv": 60, "f_type": "rock", "power": 55 },
+		"name": "probopass"
+	},
+	{
+		"item_id": "477",
+		"stats": { "s_type": null, "pv": 45, "f_type": "ghost", "power": 100 },
+		"name": "dusknoir"
+	},
+	{
+		"item_id": "478",
+		"stats": { "s_type": "ghost", "pv": 70, "f_type": "ice", "power": 80 },
+		"name": "froslass"
+	},
+	{
+		"item_id": "479",
+		"stats": { "s_type": "ghost", "pv": 50, "f_type": "electric", "power": 50 },
+		"name": "rotom"
+	},
+	{
+		"item_id": "480",
+		"stats": { "s_type": null, "pv": 75, "f_type": "psychic", "power": 75 },
+		"name": "uxie"
+	},
+	{
+		"item_id": "481",
+		"stats": { "s_type": null, "pv": 80, "f_type": "psychic", "power": 105 },
+		"name": "mesprit"
+	},
+	{
+		"item_id": "482",
+		"stats": { "s_type": null, "pv": 75, "f_type": "psychic", "power": 125 },
+		"name": "azelf"
+	},
+	{
+		"item_id": "483",
+		"stats": { "s_type": "dragon", "pv": 100, "f_type": "steel", "power": 120 },
+		"name": "dialga"
+	},
+	{
+		"item_id": "484",
+		"stats": { "s_type": "dragon", "pv": 90, "f_type": "water", "power": 120 },
+		"name": "palkia"
+	},
+	{
+		"item_id": "485",
+		"stats": { "s_type": "steel", "pv": 91, "f_type": "fire", "power": 90 },
+		"name": "heatran"
+	},
+	{
+		"item_id": "486",
+		"stats": { "s_type": null, "pv": 110, "f_type": "normal", "power": 160 },
+		"name": "regigigas"
+	},
+	{
+		"item_id": "487",
+		"stats": { "s_type": "dragon", "pv": 150, "f_type": "ghost", "power": 100 },
+		"name": "giratina-altered"
+	},
+	{
+		"item_id": "488",
+		"stats": { "s_type": null, "pv": 120, "f_type": "psychic", "power": 70 },
+		"name": "cresselia"
+	},
+	{
+		"item_id": "489",
+		"stats": { "s_type": null, "pv": 80, "f_type": "water", "power": 80 },
+		"name": "phione"
+	},
+	{
+		"item_id": "490",
+		"stats": { "s_type": null, "pv": 100, "f_type": "water", "power": 100 },
+		"name": "manaphy"
+	},
+	{
+		"item_id": "491",
+		"stats": { "s_type": null, "pv": 70, "f_type": "dark", "power": 90 },
+		"name": "darkrai"
+	},
+	{
+		"item_id": "492",
+		"stats": { "s_type": null, "pv": 100, "f_type": "grass", "power": 100 },
+		"name": "shaymin-land"
+	},
+	{
+		"item_id": "493",
+		"stats": { "s_type": null, "pv": 120, "f_type": "normal", "power": 120 },
+		"name": "arceus"
+	},
+	{
+		"item_id": "494",
+		"stats": { "s_type": "fire", "pv": 100, "f_type": "psychic", "power": 100 },
+		"name": "victini"
+	},
+	{
+		"item_id": "495",
+		"stats": { "s_type": null, "pv": 45, "f_type": "grass", "power": 45 },
+		"name": "snivy"
+	},
+	{
+		"item_id": "496",
+		"stats": { "s_type": null, "pv": 60, "f_type": "grass", "power": 60 },
+		"name": "servine"
+	},
+	{
+		"item_id": "497",
+		"stats": { "s_type": null, "pv": 75, "f_type": "grass", "power": 75 },
+		"name": "serperior"
+	},
+	{
+		"item_id": "498",
+		"stats": { "s_type": null, "pv": 65, "f_type": "fire", "power": 63 },
+		"name": "tepig"
+	},
+	{
+		"item_id": "499",
+		"stats": { "s_type": "fighting", "pv": 90, "f_type": "fire", "power": 93 },
+		"name": "pignite"
+	},
+	{
+		"item_id": "500",
+		"stats": {
+			"s_type": "fighting",
+			"pv": 110,
+			"f_type": "fire",
+			"power": 123
+		},
+		"name": "emboar"
+	},
+	{
+		"item_id": "501",
+		"stats": { "s_type": null, "pv": 55, "f_type": "water", "power": 55 },
+		"name": "oshawott"
+	},
+	{
+		"item_id": "502",
+		"stats": { "s_type": null, "pv": 75, "f_type": "water", "power": 75 },
+		"name": "dewott"
+	},
+	{
+		"item_id": "503",
+		"stats": { "s_type": null, "pv": 95, "f_type": "water", "power": 100 },
+		"name": "samurott"
+	},
+	{
+		"item_id": "504",
+		"stats": { "s_type": null, "pv": 45, "f_type": "normal", "power": 55 },
+		"name": "patrat"
+	},
+	{
+		"item_id": "505",
+		"stats": { "s_type": null, "pv": 60, "f_type": "normal", "power": 85 },
+		"name": "watchog"
+	},
+	{
+		"item_id": "506",
+		"stats": { "s_type": null, "pv": 45, "f_type": "normal", "power": 60 },
+		"name": "lillipup"
+	},
+	{
+		"item_id": "507",
+		"stats": { "s_type": null, "pv": 65, "f_type": "normal", "power": 80 },
+		"name": "herdier"
+	},
+	{
+		"item_id": "508",
+		"stats": { "s_type": null, "pv": 85, "f_type": "normal", "power": 110 },
+		"name": "stoutland"
+	},
+	{
+		"item_id": "509",
+		"stats": { "s_type": null, "pv": 41, "f_type": "dark", "power": 50 },
+		"name": "purrloin"
+	},
+	{
+		"item_id": "510",
+		"stats": { "s_type": null, "pv": 64, "f_type": "dark", "power": 88 },
+		"name": "liepard"
+	},
+	{
+		"item_id": "511",
+		"stats": { "s_type": null, "pv": 50, "f_type": "grass", "power": 53 },
+		"name": "pansage"
+	},
+	{
+		"item_id": "512",
+		"stats": { "s_type": null, "pv": 75, "f_type": "grass", "power": 98 },
+		"name": "simisage"
+	},
+	{
+		"item_id": "513",
+		"stats": { "s_type": null, "pv": 50, "f_type": "fire", "power": 53 },
+		"name": "pansear"
+	},
+	{
+		"item_id": "514",
+		"stats": { "s_type": null, "pv": 75, "f_type": "fire", "power": 98 },
+		"name": "simisear"
+	},
+	{
+		"item_id": "515",
+		"stats": { "s_type": null, "pv": 50, "f_type": "water", "power": 53 },
+		"name": "panpour"
+	},
+	{
+		"item_id": "516",
+		"stats": { "s_type": null, "pv": 75, "f_type": "water", "power": 98 },
+		"name": "simipour"
+	},
+	{
+		"item_id": "517",
+		"stats": { "s_type": null, "pv": 76, "f_type": "psychic", "power": 25 },
+		"name": "munna"
+	},
+	{
+		"item_id": "518",
+		"stats": { "s_type": null, "pv": 116, "f_type": "psychic", "power": 55 },
+		"name": "musharna"
+	},
+	{
+		"item_id": "519",
+		"stats": { "s_type": "flying", "pv": 50, "f_type": "normal", "power": 55 },
+		"name": "pidove"
+	},
+	{
+		"item_id": "520",
+		"stats": { "s_type": "flying", "pv": 62, "f_type": "normal", "power": 77 },
+		"name": "tranquill"
+	},
+	{
+		"item_id": "521",
+		"stats": { "s_type": "flying", "pv": 80, "f_type": "normal", "power": 115 },
+		"name": "unfezant"
+	},
+	{
+		"item_id": "522",
+		"stats": { "s_type": null, "pv": 45, "f_type": "electric", "power": 60 },
+		"name": "blitzle"
+	},
+	{
+		"item_id": "523",
+		"stats": { "s_type": null, "pv": 75, "f_type": "electric", "power": 100 },
+		"name": "zebstrika"
+	},
+	{
+		"item_id": "524",
+		"stats": { "s_type": null, "pv": 55, "f_type": "rock", "power": 75 },
+		"name": "roggenrola"
+	},
+	{
+		"item_id": "525",
+		"stats": { "s_type": null, "pv": 70, "f_type": "rock", "power": 105 },
+		"name": "boldore"
+	},
+	{
+		"item_id": "526",
+		"stats": { "s_type": null, "pv": 85, "f_type": "rock", "power": 135 },
+		"name": "gigalith"
+	},
+	{
+		"item_id": "527",
+		"stats": { "s_type": "flying", "pv": 65, "f_type": "psychic", "power": 45 },
+		"name": "woobat"
+	},
+	{
+		"item_id": "528",
+		"stats": { "s_type": "flying", "pv": 67, "f_type": "psychic", "power": 57 },
+		"name": "swoobat"
+	},
+	{
+		"item_id": "529",
+		"stats": { "s_type": null, "pv": 60, "f_type": "ground", "power": 85 },
+		"name": "drilbur"
+	},
+	{
+		"item_id": "530",
+		"stats": { "s_type": "steel", "pv": 110, "f_type": "ground", "power": 135 },
+		"name": "excadrill"
+	},
+	{
+		"item_id": "531",
+		"stats": { "s_type": null, "pv": 103, "f_type": "normal", "power": 60 },
+		"name": "audino"
+	},
+	{
+		"item_id": "532",
+		"stats": { "s_type": null, "pv": 75, "f_type": "fighting", "power": 80 },
+		"name": "timburr"
+	},
+	{
+		"item_id": "533",
+		"stats": { "s_type": null, "pv": 85, "f_type": "fighting", "power": 105 },
+		"name": "gurdurr"
+	},
+	{
+		"item_id": "534",
+		"stats": { "s_type": null, "pv": 105, "f_type": "fighting", "power": 140 },
+		"name": "conkeldurr"
+	},
+	{
+		"item_id": "535",
+		"stats": { "s_type": null, "pv": 50, "f_type": "water", "power": 50 },
+		"name": "tympole"
+	},
+	{
+		"item_id": "536",
+		"stats": { "s_type": "ground", "pv": 75, "f_type": "water", "power": 65 },
+		"name": "palpitoad"
+	},
+	{
+		"item_id": "537",
+		"stats": { "s_type": "ground", "pv": 105, "f_type": "water", "power": 95 },
+		"name": "seismitoad"
+	},
+	{
+		"item_id": "538",
+		"stats": { "s_type": null, "pv": 120, "f_type": "fighting", "power": 100 },
+		"name": "throh"
+	},
+	{
+		"item_id": "539",
+		"stats": { "s_type": null, "pv": 75, "f_type": "fighting", "power": 125 },
+		"name": "sawk"
+	},
+	{
+		"item_id": "540",
+		"stats": { "s_type": "grass", "pv": 45, "f_type": "bug", "power": 53 },
+		"name": "sewaddle"
+	},
+	{
+		"item_id": "541",
+		"stats": { "s_type": "grass", "pv": 55, "f_type": "bug", "power": 63 },
+		"name": "swadloon"
+	},
+	{
+		"item_id": "542",
+		"stats": { "s_type": "grass", "pv": 75, "f_type": "bug", "power": 103 },
+		"name": "leavanny"
+	},
+	{
+		"item_id": "543",
+		"stats": { "s_type": "poison", "pv": 30, "f_type": "bug", "power": 45 },
+		"name": "venipede"
+	},
+	{
+		"item_id": "544",
+		"stats": { "s_type": "poison", "pv": 40, "f_type": "bug", "power": 55 },
+		"name": "whirlipede"
+	},
+	{
+		"item_id": "545",
+		"stats": { "s_type": "poison", "pv": 60, "f_type": "bug", "power": 100 },
+		"name": "scolipede"
+	},
+	{
+		"item_id": "546",
+		"stats": { "s_type": "fairy", "pv": 40, "f_type": "grass", "power": 27 },
+		"name": "cottonee"
+	},
+	{
+		"item_id": "547",
+		"stats": { "s_type": "fairy", "pv": 60, "f_type": "grass", "power": 67 },
+		"name": "whimsicott"
+	},
+	{
+		"item_id": "548",
+		"stats": { "s_type": null, "pv": 45, "f_type": "grass", "power": 35 },
+		"name": "petilil"
+	},
+	{
+		"item_id": "549",
+		"stats": { "s_type": null, "pv": 70, "f_type": "grass", "power": 60 },
+		"name": "lilligant"
+	},
+	{
+		"item_id": "550",
+		"stats": { "s_type": null, "pv": 70, "f_type": "water", "power": 92 },
+		"name": "basculin-red-striped"
+	},
+	{
+		"item_id": "551",
+		"stats": { "s_type": "dark", "pv": 50, "f_type": "ground", "power": 72 },
+		"name": "sandile"
+	},
+	{
+		"item_id": "552",
+		"stats": { "s_type": "dark", "pv": 60, "f_type": "ground", "power": 82 },
+		"name": "krokorok"
+	},
+	{
+		"item_id": "553",
+		"stats": { "s_type": "dark", "pv": 95, "f_type": "ground", "power": 117 },
+		"name": "krookodile"
+	},
+	{
+		"item_id": "554",
+		"stats": { "s_type": null, "pv": 70, "f_type": "fire", "power": 90 },
+		"name": "darumaka"
+	},
+	{
+		"item_id": "555",
+		"stats": { "s_type": null, "pv": 105, "f_type": "fire", "power": 140 },
+		"name": "darmanitan-standard"
+	},
+	{
+		"item_id": "556",
+		"stats": { "s_type": null, "pv": 75, "f_type": "grass", "power": 86 },
+		"name": "maractus"
+	},
+	{
+		"item_id": "557",
+		"stats": { "s_type": "rock", "pv": 50, "f_type": "bug", "power": 65 },
+		"name": "dwebble"
+	},
+	{
+		"item_id": "558",
+		"stats": { "s_type": "rock", "pv": 70, "f_type": "bug", "power": 105 },
+		"name": "crustle"
+	},
+	{
+		"item_id": "559",
+		"stats": { "s_type": "fighting", "pv": 50, "f_type": "dark", "power": 75 },
+		"name": "scraggy"
+	},
+	{
+		"item_id": "560",
+		"stats": { "s_type": "fighting", "pv": 65, "f_type": "dark", "power": 90 },
+		"name": "scrafty"
+	},
+	{
+		"item_id": "561",
+		"stats": { "s_type": "flying", "pv": 72, "f_type": "psychic", "power": 58 },
+		"name": "sigilyph"
+	},
+	{
+		"item_id": "562",
+		"stats": { "s_type": null, "pv": 38, "f_type": "ghost", "power": 30 },
+		"name": "yamask"
+	},
+	{
+		"item_id": "563",
+		"stats": { "s_type": null, "pv": 58, "f_type": "ghost", "power": 50 },
+		"name": "cofagrigus"
+	},
+	{
+		"item_id": "564",
+		"stats": { "s_type": "rock", "pv": 54, "f_type": "water", "power": 78 },
+		"name": "tirtouga"
+	},
+	{
+		"item_id": "565",
+		"stats": { "s_type": "rock", "pv": 74, "f_type": "water", "power": 108 },
+		"name": "carracosta"
+	},
+	{
+		"item_id": "566",
+		"stats": { "s_type": "flying", "pv": 55, "f_type": "rock", "power": 112 },
+		"name": "archen"
+	},
+	{
+		"item_id": "567",
+		"stats": { "s_type": "flying", "pv": 75, "f_type": "rock", "power": 140 },
+		"name": "archeops"
+	},
+	{
+		"item_id": "568",
+		"stats": { "s_type": null, "pv": 50, "f_type": "poison", "power": 50 },
+		"name": "trubbish"
+	},
+	{
+		"item_id": "569",
+		"stats": { "s_type": null, "pv": 80, "f_type": "poison", "power": 95 },
+		"name": "garbodor"
+	},
+	{
+		"item_id": "570",
+		"stats": { "s_type": null, "pv": 40, "f_type": "dark", "power": 65 },
+		"name": "zorua"
+	},
+	{
+		"item_id": "571",
+		"stats": { "s_type": null, "pv": 60, "f_type": "dark", "power": 105 },
+		"name": "zoroark"
+	},
+	{
+		"item_id": "572",
+		"stats": { "s_type": null, "pv": 55, "f_type": "normal", "power": 50 },
+		"name": "minccino"
+	},
+	{
+		"item_id": "573",
+		"stats": { "s_type": null, "pv": 75, "f_type": "normal", "power": 95 },
+		"name": "cinccino"
+	},
+	{
+		"item_id": "574",
+		"stats": { "s_type": null, "pv": 45, "f_type": "psychic", "power": 30 },
+		"name": "gothita"
+	},
+	{
+		"item_id": "575",
+		"stats": { "s_type": null, "pv": 60, "f_type": "psychic", "power": 45 },
+		"name": "gothorita"
+	},
+	{
+		"item_id": "576",
+		"stats": { "s_type": null, "pv": 70, "f_type": "psychic", "power": 55 },
+		"name": "gothitelle"
+	},
+	{
+		"item_id": "577",
+		"stats": { "s_type": null, "pv": 45, "f_type": "psychic", "power": 30 },
+		"name": "solosis"
+	},
+	{
+		"item_id": "578",
+		"stats": { "s_type": null, "pv": 65, "f_type": "psychic", "power": 40 },
+		"name": "duosion"
+	},
+	{
+		"item_id": "579",
+		"stats": { "s_type": null, "pv": 110, "f_type": "psychic", "power": 65 },
+		"name": "reuniclus"
+	},
+	{
+		"item_id": "580",
+		"stats": { "s_type": "flying", "pv": 62, "f_type": "water", "power": 44 },
+		"name": "ducklett"
+	},
+	{
+		"item_id": "581",
+		"stats": { "s_type": "flying", "pv": 75, "f_type": "water", "power": 87 },
+		"name": "swanna"
+	},
+	{
+		"item_id": "582",
+		"stats": { "s_type": null, "pv": 36, "f_type": "ice", "power": 50 },
+		"name": "vanillite"
+	},
+	{
+		"item_id": "583",
+		"stats": { "s_type": null, "pv": 51, "f_type": "ice", "power": 65 },
+		"name": "vanillish"
+	},
+	{
+		"item_id": "584",
+		"stats": { "s_type": null, "pv": 71, "f_type": "ice", "power": 95 },
+		"name": "vanilluxe"
+	},
+	{
+		"item_id": "585",
+		"stats": { "s_type": "grass", "pv": 60, "f_type": "normal", "power": 60 },
+		"name": "deerling"
+	},
+	{
+		"item_id": "586",
+		"stats": { "s_type": "grass", "pv": 80, "f_type": "normal", "power": 100 },
+		"name": "sawsbuck"
+	},
+	{
+		"item_id": "587",
+		"stats": {
+			"s_type": "flying",
+			"pv": 55,
+			"f_type": "electric",
+			"power": 75
+		},
+		"name": "emolga"
+	},
+	{
+		"item_id": "588",
+		"stats": { "s_type": null, "pv": 50, "f_type": "bug", "power": 75 },
+		"name": "karrablast"
+	},
+	{
+		"item_id": "589",
+		"stats": { "s_type": "steel", "pv": 70, "f_type": "bug", "power": 135 },
+		"name": "escavalier"
+	},
+	{
+		"item_id": "590",
+		"stats": { "s_type": "poison", "pv": 69, "f_type": "grass", "power": 55 },
+		"name": "foongus"
+	},
+	{
+		"item_id": "591",
+		"stats": { "s_type": "poison", "pv": 114, "f_type": "grass", "power": 85 },
+		"name": "amoonguss"
+	},
+	{
+		"item_id": "592",
+		"stats": { "s_type": "ghost", "pv": 55, "f_type": "water", "power": 40 },
+		"name": "frillish"
+	},
+	{
+		"item_id": "593",
+		"stats": { "s_type": "ghost", "pv": 100, "f_type": "water", "power": 60 },
+		"name": "jellicent"
+	},
+	{
+		"item_id": "594",
+		"stats": { "s_type": null, "pv": 165, "f_type": "water", "power": 75 },
+		"name": "alomomola"
+	},
+	{
+		"item_id": "595",
+		"stats": { "s_type": "electric", "pv": 50, "f_type": "bug", "power": 47 },
+		"name": "joltik"
+	},
+	{
+		"item_id": "596",
+		"stats": { "s_type": "electric", "pv": 70, "f_type": "bug", "power": 77 },
+		"name": "galvantula"
+	},
+	{
+		"item_id": "597",
+		"stats": { "s_type": "steel", "pv": 44, "f_type": "grass", "power": 50 },
+		"name": "ferroseed"
+	},
+	{
+		"item_id": "598",
+		"stats": { "s_type": "steel", "pv": 74, "f_type": "grass", "power": 94 },
+		"name": "ferrothorn"
+	},
+	{
+		"item_id": "599",
+		"stats": { "s_type": null, "pv": 40, "f_type": "steel", "power": 55 },
+		"name": "klink"
+	},
+	{
+		"item_id": "600",
+		"stats": { "s_type": null, "pv": 60, "f_type": "steel", "power": 80 },
+		"name": "klang"
+	},
+	{
+		"item_id": "601",
+		"stats": { "s_type": null, "pv": 60, "f_type": "steel", "power": 100 },
+		"name": "klinklang"
+	},
+	{
+		"item_id": "602",
+		"stats": { "s_type": null, "pv": 35, "f_type": "electric", "power": 55 },
+		"name": "tynamo"
+	},
+	{
+		"item_id": "603",
+		"stats": { "s_type": null, "pv": 65, "f_type": "electric", "power": 85 },
+		"name": "eelektrik"
+	},
+	{
+		"item_id": "604",
+		"stats": { "s_type": null, "pv": 85, "f_type": "electric", "power": 115 },
+		"name": "eelektross"
+	},
+	{
+		"item_id": "605",
+		"stats": { "s_type": null, "pv": 55, "f_type": "psychic", "power": 55 },
+		"name": "elgyem"
+	},
+	{
+		"item_id": "606",
+		"stats": { "s_type": null, "pv": 75, "f_type": "psychic", "power": 75 },
+		"name": "beheeyem"
+	},
+	{
+		"item_id": "607",
+		"stats": { "s_type": "fire", "pv": 50, "f_type": "ghost", "power": 30 },
+		"name": "litwick"
+	},
+	{
+		"item_id": "608",
+		"stats": { "s_type": "fire", "pv": 60, "f_type": "ghost", "power": 40 },
+		"name": "lampent"
+	},
+	{
+		"item_id": "609",
+		"stats": { "s_type": "fire", "pv": 60, "f_type": "ghost", "power": 55 },
+		"name": "chandelure"
+	},
+	{
+		"item_id": "610",
+		"stats": { "s_type": null, "pv": 46, "f_type": "dragon", "power": 87 },
+		"name": "axew"
+	},
+	{
+		"item_id": "611",
+		"stats": { "s_type": null, "pv": 66, "f_type": "dragon", "power": 117 },
+		"name": "fraxure"
+	},
+	{
+		"item_id": "612",
+		"stats": { "s_type": null, "pv": 76, "f_type": "dragon", "power": 147 },
+		"name": "haxorus"
+	},
+	{
+		"item_id": "613",
+		"stats": { "s_type": null, "pv": 55, "f_type": "ice", "power": 70 },
+		"name": "cubchoo"
+	},
+	{
+		"item_id": "614",
+		"stats": { "s_type": null, "pv": 95, "f_type": "ice", "power": 130 },
+		"name": "beartic"
+	},
+	{
+		"item_id": "615",
+		"stats": { "s_type": null, "pv": 80, "f_type": "ice", "power": 50 },
+		"name": "cryogonal"
+	},
+	{
+		"item_id": "616",
+		"stats": { "s_type": null, "pv": 50, "f_type": "bug", "power": 40 },
+		"name": "shelmet"
+	},
+	{
+		"item_id": "617",
+		"stats": { "s_type": null, "pv": 80, "f_type": "bug", "power": 70 },
+		"name": "accelgor"
+	},
+	{
+		"item_id": "618",
+		"stats": {
+			"s_type": "electric",
+			"pv": 109,
+			"f_type": "ground",
+			"power": 66
+		},
+		"name": "stunfisk"
+	},
+	{
+		"item_id": "619",
+		"stats": { "s_type": null, "pv": 45, "f_type": "fighting", "power": 85 },
+		"name": "mienfoo"
+	},
+	{
+		"item_id": "620",
+		"stats": { "s_type": null, "pv": 65, "f_type": "fighting", "power": 125 },
+		"name": "mienshao"
+	},
+	{
+		"item_id": "621",
+		"stats": { "s_type": null, "pv": 77, "f_type": "dragon", "power": 120 },
+		"name": "druddigon"
+	},
+	{
+		"item_id": "622",
+		"stats": { "s_type": "ghost", "pv": 59, "f_type": "ground", "power": 74 },
+		"name": "golett"
+	},
+	{
+		"item_id": "623",
+		"stats": { "s_type": "ghost", "pv": 89, "f_type": "ground", "power": 124 },
+		"name": "golurk"
+	},
+	{
+		"item_id": "624",
+		"stats": { "s_type": "steel", "pv": 45, "f_type": "dark", "power": 85 },
+		"name": "pawniard"
+	},
+	{
+		"item_id": "625",
+		"stats": { "s_type": "steel", "pv": 65, "f_type": "dark", "power": 125 },
+		"name": "bisharp"
+	},
+	{
+		"item_id": "626",
+		"stats": { "s_type": null, "pv": 95, "f_type": "normal", "power": 110 },
+		"name": "bouffalant"
+	},
+	{
+		"item_id": "627",
+		"stats": { "s_type": "flying", "pv": 70, "f_type": "normal", "power": 83 },
+		"name": "rufflet"
+	},
+	{
+		"item_id": "628",
+		"stats": {
+			"s_type": "flying",
+			"pv": 100,
+			"f_type": "normal",
+			"power": 123
+		},
+		"name": "braviary"
+	},
+	{
+		"item_id": "629",
+		"stats": { "s_type": "flying", "pv": 70, "f_type": "dark", "power": 55 },
+		"name": "vullaby"
+	},
+	{
+		"item_id": "630",
+		"stats": { "s_type": "flying", "pv": 110, "f_type": "dark", "power": 65 },
+		"name": "mandibuzz"
+	},
+	{
+		"item_id": "631",
+		"stats": { "s_type": null, "pv": 85, "f_type": "fire", "power": 97 },
+		"name": "heatmor"
+	},
+	{
+		"item_id": "632",
+		"stats": { "s_type": "steel", "pv": 58, "f_type": "bug", "power": 109 },
+		"name": "durant"
+	},
+	{
+		"item_id": "633",
+		"stats": { "s_type": "dragon", "pv": 52, "f_type": "dark", "power": 65 },
+		"name": "deino"
+	},
+	{
+		"item_id": "634",
+		"stats": { "s_type": "dragon", "pv": 72, "f_type": "dark", "power": 85 },
+		"name": "zweilous"
+	},
+	{
+		"item_id": "635",
+		"stats": { "s_type": "dragon", "pv": 92, "f_type": "dark", "power": 105 },
+		"name": "hydreigon"
+	},
+	{
+		"item_id": "636",
+		"stats": { "s_type": "fire", "pv": 55, "f_type": "bug", "power": 85 },
+		"name": "larvesta"
+	},
+	{
+		"item_id": "637",
+		"stats": { "s_type": "fire", "pv": 85, "f_type": "bug", "power": 60 },
+		"name": "volcarona"
+	},
+	{
+		"item_id": "638",
+		"stats": { "s_type": "fighting", "pv": 91, "f_type": "steel", "power": 90 },
+		"name": "cobalion"
+	},
+	{
+		"item_id": "639",
+		"stats": { "s_type": "fighting", "pv": 91, "f_type": "rock", "power": 129 },
+		"name": "terrakion"
+	},
+	{
+		"item_id": "640",
+		"stats": { "s_type": "fighting", "pv": 91, "f_type": "grass", "power": 90 },
+		"name": "virizion"
+	},
+	{
+		"item_id": "641",
+		"stats": { "s_type": null, "pv": 79, "f_type": "flying", "power": 115 },
+		"name": "tornadus-incarnate"
+	},
+	{
+		"item_id": "642",
+		"stats": {
+			"s_type": "flying",
+			"pv": 79,
+			"f_type": "electric",
+			"power": 115
+		},
+		"name": "thundurus-incarnate"
+	},
+	{
+		"item_id": "643",
+		"stats": { "s_type": "fire", "pv": 100, "f_type": "dragon", "power": 120 },
+		"name": "reshiram"
+	},
+	{
+		"item_id": "644",
+		"stats": {
+			"s_type": "electric",
+			"pv": 100,
+			"f_type": "dragon",
+			"power": 150
+		},
+		"name": "zekrom"
+	},
+	{
+		"item_id": "645",
+		"stats": { "s_type": "flying", "pv": 89, "f_type": "ground", "power": 125 },
+		"name": "landorus-incarnate"
+	},
+	{
+		"item_id": "646",
+		"stats": { "s_type": "ice", "pv": 125, "f_type": "dragon", "power": 130 },
+		"name": "kyurem"
+	},
+	{
+		"item_id": "647",
+		"stats": { "s_type": "fighting", "pv": 91, "f_type": "water", "power": 72 },
+		"name": "keldeo-ordinary"
+	},
+	{
+		"item_id": "648",
+		"stats": {
+			"s_type": "psychic",
+			"pv": 100,
+			"f_type": "normal",
+			"power": 77
+		},
+		"name": "meloetta-aria"
+	},
+	{
+		"item_id": "649",
+		"stats": { "s_type": "steel", "pv": 71, "f_type": "bug", "power": 120 },
+		"name": "genesect"
+	},
+	{
+		"item_id": "650",
+		"stats": { "s_type": null, "pv": 56, "f_type": "grass", "power": 61 },
+		"name": "chespin"
+	},
+	{
+		"item_id": "651",
+		"stats": { "s_type": null, "pv": 61, "f_type": "grass", "power": 78 },
+		"name": "quilladin"
+	},
+	{
+		"item_id": "652",
+		"stats": {
+			"s_type": "fighting",
+			"pv": 88,
+			"f_type": "grass",
+			"power": 107
+		},
+		"name": "chesnaught"
+	},
+	{
+		"item_id": "653",
+		"stats": { "s_type": null, "pv": 40, "f_type": "fire", "power": 45 },
+		"name": "fennekin"
+	},
+	{
+		"item_id": "654",
+		"stats": { "s_type": null, "pv": 59, "f_type": "fire", "power": 59 },
+		"name": "braixen"
+	},
+	{
+		"item_id": "655",
+		"stats": { "s_type": "psychic", "pv": 75, "f_type": "fire", "power": 69 },
+		"name": "delphox"
+	},
+	{
+		"item_id": "656",
+		"stats": { "s_type": null, "pv": 41, "f_type": "water", "power": 56 },
+		"name": "froakie"
+	},
+	{
+		"item_id": "657",
+		"stats": { "s_type": null, "pv": 54, "f_type": "water", "power": 63 },
+		"name": "frogadier"
+	},
+	{
+		"item_id": "658",
+		"stats": { "s_type": "dark", "pv": 72, "f_type": "water", "power": 95 },
+		"name": "greninja"
+	},
+	{
+		"item_id": "659",
+		"stats": { "s_type": null, "pv": 38, "f_type": "normal", "power": 36 },
+		"name": "bunnelby"
+	},
+	{
+		"item_id": "660",
+		"stats": { "s_type": "ground", "pv": 85, "f_type": "normal", "power": 56 },
+		"name": "diggersby"
+	},
+	{
+		"item_id": "661",
+		"stats": { "s_type": "flying", "pv": 45, "f_type": "normal", "power": 50 },
+		"name": "fletchling"
+	},
+	{
+		"item_id": "662",
+		"stats": { "s_type": "flying", "pv": 62, "f_type": "fire", "power": 73 },
+		"name": "fletchinder"
+	},
+	{
+		"item_id": "663",
+		"stats": { "s_type": "flying", "pv": 78, "f_type": "fire", "power": 81 },
+		"name": "talonflame"
+	},
+	{
+		"item_id": "664",
+		"stats": { "s_type": null, "pv": 38, "f_type": "bug", "power": 35 },
+		"name": "scatterbug"
+	},
+	{
+		"item_id": "665",
+		"stats": { "s_type": null, "pv": 45, "f_type": "bug", "power": 22 },
+		"name": "spewpa"
+	},
+	{
+		"item_id": "666",
+		"stats": { "s_type": "flying", "pv": 80, "f_type": "bug", "power": 52 },
+		"name": "vivillon"
+	},
+	{
+		"item_id": "667",
+		"stats": { "s_type": "normal", "pv": 62, "f_type": "fire", "power": 50 },
+		"name": "litleo"
+	},
+	{
+		"item_id": "668",
+		"stats": { "s_type": "normal", "pv": 86, "f_type": "fire", "power": 68 },
+		"name": "pyroar"
+	},
+	{
+		"item_id": "669",
+		"stats": { "s_type": null, "pv": 44, "f_type": "fairy", "power": 38 },
+		"name": "flabebe"
+	},
+	{
+		"item_id": "670",
+		"stats": { "s_type": null, "pv": 54, "f_type": "fairy", "power": 45 },
+		"name": "floette"
+	},
+	{
+		"item_id": "671",
+		"stats": { "s_type": null, "pv": 78, "f_type": "fairy", "power": 65 },
+		"name": "florges"
+	},
+	{
+		"item_id": "672",
+		"stats": { "s_type": null, "pv": 66, "f_type": "grass", "power": 65 },
+		"name": "skiddo"
+	},
+	{
+		"item_id": "673",
+		"stats": { "s_type": null, "pv": 123, "f_type": "grass", "power": 100 },
+		"name": "gogoat"
+	},
+	{
+		"item_id": "674",
+		"stats": { "s_type": null, "pv": 67, "f_type": "fighting", "power": 82 },
+		"name": "pancham"
+	},
+	{
+		"item_id": "675",
+		"stats": { "s_type": "dark", "pv": 95, "f_type": "fighting", "power": 124 },
+		"name": "pangoro"
+	},
+	{
+		"item_id": "676",
+		"stats": { "s_type": null, "pv": 75, "f_type": "normal", "power": 80 },
+		"name": "furfrou"
+	},
+	{
+		"item_id": "677",
+		"stats": { "s_type": null, "pv": 62, "f_type": "psychic", "power": 48 },
+		"name": "espurr"
+	},
+	{
+		"item_id": "678",
+		"stats": { "s_type": null, "pv": 74, "f_type": "psychic", "power": 48 },
+		"name": "meowstic-male"
+	},
+	{
+		"item_id": "679",
+		"stats": { "s_type": "ghost", "pv": 45, "f_type": "steel", "power": 80 },
+		"name": "honedge"
+	},
+	{
+		"item_id": "680",
+		"stats": { "s_type": "ghost", "pv": 59, "f_type": "steel", "power": 110 },
+		"name": "doublade"
+	},
+	{
+		"item_id": "681",
+		"stats": { "s_type": "ghost", "pv": 60, "f_type": "steel", "power": 50 },
+		"name": "aegislash-shield"
+	},
+	{
+		"item_id": "682",
+		"stats": { "s_type": null, "pv": 78, "f_type": "fairy", "power": 52 },
+		"name": "spritzee"
+	},
+	{
+		"item_id": "683",
+		"stats": { "s_type": null, "pv": 101, "f_type": "fairy", "power": 72 },
+		"name": "aromatisse"
+	},
+	{
+		"item_id": "684",
+		"stats": { "s_type": null, "pv": 62, "f_type": "fairy", "power": 48 },
+		"name": "swirlix"
+	},
+	{
+		"item_id": "685",
+		"stats": { "s_type": null, "pv": 82, "f_type": "fairy", "power": 80 },
+		"name": "slurpuff"
+	},
+	{
+		"item_id": "686",
+		"stats": { "s_type": "psychic", "pv": 53, "f_type": "dark", "power": 54 },
+		"name": "inkay"
+	},
+	{
+		"item_id": "687",
+		"stats": { "s_type": "psychic", "pv": 86, "f_type": "dark", "power": 92 },
+		"name": "malamar"
+	},
+	{
+		"item_id": "688",
+		"stats": { "s_type": "water", "pv": 42, "f_type": "rock", "power": 52 },
+		"name": "binacle"
+	},
+	{
+		"item_id": "689",
+		"stats": { "s_type": "water", "pv": 72, "f_type": "rock", "power": 105 },
+		"name": "barbaracle"
+	},
+	{
+		"item_id": "690",
+		"stats": { "s_type": "water", "pv": 50, "f_type": "poison", "power": 60 },
+		"name": "skrelp"
+	},
+	{
+		"item_id": "691",
+		"stats": { "s_type": "dragon", "pv": 65, "f_type": "poison", "power": 75 },
+		"name": "dragalge"
+	},
+	{
+		"item_id": "692",
+		"stats": { "s_type": null, "pv": 50, "f_type": "water", "power": 53 },
+		"name": "clauncher"
+	},
+	{
+		"item_id": "693",
+		"stats": { "s_type": null, "pv": 71, "f_type": "water", "power": 73 },
+		"name": "clawitzer"
+	},
+	{
+		"item_id": "694",
+		"stats": {
+			"s_type": "normal",
+			"pv": 44,
+			"f_type": "electric",
+			"power": 38
+		},
+		"name": "helioptile"
+	},
+	{
+		"item_id": "695",
+		"stats": {
+			"s_type": "normal",
+			"pv": 62,
+			"f_type": "electric",
+			"power": 55
+		},
+		"name": "heliolisk"
+	},
+	{
+		"item_id": "696",
+		"stats": { "s_type": "dragon", "pv": 58, "f_type": "rock", "power": 89 },
+		"name": "tyrunt"
+	},
+	{
+		"item_id": "697",
+		"stats": { "s_type": "dragon", "pv": 82, "f_type": "rock", "power": 121 },
+		"name": "tyrantrum"
+	},
+	{
+		"item_id": "698",
+		"stats": { "s_type": "ice", "pv": 77, "f_type": "rock", "power": 59 },
+		"name": "amaura"
+	},
+	{
+		"item_id": "699",
+		"stats": { "s_type": "ice", "pv": 123, "f_type": "rock", "power": 77 },
+		"name": "aurorus"
+	},
+	{
+		"item_id": "700",
+		"stats": { "s_type": null, "pv": 95, "f_type": "fairy", "power": 65 },
+		"name": "sylveon"
+	},
+	{
+		"item_id": "701",
+		"stats": {
+			"s_type": "flying",
+			"pv": 78,
+			"f_type": "fighting",
+			"power": 92
+		},
+		"name": "hawlucha"
+	},
+	{
+		"item_id": "702",
+		"stats": { "s_type": "fairy", "pv": 67, "f_type": "electric", "power": 58 },
+		"name": "dedenne"
+	},
+	{
+		"item_id": "703",
+		"stats": { "s_type": "fairy", "pv": 50, "f_type": "rock", "power": 50 },
+		"name": "carbink"
+	},
+	{
+		"item_id": "704",
+		"stats": { "s_type": null, "pv": 45, "f_type": "dragon", "power": 50 },
+		"name": "goomy"
+	},
+	{
+		"item_id": "705",
+		"stats": { "s_type": null, "pv": 68, "f_type": "dragon", "power": 75 },
+		"name": "sliggoo"
+	},
+	{
+		"item_id": "706",
+		"stats": { "s_type": null, "pv": 90, "f_type": "dragon", "power": 100 },
+		"name": "goodra"
+	},
+	{
+		"item_id": "707",
+		"stats": { "s_type": "fairy", "pv": 57, "f_type": "steel", "power": 80 },
+		"name": "klefki"
+	},
+	{
+		"item_id": "708",
+		"stats": { "s_type": "grass", "pv": 43, "f_type": "ghost", "power": 70 },
+		"name": "phantump"
+	},
+	{
+		"item_id": "709",
+		"stats": { "s_type": "grass", "pv": 85, "f_type": "ghost", "power": 110 },
+		"name": "trevenant"
+	},
+	{
+		"item_id": "710",
+		"stats": { "s_type": "grass", "pv": 49, "f_type": "ghost", "power": 66 },
+		"name": "pumpkaboo-average"
+	},
+	{
+		"item_id": "711",
+		"stats": { "s_type": "grass", "pv": 65, "f_type": "ghost", "power": 90 },
+		"name": "gourgeist-average"
+	},
+	{
+		"item_id": "712",
+		"stats": { "s_type": null, "pv": 55, "f_type": "ice", "power": 69 },
+		"name": "bergmite"
+	},
+	{
+		"item_id": "713",
+		"stats": { "s_type": null, "pv": 95, "f_type": "ice", "power": 117 },
+		"name": "avalugg"
+	},
+	{
+		"item_id": "714",
+		"stats": { "s_type": "dragon", "pv": 40, "f_type": "flying", "power": 30 },
+		"name": "noibat"
+	},
+	{
+		"item_id": "715",
+		"stats": { "s_type": "dragon", "pv": 85, "f_type": "flying", "power": 70 },
+		"name": "noivern"
+	},
+	{
+		"item_id": "716",
+		"stats": { "s_type": null, "pv": 126, "f_type": "fairy", "power": 131 },
+		"name": "xerneas"
+	},
+	{
+		"item_id": "717",
+		"stats": { "s_type": "flying", "pv": 126, "f_type": "dark", "power": 131 },
+		"name": "yveltal"
+	},
+	{
+		"item_id": "718",
+		"stats": {
+			"s_type": "ground",
+			"pv": 108,
+			"f_type": "dragon",
+			"power": 100
+		},
+		"name": "zygarde-50"
+	},
+	{
+		"item_id": "719",
+		"stats": { "s_type": "fairy", "pv": 50, "f_type": "rock", "power": 100 },
+		"name": "diancie"
+	},
+	{
+		"item_id": "720",
+		"stats": { "s_type": "ghost", "pv": 80, "f_type": "psychic", "power": 110 },
+		"name": "hoopa"
+	},
+	{
+		"item_id": "721",
+		"stats": { "s_type": "water", "pv": 80, "f_type": "fire", "power": 110 },
+		"name": "volcanion"
+	},
+	{
+		"item_id": "722",
+		"stats": { "s_type": "flying", "pv": 68, "f_type": "grass", "power": 55 },
+		"name": "rowlet"
+	},
+	{
+		"item_id": "723",
+		"stats": { "s_type": "flying", "pv": 78, "f_type": "grass", "power": 75 },
+		"name": "dartrix"
+	},
+	{
+		"item_id": "724",
+		"stats": { "s_type": "ghost", "pv": 78, "f_type": "grass", "power": 107 },
+		"name": "decidueye"
+	},
+	{
+		"item_id": "725",
+		"stats": { "s_type": null, "pv": 45, "f_type": "fire", "power": 65 },
+		"name": "litten"
+	},
+	{
+		"item_id": "726",
+		"stats": { "s_type": null, "pv": 65, "f_type": "fire", "power": 85 },
+		"name": "torracat"
+	},
+	{
+		"item_id": "727",
+		"stats": { "s_type": "dark", "pv": 95, "f_type": "fire", "power": 115 },
+		"name": "incineroar"
+	},
+	{
+		"item_id": "728",
+		"stats": { "s_type": null, "pv": 50, "f_type": "water", "power": 54 },
+		"name": "popplio"
+	},
+	{
+		"item_id": "729",
+		"stats": { "s_type": null, "pv": 60, "f_type": "water", "power": 69 },
+		"name": "brionne"
+	},
+	{
+		"item_id": "730",
+		"stats": { "s_type": "fairy", "pv": 80, "f_type": "water", "power": 74 },
+		"name": "primarina"
+	},
+	{
+		"item_id": "731",
+		"stats": { "s_type": "flying", "pv": 35, "f_type": "normal", "power": 75 },
+		"name": "pikipek"
+	},
+	{
+		"item_id": "732",
+		"stats": { "s_type": "flying", "pv": 55, "f_type": "normal", "power": 85 },
+		"name": "trumbeak"
+	},
+	{
+		"item_id": "733",
+		"stats": { "s_type": "flying", "pv": 80, "f_type": "normal", "power": 120 },
+		"name": "toucannon"
+	},
+	{
+		"item_id": "734",
+		"stats": { "s_type": null, "pv": 48, "f_type": "normal", "power": 70 },
+		"name": "yungoos"
+	},
+	{
+		"item_id": "735",
+		"stats": { "s_type": null, "pv": 88, "f_type": "normal", "power": 110 },
+		"name": "gumshoos"
+	},
+	{
+		"item_id": "736",
+		"stats": { "s_type": null, "pv": 47, "f_type": "bug", "power": 62 },
+		"name": "grubbin"
+	},
+	{
+		"item_id": "737",
+		"stats": { "s_type": "electric", "pv": 57, "f_type": "bug", "power": 82 },
+		"name": "charjabug"
+	},
+	{
+		"item_id": "738",
+		"stats": { "s_type": "electric", "pv": 77, "f_type": "bug", "power": 70 },
+		"name": "vikavolt"
+	},
+	{
+		"item_id": "739",
+		"stats": { "s_type": null, "pv": 47, "f_type": "fighting", "power": 82 },
+		"name": "crabrawler"
+	},
+	{
+		"item_id": "740",
+		"stats": { "s_type": "ice", "pv": 97, "f_type": "fighting", "power": 132 },
+		"name": "crabominable"
+	},
+	{
+		"item_id": "741",
+		"stats": { "s_type": "flying", "pv": 75, "f_type": "fire", "power": 70 },
+		"name": "oricorio-baile"
+	},
+	{
+		"item_id": "742",
+		"stats": { "s_type": "fairy", "pv": 40, "f_type": "bug", "power": 45 },
+		"name": "cutiefly"
+	},
+	{
+		"item_id": "743",
+		"stats": { "s_type": "fairy", "pv": 60, "f_type": "bug", "power": 55 },
+		"name": "ribombee"
+	},
+	{
+		"item_id": "744",
+		"stats": { "s_type": null, "pv": 45, "f_type": "rock", "power": 65 },
+		"name": "rockruff"
+	},
+	{
+		"item_id": "745",
+		"stats": { "s_type": null, "pv": 75, "f_type": "rock", "power": 115 },
+		"name": "lycanroc-midday"
+	},
+	{
+		"item_id": "746",
+		"stats": { "s_type": null, "pv": 45, "f_type": "water", "power": 20 },
+		"name": "wishiwashi-solo"
+	},
+	{
+		"item_id": "747",
+		"stats": { "s_type": "water", "pv": 50, "f_type": "poison", "power": 53 },
+		"name": "mareanie"
+	},
+	{
+		"item_id": "748",
+		"stats": { "s_type": "water", "pv": 50, "f_type": "poison", "power": 63 },
+		"name": "toxapex"
+	},
+	{
+		"item_id": "749",
+		"stats": { "s_type": null, "pv": 70, "f_type": "ground", "power": 100 },
+		"name": "mudbray"
+	},
+	{
+		"item_id": "750",
+		"stats": { "s_type": null, "pv": 100, "f_type": "ground", "power": 125 },
+		"name": "mudsdale"
+	},
+	{
+		"item_id": "751",
+		"stats": { "s_type": "bug", "pv": 38, "f_type": "water", "power": 40 },
+		"name": "dewpider"
+	},
+	{
+		"item_id": "752",
+		"stats": { "s_type": "bug", "pv": 68, "f_type": "water", "power": 70 },
+		"name": "araquanid"
+	},
+	{
+		"item_id": "753",
+		"stats": { "s_type": null, "pv": 40, "f_type": "grass", "power": 55 },
+		"name": "fomantis"
+	},
+	{
+		"item_id": "754",
+		"stats": { "s_type": null, "pv": 70, "f_type": "grass", "power": 105 },
+		"name": "lurantis"
+	},
+	{
+		"item_id": "755",
+		"stats": { "s_type": "fairy", "pv": 40, "f_type": "grass", "power": 35 },
+		"name": "morelull"
+	},
+	{
+		"item_id": "756",
+		"stats": { "s_type": "fairy", "pv": 60, "f_type": "grass", "power": 45 },
+		"name": "shiinotic"
+	},
+	{
+		"item_id": "757",
+		"stats": { "s_type": "fire", "pv": 48, "f_type": "poison", "power": 44 },
+		"name": "salandit"
+	},
+	{
+		"item_id": "758",
+		"stats": { "s_type": "fire", "pv": 68, "f_type": "poison", "power": 64 },
+		"name": "salazzle"
+	},
+	{
+		"item_id": "759",
+		"stats": {
+			"s_type": "fighting",
+			"pv": 70,
+			"f_type": "normal",
+			"power": 75
+		},
+		"name": "stufful"
+	},
+	{
+		"item_id": "760",
+		"stats": {
+			"s_type": "fighting",
+			"pv": 120,
+			"f_type": "normal",
+			"power": 125
+		},
+		"name": "bewear"
+	},
+	{
+		"item_id": "761",
+		"stats": { "s_type": null, "pv": 42, "f_type": "grass", "power": 30 },
+		"name": "bounsweet"
+	},
+	{
+		"item_id": "762",
+		"stats": { "s_type": null, "pv": 52, "f_type": "grass", "power": 40 },
+		"name": "steenee"
+	},
+	{
+		"item_id": "763",
+		"stats": { "s_type": null, "pv": 72, "f_type": "grass", "power": 120 },
+		"name": "tsareena"
+	},
+	{
+		"item_id": "764",
+		"stats": { "s_type": null, "pv": 51, "f_type": "fairy", "power": 52 },
+		"name": "comfey"
+	},
+	{
+		"item_id": "765",
+		"stats": { "s_type": "psychic", "pv": 90, "f_type": "normal", "power": 60 },
+		"name": "oranguru"
+	},
+	{
+		"item_id": "766",
+		"stats": { "s_type": null, "pv": 100, "f_type": "fighting", "power": 120 },
+		"name": "passimian"
+	},
+	{
+		"item_id": "767",
+		"stats": { "s_type": "water", "pv": 25, "f_type": "bug", "power": 35 },
+		"name": "wimpod"
+	},
+	{
+		"item_id": "768",
+		"stats": { "s_type": "water", "pv": 75, "f_type": "bug", "power": 125 },
+		"name": "golisopod"
+	},
+	{
+		"item_id": "769",
+		"stats": { "s_type": "ground", "pv": 55, "f_type": "ghost", "power": 55 },
+		"name": "sandygast"
+	},
+	{
+		"item_id": "770",
+		"stats": { "s_type": "ground", "pv": 85, "f_type": "ghost", "power": 75 },
+		"name": "palossand"
+	},
+	{
+		"item_id": "771",
+		"stats": { "s_type": null, "pv": 55, "f_type": "water", "power": 60 },
+		"name": "pyukumuku"
+	},
+	{
+		"item_id": "772",
+		"stats": { "s_type": null, "pv": 95, "f_type": "normal", "power": 95 },
+		"name": "type-null"
+	},
+	{
+		"item_id": "773",
+		"stats": { "s_type": null, "pv": 95, "f_type": "normal", "power": 95 },
+		"name": "silvally"
+	},
+	{
+		"item_id": "774",
+		"stats": { "s_type": "flying", "pv": 60, "f_type": "rock", "power": 60 },
+		"name": "minior-red-meteor"
+	},
+	{
+		"item_id": "775",
+		"stats": { "s_type": null, "pv": 65, "f_type": "normal", "power": 115 },
+		"name": "komala"
+	},
+	{
+		"item_id": "776",
+		"stats": { "s_type": "dragon", "pv": 60, "f_type": "fire", "power": 78 },
+		"name": "turtonator"
+	},
+	{
+		"item_id": "777",
+		"stats": { "s_type": "steel", "pv": 65, "f_type": "electric", "power": 98 },
+		"name": "togedemaru"
+	},
+	{
+		"item_id": "778",
+		"stats": { "s_type": "fairy", "pv": 55, "f_type": "ghost", "power": 90 },
+		"name": "mimikyu-disguised"
+	},
+	{
+		"item_id": "779",
+		"stats": { "s_type": "psychic", "pv": 68, "f_type": "water", "power": 105 },
+		"name": "bruxish"
+	},
+	{
+		"item_id": "780",
+		"stats": { "s_type": "dragon", "pv": 78, "f_type": "normal", "power": 60 },
+		"name": "drampa"
+	},
+	{
+		"item_id": "781",
+		"stats": { "s_type": "grass", "pv": 70, "f_type": "ghost", "power": 131 },
+		"name": "dhelmise"
+	},
+	{
+		"item_id": "782",
+		"stats": { "s_type": null, "pv": 45, "f_type": "dragon", "power": 55 },
+		"name": "jangmo-o"
+	},
+	{
+		"item_id": "783",
+		"stats": {
+			"s_type": "fighting",
+			"pv": 55,
+			"f_type": "dragon",
+			"power": 75
+		},
+		"name": "hakamo-o"
+	},
+	{
+		"item_id": "784",
+		"stats": {
+			"s_type": "fighting",
+			"pv": 75,
+			"f_type": "dragon",
+			"power": 110
+		},
+		"name": "kommo-o"
+	},
+	{
+		"item_id": "785",
+		"stats": {
+			"s_type": "fairy",
+			"pv": 70,
+			"f_type": "electric",
+			"power": 115
+		},
+		"name": "tapu-koko"
+	},
+	{
+		"item_id": "786",
+		"stats": { "s_type": "fairy", "pv": 70, "f_type": "psychic", "power": 85 },
+		"name": "tapu-lele"
+	},
+	{
+		"item_id": "787",
+		"stats": { "s_type": "fairy", "pv": 70, "f_type": "grass", "power": 130 },
+		"name": "tapu-bulu"
+	},
+	{
+		"item_id": "788",
+		"stats": { "s_type": "fairy", "pv": 70, "f_type": "water", "power": 75 },
+		"name": "tapu-fini"
+	},
+	{
+		"item_id": "789",
+		"stats": { "s_type": null, "pv": 43, "f_type": "psychic", "power": 29 },
+		"name": "cosmog"
+	},
+	{
+		"item_id": "790",
+		"stats": { "s_type": null, "pv": 43, "f_type": "psychic", "power": 29 },
+		"name": "cosmoem"
+	},
+	{
+		"item_id": "791",
+		"stats": {
+			"s_type": "steel",
+			"pv": 137,
+			"f_type": "psychic",
+			"power": 137
+		},
+		"name": "solgaleo"
+	},
+	{
+		"item_id": "792",
+		"stats": {
+			"s_type": "ghost",
+			"pv": 137,
+			"f_type": "psychic",
+			"power": 113
+		},
+		"name": "lunala"
+	},
+	{
+		"item_id": "793",
+		"stats": { "s_type": "poison", "pv": 109, "f_type": "rock", "power": 53 },
+		"name": "nihilego"
+	},
+	{
+		"item_id": "794",
+		"stats": { "s_type": "fighting", "pv": 107, "f_type": "bug", "power": 139 },
+		"name": "buzzwole"
+	},
+	{
+		"item_id": "795",
+		"stats": { "s_type": "fighting", "pv": 71, "f_type": "bug", "power": 137 },
+		"name": "pheromosa"
+	},
+	{
+		"item_id": "796",
+		"stats": { "s_type": null, "pv": 83, "f_type": "electric", "power": 89 },
+		"name": "xurkitree"
+	},
+	{
+		"item_id": "797",
+		"stats": { "s_type": "flying", "pv": 97, "f_type": "steel", "power": 101 },
+		"name": "celesteela"
+	},
+	{
+		"item_id": "798",
+		"stats": { "s_type": "steel", "pv": 59, "f_type": "grass", "power": 181 },
+		"name": "kartana"
+	},
+	{
+		"item_id": "799",
+		"stats": { "s_type": "dragon", "pv": 223, "f_type": "dark", "power": 101 },
+		"name": "guzzlord"
+	},
+	{
+		"item_id": "800",
+		"stats": { "s_type": null, "pv": 97, "f_type": "psychic", "power": 107 },
+		"name": "necrozma"
+	},
+	{
+		"item_id": "801",
+		"stats": { "s_type": "fairy", "pv": 80, "f_type": "steel", "power": 95 },
+		"name": "magearna"
+	},
+	{
+		"item_id": "802",
+		"stats": {
+			"s_type": "ghost",
+			"pv": 90,
+			"f_type": "fighting",
+			"power": 125
+		},
+		"name": "marshadow"
+	},
+	{
+		"item_id": "803",
+		"stats": { "s_type": null, "pv": 67, "f_type": "poison", "power": 73 },
+		"name": "poipole"
+	},
+	{
+		"item_id": "804",
+		"stats": { "s_type": "dragon", "pv": 73, "f_type": "poison", "power": 73 },
+		"name": "naganadel"
+	},
+	{
+		"item_id": "805",
+		"stats": { "s_type": "steel", "pv": 61, "f_type": "rock", "power": 131 },
+		"name": "stakataka"
+	},
+	{
+		"item_id": "806",
+		"stats": { "s_type": "ghost", "pv": 53, "f_type": "fire", "power": 127 },
+		"name": "blacephalon"
+	},
+	{
+		"item_id": "807",
+		"stats": { "s_type": null, "pv": 88, "f_type": "electric", "power": 112 },
+		"name": "zeraora"
+	},
+	{
+		"item_id": "808",
+		"stats": { "s_type": null, "pv": 46, "f_type": "steel", "power": 65 },
+		"name": "meltan"
+	},
+	{
+		"item_id": "809",
+		"stats": { "s_type": null, "pv": 135, "f_type": "steel", "power": 143 },
+		"name": "melmetal"
+	},
+	{
+		"item_id": "810",
+		"stats": { "s_type": null, "pv": 50, "f_type": "grass", "power": 65 },
+		"name": "grookey"
+	},
+	{
+		"item_id": "811",
+		"stats": { "s_type": null, "pv": 70, "f_type": "grass", "power": 85 },
+		"name": "thwackey"
+	},
+	{
+		"item_id": "812",
+		"stats": { "s_type": null, "pv": 100, "f_type": "grass", "power": 125 },
+		"name": "rillaboom"
+	},
+	{
+		"item_id": "813",
+		"stats": { "s_type": null, "pv": 50, "f_type": "fire", "power": 71 },
+		"name": "scorbunny"
+	},
+	{
+		"item_id": "814",
+		"stats": { "s_type": null, "pv": 65, "f_type": "fire", "power": 86 },
+		"name": "raboot"
+	},
+	{
+		"item_id": "815",
+		"stats": { "s_type": null, "pv": 80, "f_type": "fire", "power": 116 },
+		"name": "cinderace"
+	},
+	{
+		"item_id": "816",
+		"stats": { "s_type": null, "pv": 50, "f_type": "water", "power": 40 },
+		"name": "sobble"
+	},
+	{
+		"item_id": "817",
+		"stats": { "s_type": null, "pv": 65, "f_type": "water", "power": 60 },
+		"name": "drizzile"
+	},
+	{
+		"item_id": "818",
+		"stats": { "s_type": null, "pv": 70, "f_type": "water", "power": 85 },
+		"name": "inteleon"
+	},
+	{
+		"item_id": "819",
+		"stats": { "s_type": null, "pv": 70, "f_type": "normal", "power": 55 },
+		"name": "skwovet"
+	},
+	{
+		"item_id": "820",
+		"stats": { "s_type": null, "pv": 120, "f_type": "normal", "power": 95 },
+		"name": "greedent"
+	},
+	{
+		"item_id": "821",
+		"stats": { "s_type": null, "pv": 38, "f_type": "flying", "power": 47 },
+		"name": "rookidee"
+	},
+	{
+		"item_id": "822",
+		"stats": { "s_type": null, "pv": 68, "f_type": "flying", "power": 67 },
+		"name": "corvisquire"
+	},
+	{
+		"item_id": "823",
+		"stats": { "s_type": "steel", "pv": 98, "f_type": "flying", "power": 87 },
+		"name": "corviknight"
+	},
+	{
+		"item_id": "824",
+		"stats": { "s_type": null, "pv": 25, "f_type": "bug", "power": 20 },
+		"name": "blipbug"
+	},
+	{
+		"item_id": "825",
+		"stats": { "s_type": "psychic", "pv": 50, "f_type": "bug", "power": 35 },
+		"name": "dottler"
+	},
+	{
+		"item_id": "826",
+		"stats": { "s_type": "psychic", "pv": 60, "f_type": "bug", "power": 45 },
+		"name": "orbeetle"
+	},
+	{
+		"item_id": "827",
+		"stats": { "s_type": null, "pv": 40, "f_type": "dark", "power": 28 },
+		"name": "nickit"
+	},
+	{
+		"item_id": "828",
+		"stats": { "s_type": null, "pv": 70, "f_type": "dark", "power": 58 },
+		"name": "thievul"
+	},
+	{
+		"item_id": "829",
+		"stats": { "s_type": null, "pv": 40, "f_type": "grass", "power": 40 },
+		"name": "gossifleur"
+	},
+	{
+		"item_id": "830",
+		"stats": { "s_type": null, "pv": 60, "f_type": "grass", "power": 50 },
+		"name": "eldegoss"
+	},
+	{
+		"item_id": "831",
+		"stats": { "s_type": null, "pv": 42, "f_type": "normal", "power": 40 },
+		"name": "wooloo"
+	},
+	{
+		"item_id": "832",
+		"stats": { "s_type": null, "pv": 72, "f_type": "normal", "power": 80 },
+		"name": "dubwool"
+	},
+	{
+		"item_id": "833",
+		"stats": { "s_type": null, "pv": 50, "f_type": "water", "power": 64 },
+		"name": "chewtle"
+	},
+	{
+		"item_id": "834",
+		"stats": { "s_type": "rock", "pv": 90, "f_type": "water", "power": 115 },
+		"name": "drednaw"
+	},
+	{
+		"item_id": "835",
+		"stats": { "s_type": null, "pv": 59, "f_type": "electric", "power": 45 },
+		"name": "yamper"
+	},
+	{
+		"item_id": "836",
+		"stats": { "s_type": null, "pv": 69, "f_type": "electric", "power": 90 },
+		"name": "boltund"
+	},
+	{
+		"item_id": "837",
+		"stats": { "s_type": null, "pv": 30, "f_type": "rock", "power": 40 },
+		"name": "rolycoly"
+	},
+	{
+		"item_id": "838",
+		"stats": { "s_type": "fire", "pv": 80, "f_type": "rock", "power": 60 },
+		"name": "carkol"
+	},
+	{
+		"item_id": "839",
+		"stats": { "s_type": "fire", "pv": 110, "f_type": "rock", "power": 80 },
+		"name": "coalossal"
+	},
+	{
+		"item_id": "840",
+		"stats": { "s_type": "dragon", "pv": 40, "f_type": "grass", "power": 40 },
+		"name": "applin"
+	},
+	{
+		"item_id": "841",
+		"stats": { "s_type": "dragon", "pv": 70, "f_type": "grass", "power": 110 },
+		"name": "flapple"
+	},
+	{
+		"item_id": "842",
+		"stats": { "s_type": "dragon", "pv": 110, "f_type": "grass", "power": 85 },
+		"name": "appletun"
+	},
+	{
+		"item_id": "843",
+		"stats": { "s_type": null, "pv": 52, "f_type": "ground", "power": 57 },
+		"name": "silicobra"
+	},
+	{
+		"item_id": "844",
+		"stats": { "s_type": null, "pv": 72, "f_type": "ground", "power": 107 },
+		"name": "sandaconda"
+	},
+	{
+		"item_id": "845",
+		"stats": { "s_type": "water", "pv": 70, "f_type": "flying", "power": 85 },
+		"name": "cramorant"
+	},
+	{
+		"item_id": "846",
+		"stats": { "s_type": null, "pv": 41, "f_type": "water", "power": 63 },
+		"name": "arrokuda"
+	},
+	{
+		"item_id": "847",
+		"stats": { "s_type": null, "pv": 61, "f_type": "water", "power": 123 },
+		"name": "barraskewda"
+	},
+	{
+		"item_id": "848",
+		"stats": {
+			"s_type": "poison",
+			"pv": 40,
+			"f_type": "electric",
+			"power": 38
+		},
+		"name": "toxel"
+	},
+	{
+		"item_id": "849",
+		"stats": {
+			"s_type": "poison",
+			"pv": 75,
+			"f_type": "electric",
+			"power": 98
+		},
+		"name": "toxtricity-amped"
+	},
+	{
+		"item_id": "850",
+		"stats": { "s_type": "bug", "pv": 50, "f_type": "fire", "power": 65 },
+		"name": "sizzlipede"
+	},
+	{
+		"item_id": "851",
+		"stats": { "s_type": "bug", "pv": 100, "f_type": "fire", "power": 115 },
+		"name": "centiskorch"
+	},
+	{
+		"item_id": "852",
+		"stats": { "s_type": null, "pv": 50, "f_type": "fighting", "power": 68 },
+		"name": "clobbopus"
+	},
+	{
+		"item_id": "853",
+		"stats": { "s_type": null, "pv": 80, "f_type": "fighting", "power": 118 },
+		"name": "grapploct"
+	},
+	{
+		"item_id": "854",
+		"stats": { "s_type": null, "pv": 40, "f_type": "ghost", "power": 45 },
+		"name": "sinistea"
+	},
+	{
+		"item_id": "855",
+		"stats": { "s_type": null, "pv": 60, "f_type": "ghost", "power": 65 },
+		"name": "polteageist"
+	},
+	{
+		"item_id": "856",
+		"stats": { "s_type": null, "pv": 42, "f_type": "psychic", "power": 30 },
+		"name": "hatenna"
+	},
+	{
+		"item_id": "857",
+		"stats": { "s_type": null, "pv": 57, "f_type": "psychic", "power": 40 },
+		"name": "hattrem"
+	},
+	{
+		"item_id": "858",
+		"stats": { "s_type": "fairy", "pv": 57, "f_type": "psychic", "power": 90 },
+		"name": "hatterene"
+	},
+	{
+		"item_id": "859",
+		"stats": { "s_type": "fairy", "pv": 45, "f_type": "dark", "power": 45 },
+		"name": "impidimp"
+	},
+	{
+		"item_id": "860",
+		"stats": { "s_type": "fairy", "pv": 65, "f_type": "dark", "power": 60 },
+		"name": "morgrem"
+	},
+	{
+		"item_id": "861",
+		"stats": { "s_type": "fairy", "pv": 95, "f_type": "dark", "power": 120 },
+		"name": "grimmsnarl"
+	},
+	{
+		"item_id": "862",
+		"stats": { "s_type": "normal", "pv": 93, "f_type": "dark", "power": 90 },
+		"name": "obstagoon"
+	},
+	{
+		"item_id": "863",
+		"stats": { "s_type": null, "pv": 70, "f_type": "steel", "power": 110 },
+		"name": "perrserker"
+	},
+	{
+		"item_id": "864",
+		"stats": { "s_type": null, "pv": 60, "f_type": "ghost", "power": 95 },
+		"name": "cursola"
+	},
+	{
+		"item_id": "865",
+		"stats": { "s_type": null, "pv": 62, "f_type": "fighting", "power": 135 },
+		"name": "sirfetchd"
+	},
+	{
+		"item_id": "866",
+		"stats": { "s_type": "psychic", "pv": 80, "f_type": "ice", "power": 85 },
+		"name": "mr-rime"
+	},
+	{
+		"item_id": "867",
+		"stats": { "s_type": "ghost", "pv": 58, "f_type": "ground", "power": 95 },
+		"name": "runerigus"
+	},
+	{
+		"item_id": "868",
+		"stats": { "s_type": null, "pv": 45, "f_type": "fairy", "power": 40 },
+		"name": "milcery"
+	},
+	{
+		"item_id": "869",
+		"stats": { "s_type": null, "pv": 65, "f_type": "fairy", "power": 60 },
+		"name": "alcremie"
+	},
+	{
+		"item_id": "870",
+		"stats": { "s_type": null, "pv": 65, "f_type": "fighting", "power": 100 },
+		"name": "falinks"
+	},
+	{
+		"item_id": "871",
+		"stats": { "s_type": null, "pv": 48, "f_type": "electric", "power": 101 },
+		"name": "pincurchin"
+	},
+	{
+		"item_id": "872",
+		"stats": { "s_type": "bug", "pv": 30, "f_type": "ice", "power": 25 },
+		"name": "snom"
+	},
+	{
+		"item_id": "873",
+		"stats": { "s_type": "bug", "pv": 70, "f_type": "ice", "power": 65 },
+		"name": "frosmoth"
+	},
+	{
+		"item_id": "874",
+		"stats": { "s_type": null, "pv": 100, "f_type": "rock", "power": 125 },
+		"name": "stonjourner"
+	},
+	{
+		"item_id": "875",
+		"stats": { "s_type": null, "pv": 75, "f_type": "ice", "power": 80 },
+		"name": "eiscue-ice"
+	},
+	{
+		"item_id": "876",
+		"stats": { "s_type": "normal", "pv": 60, "f_type": "psychic", "power": 65 },
+		"name": "indeedee-male"
+	},
+	{
+		"item_id": "877",
+		"stats": { "s_type": "dark", "pv": 58, "f_type": "electric", "power": 95 },
+		"name": "morpeko-full-belly"
+	},
+	{
+		"item_id": "878",
+		"stats": { "s_type": null, "pv": 72, "f_type": "steel", "power": 80 },
+		"name": "cufant"
+	},
+	{
+		"item_id": "879",
+		"stats": { "s_type": null, "pv": 122, "f_type": "steel", "power": 130 },
+		"name": "copperajah"
+	},
+	{
+		"item_id": "880",
+		"stats": {
+			"s_type": "dragon",
+			"pv": 90,
+			"f_type": "electric",
+			"power": 100
+		},
+		"name": "dracozolt"
+	},
+	{
+		"item_id": "881",
+		"stats": { "s_type": "ice", "pv": 90, "f_type": "electric", "power": 100 },
+		"name": "arctozolt"
+	},
+	{
+		"item_id": "882",
+		"stats": { "s_type": "dragon", "pv": 90, "f_type": "water", "power": 90 },
+		"name": "dracovish"
+	},
+	{
+		"item_id": "883",
+		"stats": { "s_type": "ice", "pv": 90, "f_type": "water", "power": 90 },
+		"name": "arctovish"
+	},
+	{
+		"item_id": "884",
+		"stats": { "s_type": "dragon", "pv": 70, "f_type": "steel", "power": 95 },
+		"name": "duraludon"
+	},
+	{
+		"item_id": "885",
+		"stats": { "s_type": "ghost", "pv": 28, "f_type": "dragon", "power": 60 },
+		"name": "dreepy"
+	},
+	{
+		"item_id": "886",
+		"stats": { "s_type": "ghost", "pv": 68, "f_type": "dragon", "power": 80 },
+		"name": "drakloak"
+	},
+	{
+		"item_id": "887",
+		"stats": { "s_type": "ghost", "pv": 88, "f_type": "dragon", "power": 120 },
+		"name": "dragapult"
+	},
+	{
+		"item_id": "888",
+		"stats": { "s_type": null, "pv": 92, "f_type": "fairy", "power": 130 },
+		"name": "zacian"
+	},
+	{
+		"item_id": "889",
+		"stats": { "s_type": null, "pv": 92, "f_type": "fighting", "power": 130 },
+		"name": "zamazenta"
+	},
+	{
+		"item_id": "890",
+		"stats": { "s_type": "dragon", "pv": 140, "f_type": "poison", "power": 85 },
+		"name": "eternatus"
+	},
+	{
+		"item_id": "891",
+		"stats": { "s_type": null, "pv": 60, "f_type": "fighting", "power": 90 },
+		"name": "kubfu"
+	},
+	{
+		"item_id": "892",
+		"stats": {
+			"s_type": "dark",
+			"pv": 100,
+			"f_type": "fighting",
+			"power": 130
+		},
+		"name": "urshifu-single-strike"
+	},
+	{
+		"item_id": "893",
+		"stats": { "s_type": "grass", "pv": 105, "f_type": "dark", "power": 120 },
+		"name": "zarude"
+	},
+	{
+		"item_id": "894",
+		"stats": { "s_type": null, "pv": 80, "f_type": "electric", "power": 100 },
+		"name": "regieleki"
+	},
+	{
+		"item_id": "895",
+		"stats": { "s_type": null, "pv": 200, "f_type": "dragon", "power": 100 },
+		"name": "regidrago"
+	},
+	{
+		"item_id": "896",
+		"stats": { "s_type": null, "pv": 100, "f_type": "ice", "power": 145 },
+		"name": "glastrier"
+	},
+	{
+		"item_id": "897",
+		"stats": { "s_type": null, "pv": 100, "f_type": "ghost", "power": 65 },
+		"name": "spectrier"
+	},
+	{
+		"item_id": "898",
+		"stats": { "s_type": "grass", "pv": 100, "f_type": "psychic", "power": 80 },
+		"name": "calyrex"
+	},
+	{
+		"item_id": "899",
+		"stats": {
+			"s_type": "psychic",
+			"pv": 103,
+			"f_type": "normal",
+			"power": 105
+		},
+		"name": "wyrdeer"
+	},
+	{
+		"item_id": "900",
+		"stats": { "s_type": "rock", "pv": 70, "f_type": "bug", "power": 135 },
+		"name": "kleavor"
+	},
+	{
+		"item_id": "901",
+		"stats": {
+			"s_type": "normal",
+			"pv": 130,
+			"f_type": "ground",
+			"power": 140
+		},
+		"name": "ursaluna"
+	},
+	{
+		"item_id": "902",
+		"stats": { "s_type": "ghost", "pv": 120, "f_type": "water", "power": 112 },
+		"name": "basculegion-male"
+	},
+	{
+		"item_id": "903",
+		"stats": {
+			"s_type": "poison",
+			"pv": 80,
+			"f_type": "fighting",
+			"power": 130
+		},
+		"name": "sneasler"
+	},
+	{
+		"item_id": "904",
+		"stats": { "s_type": "poison", "pv": 85, "f_type": "dark", "power": 115 },
+		"name": "overqwil"
+	},
+	{
+		"item_id": "905",
+		"stats": { "s_type": "flying", "pv": 74, "f_type": "fairy", "power": 115 },
+		"name": "enamorus-incarnate"
+	}
+]
