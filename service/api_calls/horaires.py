@@ -1,6 +1,6 @@
 import requests
 
-API_KEY="AIzaSyDlw0WI07LdmH6kOa-uM_JaJeiQAcaqZp8"
+API_KEY=""
 def get_id(name,coordonates):
     url = "https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=nantes%20restaurant%20"+name+"&inputtype=textquery&fields=place_id&locationbias=circle%3A10000%"+str(coordonates[0])+"%2C"+str(coordonates[1])+"&fields=formatted_address%2Cname%2Crating%2Copening_hours%2Cgeometry&key="+API_KEY
     payload = {}
