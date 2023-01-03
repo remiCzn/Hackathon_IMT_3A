@@ -1,0 +1,151 @@
+[
+  {
+    "datasetid": "234400034_070-008_offre-touristique-restaurants-rpdl@paysdelaloire",
+    "recordid": "1a4b9c2392da69c0fa1cc1e1b0e7284574b13ddd",
+    "fields": {
+      "longitude": -2.17408,
+      "commune": "SAINT-BREVIN-LES-PINS",
+      "localisation": [
+        47.2287,
+        -2.17408
+      ],
+      "capacitenbcouvertsterrasse": 60,
+      "latitude": 47.2287,
+      "commmail": "7beaufort@wanadoo.fr",
+      "capacitenbcouverts": 50,
+      "departement": "Loire-Atlantique",
+      "classementguides": "Guide du Routard Pays de la Loire;Le petit fut\u00e9",
+      "type": "Restaurant",
+      "codeinseecommune": 44154,
+      "commweb": "https://www.facebook.com/pages/La-Cantine-Du-7/467521496639322",
+      "codepostal": 44250,
+      "commtel": "02 40 27 03 03",
+      "modepaiement": "Cartes bancaires;Tickets Restaurant",
+      "nomoffre": "LA CANTINE DU 7",
+      "categorie": "Cuisine traditionnelle",
+      "ouverturegranule": "01/01/2018||31/12/2018||||||||||||||||||||||12:00||14:00||19:00||22:00||12:00||14:00||19:00||22:00||12:00||14:00||19:00||22:00||12:00||14:00||19:00||22:00||12:00||14:00||||",
+      "services": "WiFi",
+      "adresse2": "10 All\u00e9e des Embruns"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -2.17408,
+        47.2287
+      ]
+    },
+    "opened": [1,1,0,0,1,1,1,1,1,1,1,1,1,1]
+  },
+  {
+    "datasetid": "234400034_070-008_offre-touristique-restaurants-rpdl@paysdelaloire",
+    "fields": {
+      "longitude": -1.5757685,
+      "languesparleesaccueil": "Anglais;Fran\u00e7ais",
+      "resaenligne": "||http://www.nantes-tourisme.com/book/395237||||||",
+      "latitude": 47.2112984,
+      "departement": "Loire-Atlantique",
+      "classementguides": "Bottin Gourmand",
+      "type": "Restaurant",
+      "commweb": "http://www.lacantinedugeneral.fr",
+      "commtel": "02 28 00 63 84",
+      "modepaiement": "Cartes bancaires;Ch\u00e8ques bancaires et postaux;Tickets Restaurant",
+      "nomoffre": "LA CANTINE DU GENERAL",
+      "categorie": "Cuisine traditionnelle",
+      "resaenligneouinon": "oui",
+      "adresse1": "36 boulevard de Launay",
+      "capacitenbsalles": 2,
+      "services": "Service en terrasse",
+      "ouverturealannee": "oui",
+      "commune": "NANTES",
+      "localisation": [
+        47.2112984,
+        -1.5757685
+      ],
+      "capacitenbcouvertsterrasse": 35,
+      "accueilgroupemax": 50,
+      "capacitenbcouverts": 90,
+      "codeinseecommune": 44109,
+      "codepostal": 44100,
+      "accueilgroupe": "oui"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -1.5757685,
+        47.2112984
+      ]
+    },
+    "opened": [1,1,0,0,1,1,1,1,1,1,1,1,1,1],
+    "record_timestamp": "2023-01-03T07:06:00+01:00",
+    "recordid": "e2a26afd546585e0591a620ae1656e104c16d363"
+  },
+  {
+    "datasetid": "234400034_070-008_offre-touristique-restaurants-rpdl@paysdelaloire",
+    "recordid": "b2b7974303a994fdf64558ba470e3dc58ee4e2f1",
+    "fields": {
+      "longitude": -2.31804,
+      "commune": "PORNICHET",
+      "localisation": [
+        47.24534,
+        -2.31804
+      ],
+      "latitude": 47.24534,
+      "commmail": "la.caravelle0085@orange.fr",
+      "departement": "Loire-Atlantique",
+      "type": "Restaurant",
+      "codeinseecommune": 44132,
+      "codepostal": 44380,
+      "commtel": "02 40 61 09 10",
+      "nomoffre": "LA CARAVELLE",
+      "ouverturegranule": "01/01/2022||31/12/2022||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||",
+      "adresse2": "21 avenue du Littoral"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -2.31804,
+        47.24534
+      ]
+    },
+    "opened": [1,1,0,0,1,1,1,1,1,1,1,1,1,1],
+    "record_timestamp": "2023-01-03T07:06:00+01:00"
+  },
+  {
+    "datasetid": "234400034_070-008_offre-touristique-restaurants-rpdl@paysdelaloire",
+    "recordid": "11d4561b8a451c55ba4956b1d152ff959968fce6",
+    "fields": {
+      "accueilgroupemin": 10,
+      "longitude": -1.190753,
+      "commune": "MESANGER",
+      "localisation": [
+        47.4156924,
+        -1.190753
+      ],
+      "latitude": 47.4156924,
+      "commmail": "contact@le7detable.fr",
+      "plateformeurl": "Facebook||http://www.facebook.com/pages/Le-7-de-table/127346090704605",
+      "departement": "Loire-Atlantique",
+      "codeinseecommune": 44096,
+      "commweb": "http://www.le7detable.fr",
+      "codepostal": 44522,
+      "commtel": "02 51 14 04 14",
+      "accueilgroupe": "oui",
+      "modepaiement": "Cartes bancaires;Ch\u00e8ques bancaires et postaux;Ch\u00e8ques Vacances;Esp\u00e8ces;Tickets Restaurant",
+      "nomoffre": "LA CAVE DU 7",
+      "categorie": "Bistrot / bar \u00e0 vin",
+      "adresse3": "BP 80213",
+      "services": "Plats \u00e0 emporter / Covid-19;WiFi",
+      "adresse2": "580 Rue de l'Industrie",
+      "labels": "Vignobles et d\u00e9couvertes",
+      "ouverturealannee": "oui"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -1.190753,
+        47.4156924
+      ]
+    },
+    "opened": [1,1,0,0,1,1,1,1,1,1,1,1,1,1]
+  }
+]
