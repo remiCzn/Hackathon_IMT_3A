@@ -1,0 +1,127 @@
+[
+    {
+        "datasetid": "244400404_equipements-publics-nantes-metropole", 
+        "recordid": "5a641846e9ce480cd41046a592bb61c285c92c87", 
+        "fields": {
+            "site_web": "http://bm.nantes.fr", 
+            "geo_shape": {
+                "coordinates": [-1.5362150097176794, 47.2199674658948], 
+                "type": "Point"
+                }, 
+            "url_nantesfr": "https://metropole.nantes.fr/infonantes/equipement/E16", 
+            "adresse": "6 Cour Jules Durand", 
+            "telephone": "02 40 41 95 65", 
+            "idobj_equipub": "16", 
+            "theme": "Culture", 
+            "nom_complet": "Biblioth\u00e8que de la Manufacture", 
+            "commune": "Nantes", 
+            "code_postal": "44000", 
+            "nom": "Biblioth\u00e8que Manufacture", 
+            "pmr": "Non", 
+            "categorie": "M\u00e9diath\u00e8que", 
+            "type": "Biblioth\u00e8que", 
+            "gid": "1234"
+        }, 
+        "record_timestamp": "2023-01-03T07:00:03.164+01:00",
+        "opened": [1,1,0,0,1,1,1,1,1,1,1,1,1,1] 
+    },
+    {
+        "datasetid": "244400404_equipements-publics-nantes-metropole",
+        "recordid": "bef0db0672cc764b59004e3cb8a3c2a0229f329e", 
+        "fields": {
+            "site_web": "http://www.expressionlivre.fr/", 
+            "geo_shape": {
+                "coordinates": [-1.5338088134938879, 47.192430321563215], 
+                "type": "Point"
+                }, 
+            "url_nantesfr": "https://metropole.nantes.fr/infonantes/equipement/E4148", 
+            "adresse": "56 Rue de la Ripossi\u00e8re", 
+            "telephone": "02 40 75 37 23", 
+            "idobj_equipub": "4148", 
+            "theme": "Culture", 
+            "nom_complet": "Biblioth\u00e8que Expression Livre", 
+            "commune": "Nantes", 
+            "code_postal": "44200", 
+            "nom": "Expression Livre", 
+            "pmr": "Non", 
+            "categorie": "M\u00e9diath\u00e8que", 
+            "type": "Biblioth\u00e8que", 
+            "gid": "1253"
+            }, 
+        "record_timestamp": "2023-01-03T07:00:03.164+01:00",
+        "opened": [1,1,0,0,1,1,1,1,1,1,1,1,1,1] 
+    },
+    {
+        "datasetid": "244400404_equipements-publics-nantes-metropole", 
+        "recordid": "aab99e0e4ae607eb7292232c3f455b24f960ee09", 
+        "fields": {
+            "site_web": "https://www.leslaboratoiresvivants.com/", 
+            "geo_shape": {
+                "coordinates": [-1.5689361234428787, 47.215627980819754], 
+                "type": "Point"
+                }, 
+            "url_nantesfr": "https://metropole.nantes.fr/infonantes/equipement/E4054", 
+            "adresse": "18 Rue Colbert", 
+            "idobj_equipub": "4054", 
+            "theme": "Culture", 
+            "nom_complet": "Th\u00e9\u00e2tre Francine Vasse", 
+            "commune": "Nantes", 
+            "code_postal": "44000", 
+            "nom": "Th\u00e9\u00e2tre Francine Vasse", 
+            "pmr": "Oui", 
+            "categorie": "Salle de spectacle", 
+            "gid": "1351"
+            }, 
+        "record_timestamp": "2023-01-03T07:00:03.164+01:00",
+        "opened": [0,0,1,1,1,1,1,1,1,1,1,1,1,1] 
+    },
+    {
+        "datasetid": "244400404_equipements-publics-nantes-metropole",
+        "recordid": "a6174cb78ff067e24946e860caecf679506f25f3",
+        "fields": {
+            "geo_shape": {
+                "coordinates": [-1.5526682220912356, 47.18321000810705],
+                "type": "Point"
+            }, 
+            "url_nantesfr": "https://metropole.nantes.fr/infonantes/equipement/E3166", 
+            "adresse": "24 Rue de la Balini\u00e8re", 
+            "telephone": "02 51 70 78 20", 
+            "idobj_equipub": "3166", 
+            "theme": "Culture", 
+            "nom_complet": "Centre Musical de La Balini\u00e8re", 
+            "commune": "Rez\u00e9", 
+            "code_postal": "44400", 
+            "nom": "C. Musical La Balini\u00e8re", 
+            "pmr": "Oui", 
+            "categorie": "Salle de spectacle", 
+            "gid": "1428"
+        }, 
+        "record_timestamp": "2023-01-03T07:00:03.164+01:00",
+        "opened": [1,1,1,1,1,1,1,1,1,1,1,1,1,1] 
+    },
+    {
+        "datasetid": "244400404_equipements-publics-nantes-metropole", 
+        "recordid": "a6174cb78ff067e24946e860caecf679506f25f3", 
+        "fields": {
+            "geo_shape": {
+                "coordinates": [-1.5526682220912356, 47.18321000810705], 
+                "type": "Point"
+                }, 
+            "url_nantesfr": "https://metropole.nantes.fr/infonantes/equipement/E3166", 
+            "adresse": "24 Rue de la Balini\u00e8re", 
+            "telephone": "02 51 70 78 20", 
+            "idobj_equipub": "3166", 
+            "theme": "Culture", 
+            "nom_complet": "Centre Musical de La Balini\u00e8re", 
+            "commune": "Rez\u00e9", 
+            "code_postal": "44400", 
+            "nom": "C. Musical La Balini\u00e8re", 
+            "pmr": "Oui", 
+            "categorie": "Salle de spectacle", 
+            "gid": "1428"
+            }, 
+        "record_timestamp": "2023-01-03T07:00:03.164+01:00",
+        "opened": [1,0,0,0,0,0,0,0,0,1,1,1,1,1] 
+    }
+
+]
