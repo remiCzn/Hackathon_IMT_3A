@@ -37,4 +37,4 @@ jobs:
           USERNAME: ${{ secrets.USERNAME }}
           PORT: ${{ secrets.PORT }}
           KEY: ${{ secrets.SSHKEY }}
-          script: cd /home/${{ secrets.USERNAME }} && docker-compose up -d
+          script: cd /home/${{ secrets.USERNAME }} && docker compose up -d
