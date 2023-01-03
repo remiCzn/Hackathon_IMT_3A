@@ -1,6 +1,8 @@
-from flask import Flask, jsonify, make_response
+from flask import Flask, make_response
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 PORT = 3001
 HOST = '0.0.0.0'
@@ -8,7 +10,10 @@ HOST = '0.0.0.0'
 
 @app.route("/", methods=['GET'])
 def home():
-    return "<h1 style='color:blue'>Welcome</h1>"
+    res = {
+        "bonjour": "bonjour"
+    }
+    return make_response(res, 200)
 
 
 if __name__ == "__main__":
