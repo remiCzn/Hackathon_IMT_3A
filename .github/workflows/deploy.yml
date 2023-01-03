@@ -10,32 +10,33 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
-jobs:
-  # This workflow contains a single job called "build"
-  build:
-    runs-on: ubuntu-latest
+# jobs:
+#   # This workflow contains a single job called "build"
+#   build:
+#     runs-on: ubuntu-latest
 
-    steps:
-      - uses: actions/checkout@v3
+#     steps:
+#       - uses: actions/checkout@v3
 
-      - name: Copy repository contents via scp
-        uses: appleboy/scp-action@master
-        env:
-          HOST: ${{ secrets.HOST }}
-          USERNAME: ${{ secrets.USERNAME }}
-          PORT: ${{ secrets.PORT }}
-          KEY: ${{ secrets.SSHKEY }}
-        with:
-          source: "."
-          target: "/home/${{ secrets.USERNAME }}/test"
+#       - name: Copy repository contents via scp
+#         uses: appleboy/scp-action@master
+#         env:
+#           HOST: ${{ secrets.HOST }}
+#           USERNAME: ${{ secrets.USERNAME }}
+#           PORT: ${{ secrets.PORT }}
+#           KEY: ${{ secrets.SSHKEY }}
+#         with:
+#           source: "."
+#           target: "/home/${{ secrets.USERNAME }}/test"
 
-      - name: Executing remote command
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.HOST }}
-          USERNAME: ${{ secrets.USERNAME }}
-          PORT: ${{ secrets.PORT }}
-          KEY: ${{ secrets.SSHKEY }}
-          script: docker-compose -f /home/${{ secrets.USERNAME }}/test/docker-compose.yml up -d
+#       - name: Executing remote command
+#         env:
+#           EMPLACEMENT: /home/${{ secrets.USERNAME }}/test/
+#         uses: appleboy/ssh-action@master
+#         with:
+#           host: ${{ secrets.HOST }}
+#           USERNAME: ${{ secrets.USERNAME }}
+#           PORT: ${{ secrets.PORT }}
+#           KEY: ${{ secrets.SSHKEY }}
+#           script: docker-compose --env-file ${EMPLACEMENT}/.env -f ${EMPLACEMENT}/docker-compose.yml up -d
