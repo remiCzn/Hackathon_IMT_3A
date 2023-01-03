@@ -1,8 +1,0 @@
-{
-	"stats": [
-		{
-			"username": "bob",
-			"gamestats": [{ "game_id": "pokefumi", "win": 0, "lose": 0 }]
-		}
-	]
-}
