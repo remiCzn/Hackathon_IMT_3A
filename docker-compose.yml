@@ -9,3 +9,8 @@ services:
     build: ./service/frontend
     ports:
       - "3000:3000"
+
+  nginx:
+    build: ./service/nginx
+    ports:
+      - 80:80
