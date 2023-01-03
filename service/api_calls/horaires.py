@@ -14,30 +14,32 @@ def get_horaires(id):
     payload = {}
     headers = {}
     response = requests.request("GET", url, headers=headers, data=payload)
-    return(response.json()["result"]["current_opening_hours"]["weekday_text"])
+    return(response.json()["result"]['current_opening_hours']['periods'])
 
 
 def encode_horaires(horaires):
-    code=[]
+    code=[[False, False],[False,False],[False,False],[False,False],[False,False],[False,False],[False,False]]
     for d in horaires:
-        day,times = str(d).split(':',1)
-        times = times.strip().replace('\u2009','')
-        if times == 'Open 24 hours':
-            code.append(True)
-        elif times == 'Closed':
-            code.append(False)
-        else:
-            morning, evening = times.split('–',1)
-            morning, evening = morning.split(' '), evening.split(' ')
-            if len(morning)>1:
-                morning_h,morning_t = morning[0], morning[1].split()[0]
-                print(morning_h,morning_t)
-            else:
-                print(morning)
+        for action,time in d.items():
+            if ((action == 'open') & (int(time['time'])>= 800) & (int(time['time'])<1100))|((action == 'close') & ((int(time['time'])>= 900) & (int(time['time'])<1300))):
+                code[int(time['day'])][0]=True
+            if ((action =='close') & (int(time['time'])>=1500 | (int(time['time'])<=500)))|((action =='open') & (int(time['time'])>=1300)):
+                code[int(time['day'])][1]=True
     print(code)
+    res = ""
+    for day in code:
+        for demi in day:
+           if (demi):
+               res+='1'
+           else:
+               res+='0'
+    sunday = res[0]+res[1]
+    return res[2:]+sunday
 
 
-restaurant_name = "mcdo"
+
+
+restaurant_name = "sain"
 location = (47.218371,-1.553621)
 
 id = get_id(restaurant_name,location)
@@ -45,3 +47,4 @@ print("ID:", id)
 horaires =get_horaires(id)
 print(horaires)
 code = encode_horaires(horaires)
+print(code)
