@@ -27,3 +27,8 @@ services:
       - "${PORT_STATS}:${PORT_STATS}"
     env_file:
       - ".env"
+
+  frontend:
+    build: ./service/frontend
+    ports:
+      - "3000:3000"

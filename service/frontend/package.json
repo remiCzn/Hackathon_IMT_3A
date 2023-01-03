@@ -14,6 +14,7 @@
 		"vite": "^4.0.0"
 	},
 	"dependencies": {
+		"@sveltejs/adapter-node": "^1.0.0",
 		"axios": "1.2.2"
 	},
 	"type": "module"
