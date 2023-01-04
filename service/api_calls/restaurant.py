@@ -25,8 +25,7 @@ def addHoraire(elem):
     adresse = idJson["address"]
     horaire, weekday = horaires.get_horaires(id)
     if(horaire=="NA"):
-        elem["fields"]["horaire"] = "NA"
-        elem["fields"]["adresse"] = "NA"
+        elem["fields"]["horaire"] = "11111111111111"
         return elem
     h = horaires.encode_horaires_restaurant(horaire, weekday)
     elem["fields"]["horaire"] = h
@@ -39,11 +38,11 @@ def addHoraireData(data):
 
 def addresse(elem):
     if "adresse1" in elem["fields"]:
-        elem["fields"]["adresse"] = elem["fields"]["adresse1"]
+        elem["fields"].pop("adresse1")
     elif "adresse2" in elem["fields"]:
-        elem["fields"]["adresse"] = elem["fields"]["adresse2"]
+        elem["fields"].pop("adresse2")
     elif "adresse3" in elem["fields"]:
-        elem["fields"]["adresse"] = elem["fields"]["adresse3"]
+        elem["fields"].pop("adresse3")
 
     return elem
 
