@@ -31,8 +31,9 @@
     function getActivitiesTemp(){
         result = {
             activities:[
-                {title:"Déjeuner", description:"Déjeuner au restaurant", time:"12:00"},
-                {title:"Conférence", description:"Conférence sur le thème de la blockchain", time:"14:00"},
+                {title:"Déjeuner", description:"Déjeuner au restaurant", time:"12:00", address:"1 rue de la paix"},
+                {title:"Conférence", description:"Conférence sur le thème de la blockchain", time:"14:00", address:"10 boulevard de la paix"},
+                {title:"Dîner", description:"Dîner au restaurant", time:"19:00", address:"40 avenue de la paix"}
             ],
             date:dateString
         }
