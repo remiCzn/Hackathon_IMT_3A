@@ -7,6 +7,7 @@ def get_infos(name,coordonates):
     payload = {}
     headers = {}
     response = requests.request("GET", url, headers=headers, data=payload).json()
+    if(len(response["candidates"])==0): return {'id': "NA", 'address': "NA"}
     return {'id': response["candidates"][0]["place_id"], 'address': response["candidates"][0]["formatted_address"]}
 
 #returns the opening hours (periods in 24h format and weekday_text in more complicated format) given the id of a place on google maps
@@ -16,8 +17,8 @@ def get_horaires(id):
     headers = {}
     response = requests.request("GET", url, headers=headers, data=payload)
     response = response.json()
-    return response["result"]['current_opening_hours']['periods'], response["result"]['current_opening_hours']['weekday_text']
-
+    if("current_opening_hours" in response["result"]): return response["result"]['current_opening_hours']['periods'], response["result"]['current_opening_hours']['weekday_text']
+    else: return "NA", "NA"
 #returns the opening periods (morning and evening) of an activity given its periods and weekday_text
 #the answer is encoded on a 14-length string. 1 for open, 0 for closed. Begins with monday and ends with sunday
 def encode_horaires_activity(periods,weekday):
@@ -81,18 +82,20 @@ def encode_horaires_restaurant(periods,weekday):
     sunday = res[0] + res[1]
     return res[2:] + sunday
 
+if __name__=="__main__":
+    restaurant_name = "sain"
+    location = (47.218371,-1.553621)
 
 
 ###TEST
+if __name__=="__main__":
+    restaurant_name = "sain"
+    location = (47.218371,-1.553621)
+    infos = get_infos(restaurant_name,location)
+    print("address: ", infos['address'])
+    print("ID:", infos['id'])
+    periods,weekday =get_horaires(id)
+    print(periods, weekday)
+    code = encode_horaires_restaurant(periods, weekday)
+    print(code)
 
-"""
-restaurant_name = "sain"
-location = (47.218371,-1.553621)
-infos = get_infos(restaurant_name,location)
-print("address: ", infos['address'])
-print("ID:", infos['id'])
-periods,weekday =get_horaires(id)
-print(periods, weekday)
-code = encode_horaires_restaurant(periods, weekday)
-print(code)
-"""
