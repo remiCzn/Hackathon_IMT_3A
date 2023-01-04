@@ -69,7 +69,8 @@
             "code_postal": "44000", 
             "nom": "Th\u00e9\u00e2tre Francine Vasse", 
             "pmr": "Oui", 
-            "categorie": "Salle de spectacle", 
+            "categorie": "Salle de spectacle",
+            "type": "Salle de spectacle",
             "gid": "1351"
             }, 
         "record_timestamp": "2023-01-03T07:00:03.164+01:00",
@@ -93,7 +94,8 @@
             "code_postal": "44400", 
             "nom": "C. Musical La Balini\u00e8re", 
             "pmr": "Oui", 
-            "categorie": "Salle de spectacle", 
+            "categorie": "Salle de spectacle",
+            "type": "Salle de spectacle",
             "gid": "1428"
         }, 
         "record_timestamp": "2023-01-03T07:00:03.164+01:00",
@@ -118,6 +120,7 @@
             "nom": "C. Musical La Balini\u00e8re", 
             "pmr": "Oui", 
             "categorie": "Salle de spectacle", 
+            "type":"Salle de spectacle",
             "gid": "1428"
             }, 
         "record_timestamp": "2023-01-03T07:00:03.164+01:00",

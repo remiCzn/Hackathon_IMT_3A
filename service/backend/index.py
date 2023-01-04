@@ -22,11 +22,11 @@ app.json_encoder = LazyJSONEncoder
 
 swagger_template = dict(
 info = {
-    'title': LazyString(lambda: 'My first Swagger UI document'),
+    'title': LazyString(lambda: 'Backend API'),
     'version': LazyString(lambda: '0.1'),
-    'description': LazyString(lambda: 'This document depicts a      sample Swagger UI document and implements Hello World functionality after executing GET.'),
+    'description': LazyString(lambda: 'This document describe how to interact with the Backend'),
     },
-    host = LazyString(lambda: HOST)
+    host = LazyString(lambda: request.host)
 )
 swagger_config = {
     "headers": [],
@@ -86,9 +86,15 @@ def random_selection(mid_day, data, hist):
         result = choices.pop(rand_id)
         if result["recordid"] not in hist:
             hist.append(result["recordid"])
-            return result
+            res = {
+            "name" : result["fields"]["nom_complet"],
+            "adress" : result["fields"]["adresse"],
+            "type" : result["fields"]["type"]
+        }
+            return res
 
     return "bof"
+
 
 def basic_agenda(day):
     """
@@ -121,6 +127,8 @@ def home():
     }
     return make_response(res, 200)
 
+
+@swag_from("./docs/swagger_activity.yml")
 @app.route("/activity", methods=['GET'])
 def get_activity():
     time = int(request.args.get('time'))
@@ -131,6 +139,8 @@ def get_activity():
     else:
         return make_response(activity,200)
 
+
+@swag_from("./docs/swagger_restaurant.yml")
 @app.route("/restaurant", methods=['GET'])
 def get_restaurant():
     time = int(request.args.get('time'))
@@ -144,6 +154,7 @@ def get_restaurant():
 ###
 # TO UPDATE
 ### 
+@swag_from("./docs/swagger_agenda.yml")
 @app.route("/agenda", methods=['GET'])
 def get_agenda():
     time = int(request.args.get('time'))
@@ -152,7 +163,6 @@ def get_agenda():
         return make_response(agenda, 300)
     else:
         return make_response(agenda,200)
-
 
 if __name__ == "__main__":
     load_data()
