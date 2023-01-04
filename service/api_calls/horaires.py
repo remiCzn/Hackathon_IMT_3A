@@ -3,11 +3,13 @@ from config import API_KEY
 
 #returns the informations (id, address) about a restaurant or activity given its name and approximate location)
 def get_infos(name,coordonates):
-    url = "https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=nantes%20"+name+"&inputtype=textquery&fields=place_id%2Cformatted_address&locationbias=circle%3A10000%"+str(coordonates[0])+"%2C"+str(coordonates[1])+"&fields=formatted_address%2Cname%2Crating%2Copening_hours%2Cgeometry&key="+API_KEY
+    url = "https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=nantes%20"+name+"&inputtype=textquery&fields=place_id%2Cformatted_address&locationbias=circle%3A10000"+str(coordonates[0])+"%2C"+str(coordonates[1])+"&fields=formatted_address%2Cname%2Crating%2Copening_hours%2Cgeometry&key="+API_KEY
     payload = {}
     headers = {}
     response = requests.request("GET", url, headers=headers, data=payload).json()
-    if(len(response["candidates"])==0): return {'id': "NA", 'address': "NA"}
+    if(len(response["candidates"])==0):
+        print(response)
+        return {'id': "NA", 'address': "NA"}
     return {'id': response["candidates"][0]["place_id"], 'address': response["candidates"][0]["formatted_address"]}
 
 #returns the opening hours (periods in 24h format and weekday_text in more complicated format) given the id of a place on google maps

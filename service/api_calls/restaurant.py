@@ -1,13 +1,9 @@
 import json
-import os
 import requests
 import horaires
+import backend.majDB
+
 URL = "https://data.nantesmetropole.fr/explore/dataset/234400034_070-008_offre-touristique-restaurants-rpdl@paysdelaloire/download/?format=json&timezone=Europe/Berlin&lang=fr"
-CACHE = "data/restaurant.json"
-
-
-if not os.path.isdir("data"):
-    os.mkdir('data')
 
 #On récupère les données des restaurants depuis Nantes opendata
 def getDataFromAPI():
@@ -29,47 +25,42 @@ def addHoraire(elem):
     horaire, weekday = horaires.get_horaires(id)
     #Si il n'y a pas d'horaire d'ouverture, on considère que le lieu est ouvert
     if(horaire=="NA"):
-        elem["fields"]["horaire"] = "11111111111111"
+        elem["fields"]["horaire"] = "00000000000000"
+        elem["fields"]["adresse"] = adresse
         return elem
     h = horaires.encode_horaires_restaurant(horaire, weekday)
     elem["fields"]["horaire"] = h
-    elem["fields"]["adresse"] = adresse
     return elem
-
-def addHoraireData(data):
-    data = json.loads(data)
-    return list(map(addHoraire, data))
 
 #Supprime les addresses pour ne garder qu'un champ unique
 #L'adresse est déterminé via les coordonnées en utilisant l'api google
 def addresse(elem):
     if "adresse1" in elem["fields"]:
         elem["fields"].pop("adresse1")
-    elif "adresse2" in elem["fields"]:
+    if "adresse2" in elem["fields"]:
         elem["fields"].pop("adresse2")
-    elif "adresse3" in elem["fields"]:
+    if "adresse3" in elem["fields"]:
         elem["fields"].pop("adresse3")
-
     return elem
+
+def addDataToDB(data):
+    for d in data["records"]:
+        if "commune" in d["fields"] and d["fields"]["commune"]=="NANTES":
+            i = addHoraire(d)
+            i = addresse(i)
+            backend.majDB.addEquipementRestaurant(i)
 
 #Stocke les données des restaurants dans un json
 def cacheData():
     dataRestau = getDataFromAPI()
-    dataRestau = addHoraireData(dataRestau)
     dataRestau = json.loads(dataRestau)
-    dataRestau = list(map(addresse, dataRestau))
-    with open(CACHE, "w") as fichier:
-        fichier.write(json.dumps(dataRestau))
+    addDataToDB(dataRestau)
     return True
 
-#Retourne l'ensemble des restaurants de Nantes
-def getCachedDataRestaurant():
-    with open(CACHE, 'r') as f:
-        data = json.load(f)
-    return list(filter(lambda x : "commune" in x["fields"] and x["fields"]["commune"]=="NANTES", data))
-
 if __name__=="__main__":
-    cacheData()
-    res = getCachedDataRestaurant()
-    addHoraire(res[0])
-    print(res[0])
+    data = getDataFromAPI()
+    data = json.loads(data)
+    exemple = data[0]
+    addHoraire(exemple)
+    addresse(exemple)
+    print(exemple)
