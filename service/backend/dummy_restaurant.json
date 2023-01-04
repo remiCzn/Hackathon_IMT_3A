@@ -21,11 +21,11 @@
       "codepostal": 44250,
       "commtel": "02 40 27 03 03",
       "modepaiement": "Cartes bancaires;Tickets Restaurant",
-      "nomoffre": "LA CANTINE DU 7",
+      "nom_complet": "LA CANTINE DU 7",
       "categorie": "Cuisine traditionnelle",
       "ouverturegranule": "01/01/2018||31/12/2018||||||||||||||||||||||12:00||14:00||19:00||22:00||12:00||14:00||19:00||22:00||12:00||14:00||19:00||22:00||12:00||14:00||19:00||22:00||12:00||14:00||||",
       "services": "WiFi",
-      "adresse2": "10 All\u00e9e des Embruns"
+      "adresse": "10 All\u00e9e des Embruns"
     },
     "geometry": {
       "type": "Point",
@@ -49,10 +49,10 @@
       "commweb": "http://www.lacantinedugeneral.fr",
       "commtel": "02 28 00 63 84",
       "modepaiement": "Cartes bancaires;Ch\u00e8ques bancaires et postaux;Tickets Restaurant",
-      "nomoffre": "LA CANTINE DU GENERAL",
+      "nom_complet": "LA CANTINE DU GENERAL",
       "categorie": "Cuisine traditionnelle",
       "resaenligneouinon": "oui",
-      "adresse1": "36 boulevard de Launay",
+      "adresse": "36 boulevard de Launay",
       "capacitenbsalles": 2,
       "services": "Service en terrasse",
       "ouverturealannee": "oui",
@@ -96,9 +96,9 @@
       "codeinseecommune": 44132,
       "codepostal": 44380,
       "commtel": "02 40 61 09 10",
-      "nomoffre": "LA CARAVELLE",
+      "nom_complet": "LA CARAVELLE",
       "ouverturegranule": "01/01/2022||31/12/2022||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||",
-      "adresse2": "21 avenue du Littoral"
+      "adresse": "21 avenue du Littoral"
     },
     "geometry": {
       "type": "Point",
@@ -131,13 +131,14 @@
       "commtel": "02 51 14 04 14",
       "accueilgroupe": "oui",
       "modepaiement": "Cartes bancaires;Ch\u00e8ques bancaires et postaux;Ch\u00e8ques Vacances;Esp\u00e8ces;Tickets Restaurant",
-      "nomoffre": "LA CAVE DU 7",
+      "nom_complet": "LA CAVE DU 7",
       "categorie": "Bistrot / bar \u00e0 vin",
       "adresse3": "BP 80213",
       "services": "Plats \u00e0 emporter / Covid-19;WiFi",
-      "adresse2": "580 Rue de l'Industrie",
+      "adresse": "580 Rue de l'Industrie",
       "labels": "Vignobles et d\u00e9couvertes",
-      "ouverturealannee": "oui"
+      "ouverturealannee": "oui",
+      "type": "Restaurant"
     },
     "geometry": {
       "type": "Point",
