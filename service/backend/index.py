@@ -1,4 +1,4 @@
-from flask import Flask, make_response
+from flask import Flask, make_response, request
 from flasgger import Swagger, LazyString, LazyJSONEncoder
 from flasgger import swag_from
 #from flask_cors import CORS
@@ -82,7 +82,8 @@ def random_selection(mid_day, data, hist):
             choices.append(element)
 
     while len(choices) > 0:
-        result = random.choice(choices)
+        rand_id = random.randint(0, len(choices)-1)
+        result = choices.pop(rand_id)
         if result["recordid"] not in hist:
             hist.append(result["recordid"])
             return result
@@ -120,13 +121,38 @@ def home():
     }
     return make_response(res, 200)
 
-@app.route("/activity", methods=['POST'])
-def get_activity(time, position, tags):
+@app.route("/activity", methods=['GET'])
+def get_activity():
+    time = int(request.args.get('time'))
+    activity = random_selection(time, data_activities, hist_activities)
+    if activity == "bof":
+        result = {"error": "no more activity not already seen"}
+        return make_response(result,400)
+    else:
+        return make_response(activity,200)
 
+@app.route("/restaurant", methods=['GET'])
+def get_restaurant():
+    time = int(request.args.get('time'))
+    restaurant = random_selection(time, data_restaurant, hist_restaurants)
+    if restaurant == "bof":
+        result = {"error":"no more restaurant not already seen"}
+        return make_response(result, 400)
+    else:
+        return make_response(restaurant, 200)
 
-    random_selection(time)
-    activity = Item()
-    return
+###
+# TO UPDATE
+### 
+@app.route("/agenda", methods=['GET'])
+def get_agenda():
+    time = int(request.args.get('time'))
+    agenda = basic_agenda(time)
+    if "bof" in agenda:
+        return make_response(agenda, 300)
+    else:
+        return make_response(agenda,200)
+
 
 if __name__ == "__main__":
     load_data()
