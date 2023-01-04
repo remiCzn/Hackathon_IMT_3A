@@ -16,9 +16,9 @@
 {:else}
     <h1 class="text-lg font-semibold">{data.date}</h1>
     <div class="gap-14 flex-column items-center text-center">
-    {#each data.activities as activity}
-        <ResultItem activity={activity} />
-    {/each}
+        {#each data.activities as activity}
+            <ResultItem activity={activity} />
+        {/each}
     </div>
 {/if}
 
