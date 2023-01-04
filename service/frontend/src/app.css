@@ -2,14 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-.main {
-	@apply content-center justify-items-center grid bg-blue-100 w-full h-full;
+h1 {
+	@apply text-6xl font-bold;
 }
 
-.title {
-	@apply text-blue-900 text-3xl font-bold underline;
+h2 {
+	@apply text-5xl font-medium;
 }
 
-.input {
-	@apply border-blue-700 text-blue-900 bg-blue-200 m-2 border-2 rounded-md;
+h3 {
+	@apply text-2xl font-medium;
+}
+
+p1 {
+	@apply text-xl;
+}
+
+p2 {
+	@apply text-lg;
 }

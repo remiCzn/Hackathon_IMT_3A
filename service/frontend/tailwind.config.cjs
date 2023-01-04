@@ -10,7 +10,13 @@ module.exports = {
 				"soft-blue": "#B8DFEF",
 				metal: "#4E4E4E",
 			},
+			borderWidth: {
+				13: "13px",
+			},
+			fontFamily: {
+				inter: ["Inter", "sans-serif"],
+			},
 		},
 	},
-	plugins: [],
+	plugins: [require("tailwindcss-font-inter")],
 };

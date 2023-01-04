@@ -1,57 +1,34 @@
 <script>
-    let result = {
-        activities:[],
-        date:""
-    }
-
-    import { onMount } from 'svelte';
-	
-	let now = new Date(), month, day, year;
-	let dateString;
-	
-	onMount(()=> {
-        month = '' + (now.getMonth() + 1),
-        day = '' + now.getDate(),
-        year = now.getFullYear();
-
-    if (month.length < 2) 
-        month = '0' + month;
-    if (day.length < 2) 
-        day = '0' + day;
-
-    dateString = [year, month, day].join('-');
-	})
-
-    async function getActivities() {
-        const response = await fetch("http://localhost:3000/activities");
-        const data = await response.json();
-        result = data;
-    }
-
-    function getActivitiesTemp(){
-        result = {
-            activities:[
-                {title:"Déjeuner", description:"Déjeuner au restaurant", time:"12:00", address:"1 rue de la paix"},
-                {title:"Conférence", description:"Conférence sur le thème de la blockchain", time:"14:00", address:"10 boulevard de la paix"},
-                {title:"Dîner", description:"Dîner au restaurant", time:"19:00", address:"40 avenue de la paix"}
-            ],
-            date:dateString
-        }
-    }
-
-    import "../app.css"
-    import ResultsItem from "../components/ResultsItem.svelte";
+    import Blob from "../components/svg/Blob.svelte";
 </script>
 
+<div>
+    <div class="w-6/12 my-12">
+        <h2>Découvrez des activités uniques en <span class="text-soft-purple">Loire-Atlantique</span></h2>
+        <br>
+        <h3> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</h3>
+    </div>
 
-<h1 class="title">Hackathon</h1>
-<input class="input text-lg p-0.5" type="date" id="start" bind:value={dateString}>
-<button on:click={getActivitiesTemp} class="input text-xl p-2">Plannifie ma journée</button>
+    <a href="/">
+        <div class="ml-auto max-w-max relative">
+            <div class="border-dashed border-soft-yellow border-13 rounded-2xl
+                        absolute w-96 h-28 right-3">
+            </div>
+            <div class="bg-soft-blue rounded-3xl py-8 px-10 text-center">
+                <h2 class="text-bold text-white">Plan my Day!</h2>
+            </div>
+        </div>
+    </a>
 
-<br>
+    <div class="py-12">
+        <div class="flex items-center pl-5">
+            <h3>Creators</h3>
+            <img src="./img/creators.png" alt="creators"/>
+        </div>
 
-<ResultsItem data={result} />
-
-<style>
-
-</style>
+        <div class="relative -top-20">
+            <Blob></Blob>
+            <img src="./img/logo_imta.png" alt="logo" class="absolute bottom-3 left-12">
+        </div>
+    </div>
+</div>
