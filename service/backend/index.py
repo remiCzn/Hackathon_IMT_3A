@@ -4,16 +4,7 @@ from flasgger import swag_from
 #from flask_cors import CORS
 import random
 import json
-
-from dataclasses import dataclass
-from typing import NamedTuple
-
-@dataclass
-class Item(NamedTuple):
-    name: str
-    latitude: float
-    longitude: float
-    tags: list
+import db
 
 app = Flask(__name__)
 app.json_encoder = LazyJSONEncoder
@@ -47,7 +38,7 @@ PORT = 3001
 HOST = '0.0.0.0'
 
 data_activities = []
-data_restaurant = []
+data_restaurants = []
 
 hist_activities = []
 hist_restaurants = []
@@ -59,12 +50,19 @@ swagger = Swagger(app, template=swagger_template,
 
 def load_data():
     global data_activities
-    global data_restaurant
+    global data_restaurants
     with open('dummy.json', 'r') as activity_file:
         data_activities = json.load(activity_file)
     with open('dummy_restaurant.json', 'r') as restaurant_file:
-        data_restaurant = json.load(restaurant_file)
+        data_restaurants = json.load(restaurant_file)
 
+
+def load_data_from_db():
+    db.db_connect()
+    global data_activities
+    global data_restaurants
+    data_activities = db.send_request('''SELECT * FROM Activity''')
+    data_restaurants = db.send_request('''SELECT * FROM Restaurant''')
 
 def random_selection(mid_day, data, hist):
     """
@@ -112,9 +110,9 @@ def basic_agenda(day):
     fst_half = 2*day
     scd_half = 2*day+1
     day_agenda.append(random_selection(fst_half, data_activities, hist_activities))
-    day_agenda.append(random_selection(fst_half, data_restaurant, hist_restaurants))
+    day_agenda.append(random_selection(fst_half, data_restaurants, hist_restaurants))
     day_agenda.append(random_selection(scd_half, data_activities, hist_activities))
-    day_agenda.append(random_selection(scd_half, data_restaurant, hist_restaurants))
+    day_agenda.append(random_selection(scd_half, data_restaurants, hist_restaurants))
 
     return day_agenda
 
@@ -144,7 +142,7 @@ def get_activity():
 @app.route("/restaurant", methods=['GET'])
 def get_restaurant():
     time = int(request.args.get('time'))
-    restaurant = random_selection(time, data_restaurant, hist_restaurants)
+    restaurant = random_selection(time, data_restaurants, hist_restaurants)
     if restaurant == "bof":
         result = {"error":"no more restaurant not already seen"}
         return make_response(result, 400)
