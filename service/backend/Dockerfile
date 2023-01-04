@@ -1,7 +1,8 @@
-FROM python:3.8-alpine
+FROM debian:latest
 WORKDIR /app
 COPY requirements.txt /app
-RUN apt install gcc
+RUN apt update && apt upgrade
+RUN apt install -y python3-pip python3 libmariadb-dev
 RUN pip install -r requirements.txt
 ADD . /app/
 CMD ["python","-u","index.py"]
