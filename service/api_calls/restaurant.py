@@ -1,7 +1,7 @@
 import json
 import requests
 import horaires
-import backend.majDB
+import majDB
 
 URL = "https://data.nantesmetropole.fr/explore/dataset/234400034_070-008_offre-touristique-restaurants-rpdl@paysdelaloire/download/?format=json&timezone=Europe/Berlin&lang=fr"
 
@@ -13,7 +13,7 @@ def getDataFromAPI():
     return res.content
 
 #Ajoute à un restaurant, son horaire d'ouverture et son adresse
-def addHoraire(elem):
+def formatData(elem):
     idJson = horaires.get_infos(elem["fields"]["nomoffre"], elem["fields"]["localisation"])
     id = idJson["id"]
     #Si l'api de google n'a pas trouvé de résultat
@@ -30,6 +30,7 @@ def addHoraire(elem):
         return elem
     h = horaires.encode_horaires_restaurant(horaire, weekday)
     elem["fields"]["horaire"] = h
+    elem["fields"]["adresse"] = adresse
     return elem
 
 #Supprime les addresses pour ne garder qu'un champ unique
@@ -46,9 +47,9 @@ def addresse(elem):
 def addDataToDB(data):
     for d in data["records"]:
         if "commune" in d["fields"] and d["fields"]["commune"]=="NANTES":
-            i = addHoraire(d)
+            i = formatData(d)
             i = addresse(i)
-            backend.majDB.addEquipementRestaurant(i)
+            majDB.addEquipementRestaurant(i)
 
 #Stocke les données des restaurants dans un json
 def cacheData():
@@ -60,7 +61,9 @@ def cacheData():
 if __name__=="__main__":
     data = getDataFromAPI()
     data = json.loads(data)
+    data = list(filter(lambda x: "commune" in x["fields"] and x["fields"]["commune"]=="NANTES", data))
     exemple = data[0]
-    addHoraire(exemple)
+    formatData(exemple)
     addresse(exemple)
     print(exemple)
+    majDB.addEquipementRestaurant(exemple)

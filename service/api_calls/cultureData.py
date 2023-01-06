@@ -1,6 +1,6 @@
 import horaires
 import requests
-import backend.majDB
+import majDB
 
 URL = "https://data.nantesmetropole.fr/api/records/1.0/search/?dataset=244400404_equipements-publics-nantes-metropole&q=&rows=10000&facet=theme&facet=categorie&facet=type&facet=commune&refine.theme="
 
@@ -12,7 +12,9 @@ def getDataFromAPI(theme="Culture"):
     return res.json()
 
 #Ajoute à un élément son horaire d'ouverture et renvoie cet element modifié
-def addHoraire(elem):
+def formatData(elem):
+    if("type" not in elem["fields"]):
+        elem["fields"]["type"] = "NA"
     idJson = horaires.get_infos(elem["fields"]["nom_complet"], elem["fields"]["geo_shape"]["coordinates"])
     id = idJson["id"]
     #Si l'api google ne retourne aucun résultat
@@ -21,7 +23,6 @@ def addHoraire(elem):
         elem["fields"]["adresse"] = "NA"
         return elem
     adresse = idJson["address"]
-    print(adresse)
     horaire, weekday = horaires.get_horaires(id)
     #Si on a pas d'horaire d'ouverture, on considère qu'il est fermé
     if(horaire=="NA"):
@@ -35,8 +36,8 @@ def addHoraire(elem):
 
 def addDataToDB(data):
     for d in data["records"]:
-        i = addHoraire(d)
-        backend.majDB.addEquipementCulture(i)
+        i = formatData(d)
+        majDB.addEquipementCulture(i)
 
 def cacheData():
     dataCulture = getDataFromAPI()
@@ -49,6 +50,6 @@ def cacheData():
 
 if __name__=="__main__":
     data = getDataFromAPI()
-    exemple = data["records"][1]
-    addHoraire(exemple)
-    print(exemple)
+    exemple = data["records"][5]
+    formatData(exemple)
+    majDB.addEquipementCulture(exemple)
