@@ -31,14 +31,17 @@ export function getAgenda(day) {
         params: {
             time: dateToTimeId(day)
         }
-    }).then((res) => res.data);
+    }).then((res) => res.data)
+        .catch((err) => {
+            {}
+        });
 }
 
-(async () => {
-    const a = await getRestaurant(new Date());
-    console.log(a);
-    const b = await getActivity(new Date());
-    console.log(b);
-    const c = await getAgenda(new Date());
-    console.log(c);
-})();
+// (async () => {
+//     const a = await getRestaurant(new Date());
+//     console.log(a);
+//     const b = await getActivity(new Date());
+//     console.log(b);
+//     const c = await getAgenda(new Date());
+//     console.log(c);
+// })();

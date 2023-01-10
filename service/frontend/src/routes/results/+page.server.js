@@ -1,9 +1,16 @@
 /** @type {import('./$types').PageServerLoad} */
-export async function load() {
-    // Fetch data on api.chillpaper.fr
-    const response = await fetch('https://api.chillpaper.fr/activity');
-    const data = await response.json();
+import {getAgenda} from "$lib/api.js";
 
-    
-    return data;
-};
+export async function load({ url }) {
+    // Fetch data on api.chillpaper.fr
+    const date = new Date(url.searchParams.get("date"));
+    const coords = url.searchParams.get("coords");
+    const agenda = getAgenda(date);
+    if(agenda === {}) {
+        return undefined
+    } else {
+        return {
+            agenda: agenda
+        };
+    }
+}

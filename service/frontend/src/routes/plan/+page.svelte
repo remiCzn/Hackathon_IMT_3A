@@ -62,7 +62,7 @@
 	/>
 
 	<Anchor
-		href="/results"
+		href="/results?date={dateString}&coords={coord}"
 		class="bg-soft-pink px-2 py-4 rounded-3xl lg:w-10/12 xl:w-11/12"
 		bind:condition={validInformations}>Voir mon programme</Anchor
 	>
