@@ -6,3 +6,5 @@
 </script>
 
 <ActivityItem />
+<p1>Sample data fetched</p1>
+<p>{JSON.stringify(data)}</p>
