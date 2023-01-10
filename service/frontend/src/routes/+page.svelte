@@ -9,7 +9,7 @@
         <h3> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</h3>
     </div>
 
-    <a href="/">
+    <a href="/planning">
         <div class="m-auto md:m-0 md:block md:ml-auto max-w-max relative">
             <div class="invisible lg:visible
                         border-dashed border-soft-yellow border-13 rounded-2xl
