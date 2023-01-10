@@ -1,0 +1,53 @@
+openapi: 3.0.0
+tags:
+  - Restaurant
+description: Get a restaurant available at the time given.
+
+parameters:
+  - name: time
+    in: query
+    type: integer
+    required: true
+    description: time goes from 0 to 13, 0 for monday morning, 1 for monday afternoon, 2 for tuesday morning, etc.
+  - name: lat
+    in: query
+    type: number
+    required: true
+    description: latitude of the user
+  - name: long
+    in: query
+    type: number
+    required: true
+    description: longitude of the user
+  - name: r
+    in: query
+    type: integer
+    required: true
+    description: max distance from the user
+  - name: tags
+    in: query
+    type: array
+    items:
+      $ref: '#definitions/Tag'
+    required: true
+    description: list of tags to which the proposed activities and restaurants should 
+    
+responses:
+    '200':
+      description: Successful response
+      schema: 
+        $ref: '#definitions/Activity'
+    '400':
+      description: No more activity not already seen
+definitions:
+  Tag:
+    type: string
+  Activity:
+    type: object
+    properties: 
+      name:
+        type: string
+      adress:
+        type: string
+      type:
+        type: string
