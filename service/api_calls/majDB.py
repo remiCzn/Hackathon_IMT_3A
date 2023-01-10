@@ -61,7 +61,7 @@ def addEquipementCulture(elem):
 
 def majDB():
     initRestaurant()
-    restaurant.cacheData()
+    restaurantData.cacheData()
     cultureData.cacheData()
 
 if __name__=="__main__":
