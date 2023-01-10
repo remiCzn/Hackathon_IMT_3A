@@ -44,6 +44,8 @@ data_restaurants = []
 hist_activities = []
 hist_restaurants = []
 
+tag_list = ["Médiathèque", "Salle de spectacle", "Monument", "Musée, Chateau", "Ecole Culturelle", "Salle d'exposition", "Cinéma"]
+
 swagger = Swagger(app, template=swagger_template,             
                   config=swagger_config)
 
@@ -64,6 +66,7 @@ def load_data_from_db():
     global data_restaurants
     data_activities = db.send_request('''SELECT * FROM Activity''')
     data_restaurants = db.send_request('''SELECT * FROM Restaurant''')
+
 
 def random_selection(mid_day, data, hist):
     """
@@ -88,7 +91,7 @@ def random_selection(mid_day, data, hist):
             res = {
             "name" : result["fields"]["nom_complet"],
             "adress" : result["fields"]["adresse"],
-            "type" : result["fields"]["type"]
+            "categorie" : result["fields"]["categorie"]
         }
             return res
 
@@ -112,7 +115,6 @@ def selection_by_distance(mid_day, pos, r, data, hist):
     for element in data:
         if element["opened"][mid_day]:
             dist = get_distance(pos[0], pos[1], element["fields"]["localisation"][0], element["fields"]["localisation"][1])
-            print(dist)
             if dist <= r:
                 choices.append(element)
     
@@ -124,7 +126,34 @@ def selection_by_distance(mid_day, pos, r, data, hist):
             res = {
             "name" : result["fields"]["nom_complet"],
             "adress" : result["fields"]["adresse"],
-            "type" : result["fields"]["type"]
+            "categorie" : result["fields"]["categorie"]
+        }
+            return res
+
+    return "bof"
+
+
+def selection_by_tags_distance(mid_day, pos, r, tags, data, hist):
+
+    assert type(mid_day) is int, "Received wrong type"
+    assert type(tags) is list, "tags should be a list"
+
+    choices = []
+    for element in data:
+        if element["opened"][mid_day]:
+            dist = get_distance(pos[0], pos[1], element["fields"]["localisation"][0], element["fields"]["localisation"][1])
+            if (dist <= r) & (element["fields"]["categorie"] in tags):
+                choices.append(element)
+
+    while len(choices) > 0:
+        rand_id = random.randint(0, len(choices)-1)
+        result = choices.pop(rand_id)
+        if result["recordid"] not in hist:
+            hist.append(result["recordid"])
+            res = {
+            "name" : result["fields"]["nom_complet"],
+            "adress" : result["fields"]["adresse"],
+            "categorie" : result["fields"]["categorie"]
         }
             return res
 
@@ -153,6 +182,7 @@ def basic_agenda(day):
 
     return day_agenda
 
+
 def by_distance_agenda(day, pos, r):
     """
     Create an agenda respecting a distance criterion consisting of randomly
@@ -177,6 +207,23 @@ def by_distance_agenda(day, pos, r):
     day_agenda.append(selection_by_distance(scd_half, pos, r, data_restaurants, hist_restaurants))
 
     return day_agenda
+
+
+def by_tags_distance_agenda(day, pos, r, tags):
+
+    assert type(day) is int, "Received wrong type"
+
+    day_agenda = []
+
+    fst_half = 2*day
+    scd_half = 2*day+1
+    day_agenda.append(selection_by_tags_distance(fst_half, pos, r, tags, data_activities, hist_activities))
+    day_agenda.append(selection_by_tags_distance(fst_half, pos, r, tags, data_restaurants, hist_restaurants))
+    day_agenda.append(selection_by_tags_distance(scd_half, pos, r, tags, data_activities, hist_activities))
+    day_agenda.append(selection_by_tags_distance(scd_half, pos, r, tags, data_restaurants, hist_restaurants))
+
+    return day_agenda
+
 
 def get_distance(lat_x, long_x, lat_y, long_y):
     """
@@ -238,7 +285,45 @@ def get_agenda():
         return make_response(agenda,200)
 
 
+@swag_from("./docs/swagger_agenda_distance.yml")
+@app.route("/agenda_distance", methods=['GET'])
+def get_agenda_by_distance():
+    time = int(request.args.get('time'))
+    lat = float(request.args.get('lat'))
+    long = float(request.args.get('long'))
+    r = int(request.args.get('r'))
+
+    agenda = by_distance_agenda(time, (lat,long), r)
+    if "bof" in agenda:
+        return make_response(agenda, 300)
+    else:
+        return make_response(agenda, 200)
+
+@swag_from("./docs/swagger_agenda_tags_distance.yml")
+@app.route("/agenda_tags_distance", methods=['GET'])
+def get_agenda_by_tags_distance():
+    time = int(request.args.get('time'))
+    lat = float(request.args.get('lat'))
+    long = float(request.args.get('long'))
+    r = int(request.args.get('r'))
+    tags = request.args.get('tags')
+    tags = tags.split(",")
+
+    agenda = by_tags_distance_agenda(time, (lat,long), r, tags)
+    if "bof" in agenda:
+        return make_response(agenda, 300)
+    else:
+        return make_response(agenda, 200)
+
+
+@swag_from("./docs/swagger_tags.yml")
+@app.route("/tags", methods=['GET'])
+def get_tags():
+    return make_response({"tags": tag_list}, 200)
+
+
+
+
 if __name__ == "__main__":
     load_data()
-    print(by_distance_agenda(0, (47.24008355186556, -1.5291889979559394), 10))
     app.run(host=HOST, port=PORT)
