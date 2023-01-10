@@ -1,10 +1,11 @@
 <script>
 	import Geolocation from "svelte-geolocation";
 	let getPosition = false;
-	let coord;
+	let coord = [];
 
 	// Date handling
 	import { onMount } from "svelte";
+	import Anchor from "../../components/Buttons/Anchor.svelte";
 
 	let now = new Date(),
 		month,
@@ -22,6 +23,9 @@
 
 		dateString = [year, month, day].join("-");
 	});
+
+	// Process handling
+	$: validInformations = coord.length == 2 && dateString != "";
 </script>
 
 <div
@@ -50,12 +54,10 @@
 
 	<Geolocation
 		{getPosition}
-		let:coords
-		let:loading
-		let:success
-		let:error
-		let:notSuppoèrted
+		on:position={(e) => {
+			coord = [e.detail.coords.latitude, e.detail.coords.longitude];
+		}}
 	/>
 
-	<a href="/result"><h2 class="text-center">- Voir mon planning -</h2></a>
+	<Anchor bind:condition={validInformations}>Voir mon programme</Anchor>
 </div>
