@@ -28,4 +28,12 @@
 	.custom-shadow {
 		box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
 	}
+
+	.custom-shadow:hover {
+		box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25), 0 0 0 2px #edb5a3;
+	}
+
+	.custom-shadow:active {
+		box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25), 0 0 0 2px #edb5a3 inset;
+	}
 </style>
