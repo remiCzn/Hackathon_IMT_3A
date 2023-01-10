@@ -32,8 +32,8 @@ export function getAgenda(day) {
             time: dateToTimeId(day)
         }
     }).then((res) => res.data)
-        .catch((err) => {
-            {}
+        .catch((_) => {
+            return undefined;
         });
 }
 
