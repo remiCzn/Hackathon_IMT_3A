@@ -154,6 +154,16 @@ def basic_agenda(day):
     return day_agenda
 
 def by_distance_agenda(day, pos, r):
+    """
+    Create an agenda respecting a distance criterion consisting of randomly
+    selected activities and restaurant for the first half and second half of the day and 
+    for lunch and dinner.
+    :param day: int, ranging from 0 to 6, the day for which the function aims at creating an agenda
+    :param pos: tuple(float, float), a tuple containing the latitude and the longitude of the user such that pos = (lat, long)
+    :param r:  int, the max distance from the user to the point of interest in km
+    :return: list of dict, list of elements consisting of activities and restaurants, ordered by
+    appearance in the day.
+    """
 
     assert type(day) is int, "Received wrong type"
 
