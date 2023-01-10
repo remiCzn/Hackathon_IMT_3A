@@ -1,5 +1,5 @@
 <svg
-	width="48"
+	width="45"
 	height="41"
 	viewBox="0 0 48 41"
 	fill="none"
