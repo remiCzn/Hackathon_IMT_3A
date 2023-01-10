@@ -54,7 +54,7 @@
 		let:loading
 		let:success
 		let:error
-		let:notSupported
+		let:notSuppoèrted
 	/>
 
 	<a href="/result"><h2 class="text-center">- Voir mon planning -</h2></a>
