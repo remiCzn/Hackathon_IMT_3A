@@ -1,6 +1,6 @@
 import json
 import requests
-import horaires
+import googleData
 import majDB
 
 URL = "https://data.nantesmetropole.fr/explore/dataset/234400034_070-008_offre-touristique-restaurants-rpdl@paysdelaloire/download/?format=json&timezone=Europe/Berlin&lang=fr"

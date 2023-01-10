@@ -1,5 +1,5 @@
 from db import db_connect, cursor
-import restaurant, cultureData
+import restaurantData, cultureData
 
 def initRestaurant():
     cursor = db_connect()
