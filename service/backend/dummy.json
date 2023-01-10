@@ -4,10 +4,7 @@
         "recordid": "5a641846e9ce480cd41046a592bb61c285c92c87", 
         "fields": {
             "site_web": "http://bm.nantes.fr", 
-            "geo_shape": {
-                "coordinates": [-1.5362150097176794, 47.2199674658948], 
-                "type": "Point"
-                }, 
+            "localisation": [47.2199674658948, -1.5362150097176794],
             "url_nantesfr": "https://metropole.nantes.fr/infonantes/equipement/E16", 
             "adresse": "6 Cour Jules Durand", 
             "telephone": "02 40 41 95 65", 
@@ -30,10 +27,7 @@
         "recordid": "bef0db0672cc764b59004e3cb8a3c2a0229f329e", 
         "fields": {
             "site_web": "http://www.expressionlivre.fr/", 
-            "geo_shape": {
-                "coordinates": [-1.5338088134938879, 47.192430321563215], 
-                "type": "Point"
-                }, 
+            "localisation": [47.192430321563215, -1.5338088134938879],
             "url_nantesfr": "https://metropole.nantes.fr/infonantes/equipement/E4148", 
             "adresse": "56 Rue de la Ripossi\u00e8re", 
             "telephone": "02 40 75 37 23", 
@@ -56,10 +50,7 @@
         "recordid": "aab99e0e4ae607eb7292232c3f455b24f960ee09", 
         "fields": {
             "site_web": "https://www.leslaboratoiresvivants.com/", 
-            "geo_shape": {
-                "coordinates": [-1.5689361234428787, 47.215627980819754], 
-                "type": "Point"
-                }, 
+            "localisation": [47.215627980819754, -1.5689361234428787],
             "url_nantesfr": "https://metropole.nantes.fr/infonantes/equipement/E4054", 
             "adresse": "18 Rue Colbert", 
             "idobj_equipub": "4054", 
@@ -80,10 +71,7 @@
         "datasetid": "244400404_equipements-publics-nantes-metropole",
         "recordid": "a6174cb78ff067e24946e860caecf679506f25f3",
         "fields": {
-            "geo_shape": {
-                "coordinates": [-1.5526682220912356, 47.18321000810705],
-                "type": "Point"
-            }, 
+            "localisation": [47.18321000810705, -1.5526682220912356],
             "url_nantesfr": "https://metropole.nantes.fr/infonantes/equipement/E3166", 
             "adresse": "24 Rue de la Balini\u00e8re", 
             "telephone": "02 51 70 78 20", 
@@ -105,10 +93,7 @@
         "datasetid": "244400404_equipements-publics-nantes-metropole", 
         "recordid": "a6174cb78ff067e24946e860caecf679506f25f3", 
         "fields": {
-            "geo_shape": {
-                "coordinates": [-1.5526682220912356, 47.18321000810705], 
-                "type": "Point"
-                }, 
+            "localisation": [47.18321000810705, -1.5526682220912356],
             "url_nantesfr": "https://metropole.nantes.fr/infonantes/equipement/E3166", 
             "adresse": "24 Rue de la Balini\u00e8re", 
             "telephone": "02 51 70 78 20", 
