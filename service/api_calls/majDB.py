@@ -1,18 +1,18 @@
-from db import db_connect
-from api_calls import restaurant, cultureData
+from db import db_connect, cursor
+import restaurant, cultureData
 
 def initRestaurant():
     cursor = db_connect()
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS Restaurant(
         id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE,
-        activityid VARCHAR,
-        name VARCHAR,
-        category VARCHAR,
+        activityid VARCHAR(255),
+        name VARCHAR(255),
+        category VARCHAR(255),
         address TEXT,
         coordinate INTEGER ARRAY[2],
         schedule INTEGER ARRAY[14],
-        contact TEXT
+        contact VARCHAR(255)
     )
     """)
 
@@ -32,6 +32,7 @@ def addEquipementRestaurant(elem):
         INSERT INTO Restaurant(activityid, name, category, address, coordinate, schedule, contact)
         VALUES (:activityid, :name, :category, :address, :coordinate, :schedule, :contact)
     """
+    
     cursor = db_connect()
     cursor.execute(statement, data)
     return cursor.lastrowid
@@ -50,7 +51,7 @@ def addEquipementCulture(elem):
     else: data["contact"] = "NA"
 
     statement = """
-        INSERT INTO equipement(activityid, name, category, type, theme, address, coordinate, schedule, contact)
+        INSERT INTO Activity(activityid, name, category, type, theme, address, coordinate, schedule, contact)
         VALUES (:activityid, :name, :category, :type, :theme, :address, :coordinate, :schedule, :contact)
     """
     cursor = db_connect()
@@ -64,4 +65,7 @@ def majDB():
     cultureData.cacheData()
 
 if __name__=="__main__":
-    majDB()
+    #majDB()
+    statement = "ALTER TABLE Activity ADD contact VARCHAR(255)"
+    db_connect().execute(statement)
+    
