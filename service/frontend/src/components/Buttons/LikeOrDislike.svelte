@@ -15,8 +15,8 @@
 
 <style>
 	.circleBase {
-		height: 90px;
-		width: 90px;
+		height: 80px;
+		width: 80px;
 		background-color: #fff;
 		border-radius: 50%;
 		background-repeat: no-repeat;
