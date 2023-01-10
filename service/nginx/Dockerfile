@@ -1,4 +1,4 @@
-FROM nginx
+FROM nginx:alpine
 WORKDIR /app
 COPY default.conf /etc/nginx/conf.d/default.conf
 RUN apk update && \
