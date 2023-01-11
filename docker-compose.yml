@@ -4,11 +4,15 @@ services:
     build: ./service/backend/
     ports:
       - "3001:3001"
+    networks:
+      - backend
 
   frontend:
     build: ./service/frontend
     ports:
       - "3000:3000"
+    networks:
+      - backend
 
   nginx:
     image: jonasal/nginx-certbot:latest
@@ -21,6 +25,9 @@ services:
     volumes:
       - nginx_secrets:/etc/letsencrypt
       - ./service/nginx/user_conf.d:/etc/nginx/user_conf.d
+    networks:
+      - backend
+      - wan
 
   mariadb:
     image: 'mariadb:10'
