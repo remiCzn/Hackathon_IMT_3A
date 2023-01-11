@@ -1,4 +1,5 @@
 import axios from "axios";
+import {historyStore} from "$lib/historyStore.js";
 
 const client = axios.create({
     baseURL: "https://chillpaper.fr/api"
@@ -24,7 +25,8 @@ export function getActivity(day, historyToken) {
             hist: historyToken
         }
     }).then((res) => {
-        res.data
+        historyStore.set(res.data.hist);
+        return res.data.activity;
     });
 }
 
@@ -36,7 +38,10 @@ export function getRestaurant(day, historyToken) {
         headers: {
             hist: historyToken
         }
-    }).then((res) => res.data);
+    }).then((res) => {
+        historyStore.set(res.data.hist);
+        return res.data.restaurant;
+    });
 }
 
 export function getAgenda(day, historyToken) {
@@ -48,6 +53,7 @@ export function getAgenda(day, historyToken) {
             hist: historyToken
         }
     }).then((res) => {
+        historyStore.set(res.data.hist);
         return res.data.agenda;
     }).catch((_) => {
         return undefined;
