@@ -4,6 +4,8 @@ services:
     build: ./service/backend/
     ports:
       - "3001:3001"
+    depends_on:
+      - mariadb
     networks:
       - backend
       - wan
