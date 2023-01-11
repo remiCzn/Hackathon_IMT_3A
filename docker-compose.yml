@@ -2,18 +2,20 @@ version: "3.9"
 services:
   backend:
     build: ./service/backend/
-    ports:
-      - "3001:3001"
-
+    networks:
+      - backend
   frontend:
     build: ./service/frontend
-    ports:
-      - "3000:3000"
+    networks:
+      - backend
 
   nginx:
     build: ./service/nginx
     ports:
-      - 80:80
+      - "80:80"
+    networks:
+      - wan
+      - backend
 
   mariadb:
     image: 'mariadb:10'
@@ -27,6 +29,17 @@ services:
       - "3306:3306"
     volumes:
       - mariadb:/var/lib/mysql
+    networks:
+      - backend
+      - wan
 
 volumes:
   mariadb:
+
+networks:
+  backend:
+    name: backend
+    external: true
+  wan:
+    name: wan
+    external: true
