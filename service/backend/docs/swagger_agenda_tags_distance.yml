@@ -31,6 +31,11 @@ parameters:
       $ref: '#definitions/Tag'
     required: true
     description: list of tags to which the proposed activities and restaurants should belong.
+  - name: hist
+    in: header
+    type: string
+    required: true
+    description: a jwt token encoded with the HS256 algorithm
   
 responses:
     '200':
@@ -42,6 +47,15 @@ responses:
 definitions:
   Tag:
     type: string
+ResponseAgenda:
+  type: object
+  properties:
+    agenda:
+      type: object
+      schema:
+        $ref: '#/Definitions/Agenda'
+    hist:
+      type: string
   Agenda:
     type: array
     items: 
