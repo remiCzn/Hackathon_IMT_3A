@@ -1,9 +1,9 @@
 import axios from "axios";
-import jwt from "jsonwebtoken"
 
 const client = axios.create({
     baseURL: "http://api.chillpaper.fr"
 });
+
 
 export function dateToHalfday(day) {
     let dayOfWeek = dateToDay(day);
@@ -15,46 +15,41 @@ export function dateToDay(day) {
     return (((day.getDay() - 1) % 7) + 7) % 7;
 }
 
-function history() {
-    cookies
-    let a = jwt.sign({
-        history: []
-    }, "secret");
-    console.log(a);
-    return a;
-}
-
-export function getActivity(day) {
+export function getActivity(day, historyToken) {
     return client.get("/activity", {
         params: {
             time: dateToHalfday(day)
         },
         headers: {
-            hist: history()
+            hist: historyToken
         }
-    }).then((res) => res.data);
+    }).then((res) => {
+        res.data
+    });
 }
 
-export function getRestaurant(day) {
+export function getRestaurant(day, historyToken) {
     return client.get("/restaurant", {
         params: {
             time: dateToHalfday(day),
         },
         headers: {
-            hist: history()
+            hist: historyToken
         }
     }).then((res) => res.data);
 }
 
-export function getAgenda(day) {
+export function getAgenda(day, historyToken) {
     return client.get("/agenda", {
         params: {
-            time: dateToHalfday(day)
+            time: dateToDay(day)
         },
         headers: {
-            hist: history()
+            hist: historyToken
         }
-    }).then((res) => res.data).catch((_) => {
+    }).then((res) => {
+        return res.data.agenda;
+    }).catch((_) => {
         return undefined;
     });
 }
