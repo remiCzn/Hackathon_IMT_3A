@@ -21,7 +21,12 @@ def db_connect():
 
     global cursor
     cursor = conn.cursor()
-
+    return conn
+    
+def db_close(conn):
+    if conn:
+        conn.close()
+        
 def send_request(request):
     cur = cursor
     cur.execute(request)
