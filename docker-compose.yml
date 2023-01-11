@@ -37,6 +37,5 @@ services:
 
 volumes:
   nginx_secrets:
-      - mariadb:/var/lib/mysql
   mariadb:
   
