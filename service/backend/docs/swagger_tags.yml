@@ -1,0 +1,21 @@
+openapi: 3.0.0
+tags:
+  - name: 
+get:
+  description: None
+responses:
+    '200':
+      description: Successful response
+      schema: 
+        $ref: '#definitions/Tags'
+    '400':
+      description: Bad Request
+    '500':
+      description: Internal Server Error
+definitions:
+  Tags:
+    type: array
+    items: 
+      $ref: '#/definitions/Tag'
+  Tag:
+    type: string

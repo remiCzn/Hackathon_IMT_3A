@@ -20,7 +20,8 @@
 	},
 	"dependencies": {
 		"@sveltejs/adapter-node": "^1.0.0",
-		"axios": "1.2.2"
+		"axios": "1.2.2",
+		"jsonwebtoken": "9.0.0"
 	},
 	"type": "module"
 }

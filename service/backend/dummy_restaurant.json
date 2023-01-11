@@ -93,6 +93,7 @@
       "commmail": "la.caravelle0085@orange.fr",
       "departement": "Loire-Atlantique",
       "type": "Restaurant",
+      "categorie" : "None",
       "codeinseecommune": 44132,
       "codepostal": 44380,
       "commtel": "02 40 61 09 10",

@@ -9,6 +9,28 @@ parameters:
     type: integer
     required: true
     description: time goes from 0 to 6 where 0 is monday and 6 is sunday
+  - name: lat
+    in: query
+    type: number
+    required: true
+    description: latitude of the user
+  - name: long
+    in: query
+    type: number
+    required: true
+    description: longitude of the user
+  - name: r
+    in: query
+    type: integer
+    required: true
+    description: max distance from the user
+  - name: tags
+    in: query
+    type: array
+    items:
+      $ref: '#definitions/Tag'
+    required: true
+    description: list of tags to which the proposed activities and restaurants should belong.
   
 responses:
     '200':
@@ -18,11 +40,12 @@ responses:
     '300':
       description: Agenda contains empty spaces
 definitions:
+  Tag:
+    type: string
   Agenda:
     type: array
     items: 
       $ref: '#/definitions/Activity'
-
   Activity:
     type: object
     properties: 

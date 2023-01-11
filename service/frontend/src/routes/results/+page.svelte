@@ -5,6 +5,10 @@
 	export let data;
 </script>
 
-<ActivityItem />
-<p1>Sample data fetched</p1>
-<p>{JSON.stringify(data)}</p>
+{#if data.agenda === undefined }
+    <h3>Aucun résultat</h3>
+{:else}
+    {#each data.agenda as activity, i}
+        <ActivityItem description="{activity.name}" location="{activity.adress}"/>
+    {/each}
+{/if}
