@@ -15,7 +15,7 @@ h3 {
 }
 
 p1 {
-    @apply text-xl font-medium;
+    @apply text-2xl font-medium;
 }
 
 p2 {
