@@ -25,8 +25,8 @@
 	});
 
 	// Process handling
-	$: validCoord = coord.length == 2;
-	$: validDate = dateString != "";
+	$: validCoord = coord.length === 2;
+	$: validDate = dateString !== "";
 	$: validInformations = validCoord && validDate;
 </script>
 
