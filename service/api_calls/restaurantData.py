@@ -2,6 +2,7 @@ import json
 import requests
 import googleData
 import majDB
+import tqdm
 
 URL = "https://data.nantesmetropole.fr/explore/dataset/234400034_070-008_offre-touristique-restaurants-rpdl@paysdelaloire/download/?format=json&timezone=Europe/Berlin&lang=fr"
 
@@ -73,8 +74,9 @@ if __name__=="__main__":
     data = getDataFromAPI()
     data = json.loads(data)
     data = list(filter(lambda x: "commune" in x["fields"] and x["fields"]["commune"]=="NANTES", data))
-    exemple = data[0]
-    formatData(exemple)
-    addresse(exemple)
-    print(exemple)
-    majDB.addEquipementRestaurant(exemple)
+    print(len(data))
+    for d in tqdm(data):
+       exemple = d
+       formatData(exemple)
+       addresse(exemple)
+       majDB.addEquipementRestaurant(exemple)

@@ -1,6 +1,8 @@
 import requests
-from config import API_KEY
+#from config import API_KEY
 
+API_KEY = "AIzaSyCpCrc6Ua3wZRcFvQGKGKDGgAOW6r-mJJ8"
+#returns the informations (id, address) about a restaurant or activity given its name and approximate location)
 def get_infos(name,coordonates):
     """
     :param name: approximate name of a place
@@ -26,7 +28,9 @@ def get_horaires(id):
     headers = {}
     response = requests.request("GET", url, headers=headers, data=payload)
     response = response.json()
-    if("current_opening_hours" in response["result"]): return response["result"]['current_opening_hours']['periods'], response["result"]['current_opening_hours']['weekday_text']
+    #print(response)
+    if("current_opening_hours" in response["result"] and "periods" in response["result"]["current_opening_hours"]):
+        return response["result"]['current_opening_hours']['periods'], response["result"]['current_opening_hours']['weekday_text']
     else: return "NA", "NA"
 
 def encode_horaires_activity(periods,weekday):
@@ -133,7 +137,7 @@ if __name__=="__main__":
     infos = get_infos(restaurant_name,location)
     print("address: ", infos['address'])
     print("ID:", infos['id'])
-    id = infos['id ']
+    id = infos['id']
     periods,weekday =get_horaires(id)
     print(periods, weekday)
     code = encode_horaires_restaurant(periods, weekday)

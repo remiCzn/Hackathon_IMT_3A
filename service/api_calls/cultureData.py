@@ -1,6 +1,7 @@
 import googleData
 import requests
 import majDB
+import tqdm
 
 URL = "https://data.nantesmetropole.fr/api/records/1.0/search/?dataset=244400404_equipements-publics-nantes-metropole&q=&rows=10000&facet=theme&facet=categorie&facet=type&facet=commune&refine.theme="
 
@@ -65,6 +66,8 @@ def cacheData():
 
 if __name__=="__main__":
     data = getDataFromAPI()
-    exemple = data["records"][5]
-    formatData(exemple)
-    majDB.addEquipementCulture(exemple)
+    print(len(data["records"]))
+    for d in tqdm(data["records"]):
+       exemple = d
+       formatData(exemple)
+       majDB.addEquipementCulture(exemple)
