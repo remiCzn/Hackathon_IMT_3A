@@ -13,16 +13,14 @@ services:
   nginx:
     image: jonasal/nginx-certbot:latest
     restart: unless-stopped
-    environment:
-      - CERTBOT_EMAIL
     env_file:
-      - ./nginx-certbot.env
+      - ./service/nginx/nginx-certbot.env
     ports:
       - 80:80
       - 443:443
     volumes:
       - nginx_secrets:/etc/letsencrypt
-      - ./user_conf.d:/etc/nginx/user_conf.d
+      - ./service/nginx/user_conf.d:/etc/nginx/user_conf.d
 
   mariadb:
     image: 'mariadb:10'
@@ -36,3 +34,6 @@ services:
       - "3306:3306"
     volumes:
       - ./mariadb/:/var/lib/mysql
+
+volumes:
+  nginx_secrets:
