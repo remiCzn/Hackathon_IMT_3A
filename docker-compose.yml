@@ -6,6 +6,7 @@ services:
       - "3001:3001"
     networks:
       - backend
+      - wan
 
   frontend:
     build: ./service/frontend
@@ -33,6 +34,7 @@ services:
   mariadb:
     image: 'mariadb:10'
     restart: always
+    hostname: db
     environment:
       MYSQL_USER: user
       MYSQL_PASSWORD: 1234
