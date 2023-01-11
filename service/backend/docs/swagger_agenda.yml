@@ -9,20 +9,35 @@ parameters:
     type: integer
     required: true
     description: time goes from 0 to 6 where 0 is monday and 6 is sunday
+  - name: hist
+    in: header
+    type: string
+    required: true
+    description: a jwt token encoded with the HS256 algorithm
+
   
 responses:
     '200':
       description: Successful response
       schema: 
-        $ref: '#definitions/Agenda'
+        $ref: '#definitions/ResponseAgenda'
     '300':
       description: Agenda contains empty spaces
 definitions:
+  ResponseAgenda:
+    type: object
+    properties:
+      agenda:
+        type: object
+        schema:
+          $ref: '#/Definitions/Agenda'
+      hist:
+        type: string
+
   Agenda:
     type: array
     items: 
       $ref: '#/definitions/Activity'
-
   Activity:
     type: object
     properties: 

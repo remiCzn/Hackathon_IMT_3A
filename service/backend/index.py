@@ -84,6 +84,17 @@ def encode(label, token):
     
     return jwt.encode({label: token}, "secret", algorithm="HS256")
 
+def get_tag_list():
+
+    _tag_list = []
+    for element in data_activities:
+        if element["category"] not in _tag_list : _tag_list.append(element["category"])
+    for element in data_restaurants:
+        if element["category"] not in _tag_list : _tag_list.append(element["category"])
+
+    return _tag_list
+
+
 def random_selection(mid_day, data, hist):
     """
     Perform random selection of activity available at that time.
@@ -343,7 +354,7 @@ def get_activity_by_distance():
     hist = request.headers.get('hist')
     hist = decode(hist)['history'] if (hist != "") else []
 
-    activity = selection_by_distance(time, (lat,long), r, data_activities, hist)
+    activity, hist = selection_by_distance(time, (lat,long), r, data_activities, hist)
     if activity == "bof":
         result = {"hist": encode("hist", hist), "activity": {"error": "no more activity not already seen"}}
         return make_response(result,400)
@@ -364,7 +375,7 @@ def get_activity_by_tags_distance():
     hist = request.headers.get('hist')
     hist = decode(hist)['history'] if (hist != "") else []
 
-    activity = selection_by_tags_distance(time, (lat,long), r, tags, data_activities, hist)
+    activity, hist = selection_by_tags_distance(time, (lat,long), r, tags, data_activities, hist)
     if activity == "bof":
         result = {"hist": encode("hist", hist), "activity": {"error": "no more activity not already seen"}}
         return make_response(result,400)
@@ -380,7 +391,7 @@ def get_restaurant():
     hist = request.headers.get('hist')
     hist = decode(hist)['history'] if (hist != "") else []
 
-    restaurant = random_selection(time, data_restaurants, hist)
+    restaurant, hist = random_selection(time, data_restaurants, hist)
     if restaurant == "bof":
         result = {"hist": encode("hist", hist), "restaurant":{"error":"no more restaurant not already seen"}}
         return make_response(result, 400)
@@ -399,7 +410,7 @@ def get_restaurant_by_distance():
     hist = request.headers.get('hist')
     hist = decode(hist)['history'] if (hist != "") else []
 
-    activity = selection_by_distance(time, (lat,long), r, data_restaurants, hist)
+    restaurant, hist = selection_by_distance(time, (lat,long), r, data_restaurants, hist)
     if restaurant == "bof":
         result = {"hist": encode("hist", hist), "restaurant":{"error":"no more restaurant not already seen"}}
         return make_response(result, 400)
@@ -420,7 +431,7 @@ def get_restaurant_by_tags_distance():
     hist = request.headers.get('hist')
     hist = decode(hist)['history'] if (hist != "") else []
 
-    restaurant = selection_by_tags_distance(time, (lat,long), r, tags, data_restaurants, hist)
+    restaurant, hist = selection_by_tags_distance(time, (lat,long), r, tags, data_restaurants, hist)
     if restaurant == "bof":
         result = {"hist": encode("hist", hist), "restaurant":{"error":"no more restaurant not already seen"}}
         return make_response(result, 400)
@@ -492,5 +503,6 @@ if __name__ == "__main__":
     print(data_restaurants[0])
     preprocessing(data_activities)
     preprocessing(data_restaurants)
+    tag_list = get_tag_list()
 
     app.run(host=HOST, port=PORT)

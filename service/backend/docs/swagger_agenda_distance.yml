@@ -24,6 +24,11 @@ parameters:
     type: integer
     required: true
     description: max distance from the user
+  - name: hist
+    in: header
+    type: string
+    required: true
+    description: a jwt token encoded with the HS256 algorithm
   
 responses:
     '200':
@@ -33,11 +38,19 @@ responses:
     '300':
       description: Agenda contains empty spaces
 definitions:
+  ResponseAgenda:
+    type: object
+    properties:
+      agenda:
+        type: object
+        schema:
+          $ref: '#/Definitions/Agenda'
+      hist:
+        type: string
   Agenda:
     type: array
     items: 
       $ref: '#/definitions/Activity'
-
   Activity:
     type: object
     properties: 

@@ -24,6 +24,11 @@ parameters:
     type: integer
     required: true
     description: max distance from the user
+  - name: hist
+    in: header
+    type: string
+    required: true
+    description: a jwt token encoded with the HS256 algorithm
     
 responses:
     '200':
@@ -33,6 +38,15 @@ responses:
     '400':
       description: No more activity not already seen
 definitions:
+  ResponseActivity:
+    type: object
+    properties:
+      agenda:
+        type: object
+        schema:
+          $ref: '#/Definitions/Activity'
+      hist:
+        type: string
   Activity:
     type: object
     properties: 
