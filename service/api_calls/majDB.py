@@ -120,7 +120,8 @@ def dropTable():
     conn = db_connect()
     cursor = conn.cursor()
     cursor.execute("DROP TABLE Activity")
-    #cursor.execute("DROP TABLE Restaurant")
+    cursor.execute("DROP TABLE Restaurant")
+    cursor.execute("DROP TABLE Spectacle")
     conn.commit()
     db_close(conn)
 

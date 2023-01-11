@@ -1,8 +1,10 @@
 import json
-import mariadb
 import sys
 
-cursor=None
+import mariadb
+
+cursor = None
+
 
 def db_connect():
     # Connect to MariaDB Platform
@@ -22,11 +24,13 @@ def db_connect():
     global cursor
     cursor = conn.cursor()
     return conn
-    
+
+
 def db_close(conn):
     if conn:
         conn.close()
-        
+
+
 def send_request(request):
     cur = cursor
     cur.execute(request)
@@ -37,4 +41,4 @@ def send_request(request):
         json_data.append(dict(zip(row_headers, result)))
     return json.dumps(json_data)
     # Get Cursor
-    #return conn.cursor()
+    # return conn.cursor()
