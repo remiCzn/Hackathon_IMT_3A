@@ -1,12 +1,15 @@
 import json
 import requests
-import horaires
+import googleData
 import majDB
 
 URL = "https://data.nantesmetropole.fr/explore/dataset/234400034_070-008_offre-touristique-restaurants-rpdl@paysdelaloire/download/?format=json&timezone=Europe/Berlin&lang=fr"
 
 #On récupère les données des restaurants depuis Nantes opendata
 def getDataFromAPI():
+    """
+    :return: all data available on restaurants in Loire-Atlantique
+    """
     res = requests.get(URL)
     if not res.ok:
         return res.status_code
@@ -14,7 +17,11 @@ def getDataFromAPI():
 
 #Ajoute à un restaurant, son horaire d'ouverture et son adresse
 def formatData(elem):
-    idJson = horaires.get_infos(elem["fields"]["nomoffre"], elem["fields"]["localisation"])
+    """
+    :param elem: restaurant
+    :return: donnée formatée avec les données google (restaurant, son horaire d'ouverture et son adresse)
+    """
+    idJson = googleData.get_infos(elem["fields"]["nomoffre"], elem["fields"]["localisation"])
     id = idJson["id"]
     #Si l'api de google n'a pas trouvé de résultat
     if(id=="NA"):
@@ -22,13 +29,13 @@ def formatData(elem):
         elem["fields"]["adresse"] = "NA"
         return elem
     adresse = idJson["address"]
-    horaire, weekday = horaires.get_horaires(id)
+    horaire, weekday = googleData.get_horaires(id)
     #Si il n'y a pas d'horaire d'ouverture, on considère que le lieu est ouvert
     if(horaire=="NA"):
         elem["fields"]["horaire"] = "00000000000000"
         elem["fields"]["adresse"] = adresse
         return elem
-    h = horaires.encode_horaires_restaurant(horaire, weekday)
+    h = googleData.encode_horaires_restaurant(horaire, weekday)
     elem["fields"]["horaire"] = h
     elem["fields"]["adresse"] = adresse
     return elem
@@ -45,6 +52,10 @@ def addresse(elem):
     return elem
 
 def addDataToDB(data):
+    """
+    :param data: restaurant name
+    :return: nothing, add restaurant formated to database with google infos
+    """
     for d in data["records"]:
         if "commune" in d["fields"] and d["fields"]["commune"]=="NANTES":
             i = formatData(d)

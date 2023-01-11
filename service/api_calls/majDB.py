@@ -1,5 +1,5 @@
 from db import db_connect, cursor
-import restaurant, cultureData
+import restaurantData, cultureData
 
 def initRestaurant():
     cursor = db_connect()
@@ -61,7 +61,7 @@ def addEquipementCulture(elem):
 
 def majDB():
     initRestaurant()
-    restaurant.cacheData()
+    restaurantData.cacheData()
     cultureData.cacheData()
 
 if __name__=="__main__":
