@@ -55,11 +55,13 @@ def aVenir(data):
         data["date"] = "20"+data["date"]
     return dateEvent.date()>date.today()
 
-    
-if __name__=="__main__":
+def main():
     data = getDataFromAPI()
     data = json.loads(data)
     data = list(filter(aVenir, data))
     data = list(map(formatData, data))
     for d in tqdm(data):
         majDB.addEquipementSpectacle(d)
+
+if __name__=="__main__":
+    main()
