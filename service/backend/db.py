@@ -12,7 +12,7 @@ def db_connect():
         conn = mariadb.connect(
             user="herve",
             password="e92]sPW6FXhZ5y_)",
-            host="db",
+            host="chillpaper.fr",
             port=3306,
             database="herve"
 
