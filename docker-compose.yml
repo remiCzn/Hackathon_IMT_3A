@@ -2,20 +2,25 @@ version: "3.9"
 services:
   backend:
     build: ./service/backend/
-    networks:
-      - backend
+    ports:
+      - "3001:3001"
+
   frontend:
     build: ./service/frontend
-    networks:
-      - backend
+    ports:
+      - "3000:3000"
 
   nginx:
-    build: ./service/nginx
+    image: jonasal/nginx-certbot:latest
+    restart: unless-stopped
+    env_file:
+      - ./service/nginx/nginx-certbot.env
     ports:
-      - "80:80"
-    networks:
-      - wan
-      - backend
+      - 80:80
+      - 443:443
+    volumes:
+      - nginx_secrets:/etc/letsencrypt
+      - ./service/nginx/user_conf.d:/etc/nginx/user_conf.d
 
   mariadb:
     image: 'mariadb:10'
@@ -34,12 +39,5 @@ services:
       - wan
 
 volumes:
+  nginx_secrets:
   mariadb:
-
-networks:
-  backend:
-    name: backend
-    external: true
-  wan:
-    name: wan
-    external: true

@@ -1,13 +1,15 @@
 <script>
-	export let href;
-	export let condition = true;
+    export let href;
+    export let condition = true;
 </script>
 
 <a
-	{href}
-	class="text-center {$$props.class} {condition
+        class="text-center {$$props.class} {condition
 		? ''
 		: 'opacity-50 cursor-not-allowed'}"
+        {href}
 >
-	<h2 class="text-white"><slot /></h2>
+    <h3 class="text-white">
+        <slot/>
+    </h3>
 </a>

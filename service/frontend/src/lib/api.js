@@ -1,47 +1,61 @@
 import axios from "axios";
+import {historyStore} from "$lib/historyStore.js";
 
 const client = axios.create({
-    baseURL: "http://api.chillpaper.fr"
+    baseURL: "https://chillpaper.fr/api"
 });
 
-export function dateToTimeId(day) {
-    let dayOfWeek = (((day.getDay() - 1) % 7) + 7) % 7;
+
+export function dateToHalfday(day) {
+    let dayOfWeek = dateToDay(day);
     let partOfDay = day.getHours() >= 12;
     return 2 * dayOfWeek + partOfDay;
 }
 
-export function getActivity(day) {
+export function dateToDay(day) {
+    return (((day.getDay() - 1) % 7) + 7) % 7;
+}
+
+export function getActivity(day, historyToken) {
     return client.get("/activity", {
         params: {
-            time: dateToTimeId(day)
+            time: dateToHalfday(day)
+        },
+        headers: {
+            hist: historyToken
         }
-    }).then((res) => res.data);
+    }).then((res) => {
+        historyStore.set(res.data.hist);
+        return res.data.activity;
+    });
 }
 
-export function getRestaurant(day) {
+export function getRestaurant(day, historyToken) {
     return client.get("/restaurant", {
         params: {
-            time: dateToTimeId(day)
+            time: dateToHalfday(day),
+        },
+        headers: {
+            hist: historyToken
         }
-    }).then((res) => res.data);
+    }).then((res) => {
+        historyStore.set(res.data.hist);
+        return res.data.restaurant;
+    });
 }
 
-export function getAgenda(day) {
+export function getAgenda(day, historyToken) {
     return client.get("/agenda", {
         params: {
-            time: dateToTimeId(day)
+            time: dateToDay(day)
+        },
+        headers: {
+            hist: historyToken
         }
-    }).then((res) => res.data)
-        .catch((err) => {
-            {}
-        });
+    }).then((res) => {
+        historyStore.set(res.data.hist);
+        return res.data.agenda;
+    }).catch((_) => {
+        return undefined;
+    });
 }
-
-// (async () => {
-//     const a = await getRestaurant(new Date());
-//     console.log(a);
-//     const b = await getActivity(new Date());
-//     console.log(b);
-//     const c = await getAgenda(new Date());
-//     console.log(c);
-// })();
