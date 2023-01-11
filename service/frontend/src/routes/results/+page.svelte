@@ -9,8 +9,9 @@
     <h3>Aucun résultat</h3>
 {:else}
     <div class="flex flex-row">
-        {#each data.agenda as activity, i}
-            <ActivityItem description="{activity.name}" location="{activity.adress}"/>
-        {/each}
+        <ActivityItem title="Matin" description="{data.agenda[0].name}" location="{data.agenda[0].adress}"/>
+        <ActivityItem title="Déjeuner" description="{data.agenda[1].name}" location="{data.agenda[1].adress}"/>
+        <ActivityItem title="Après-midi" description="{data.agenda[2].name}" location="{data.agenda[2].adress}"/>
+        <ActivityItem title="Diner" description="{data.agenda[3].name}" location="{data.agenda[3].adress}"/>
     </div>
 {/if}

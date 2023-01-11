@@ -10,7 +10,7 @@ export async function load({url}) {
     const range = url.searchParams.get("rayon");
     console.log(lat, long, range);
     // Fetch data on chillpaper.fr/api
-    const agenda = await getAgenda(date, get(historyStore));
+    const agenda = await getAgenda(date, get(historyStore), lat, long, range);
     return {
         agenda: agenda
     }
