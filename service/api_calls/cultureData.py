@@ -64,10 +64,13 @@ def cacheData():
     addDataToDB(dataSport)
     return True
 
-if __name__=="__main__":
+def main():
     data = getDataFromAPI()
     print(len(data["records"]))
     for d in tqdm(data["records"]):
        exemple = d
        formatData(exemple)
        majDB.addEquipementCulture(exemple)
+
+if __name__=="__main__":
+    main()

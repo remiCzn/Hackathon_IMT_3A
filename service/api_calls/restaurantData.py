@@ -70,7 +70,7 @@ def cacheData():
     addDataToDB(dataRestau)
     return True
 
-if __name__=="__main__":
+def main():
     data = getDataFromAPI()
     data = json.loads(data)
     data = list(filter(lambda x: "commune" in x["fields"] and x["fields"]["commune"]=="NANTES", data))
@@ -80,3 +80,6 @@ if __name__=="__main__":
        formatData(exemple)
        addresse(exemple)
        majDB.addEquipementRestaurant(exemple)
+
+if __name__=="__main__":
+    main()

@@ -1,7 +1,6 @@
 import requests
-#from config import API_KEY
+from config import API_KEY
 
-API_KEY = "AIzaSyCpCrc6Ua3wZRcFvQGKGKDGgAOW6r-mJJ8"
 #returns the informations (id, address) about a restaurant or activity given its name and approximate location)
 def get_infos(name,coordonates):
     """
