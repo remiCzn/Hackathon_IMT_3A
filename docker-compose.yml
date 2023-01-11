@@ -33,6 +33,7 @@ services:
   mariadb:
     image: 'mariadb:10'
     restart: always
+    hostname: db
     environment:
       MYSQL_USER: user
       MYSQL_PASSWORD: 1234
