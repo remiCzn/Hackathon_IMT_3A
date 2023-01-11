@@ -1,14 +1,14 @@
 <script>
-	import LikeOrDislike from "../Buttons/LikeOrDislike.svelte";
-	import GpsIcon from "../svg/GpsIcon.svelte";
+    import LikeOrDislike from "../Buttons/LikeOrDislike.svelte";
+    import GpsIcon from "../svg/GpsIcon.svelte";
 
-	export let title = "Déjeuner";
+    export let title = "Déjeuner";
     export let description = "Brunch luxe gucci tier";
     export let location = "114 rue de la briquetterie";
 </script>
 
 <div
-        class="flex flex-col gap-8 text-center py-4 px-3 border-2 border-soft-pink shadow-lg rounded-3xl max-w-fit"
+        class="flex flex-col gap-8 text-center py-4 px-3 border-2 border-soft-pink shadow-lg rounded-3xl w-full h-full"
 >
     <div class="flex flex-col gap-3">
         <div class="flex flex-col gap-1">
