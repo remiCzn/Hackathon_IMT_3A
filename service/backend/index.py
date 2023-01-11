@@ -4,6 +4,7 @@ from flasgger import swag_from
 #from flask_cors import CORS
 import numpy as np
 import random
+import jwt as jwt
 import json
 import db
 
@@ -41,8 +42,8 @@ HOST = '0.0.0.0'
 data_activities = []
 data_restaurants = []
 
-hist_activities = []
-hist_restaurants = []
+#hist_activities = []
+#hist_restaurants = []
 
 tag_list = ["Médiathèque", "Salle de spectacle", "Monument", "Musée, Chateau", "Ecole Culturelle", "Salle d'exposition", "Cinéma"]
 
@@ -64,9 +65,24 @@ def load_data_from_db():
     db.db_connect()
     global data_activities
     global data_restaurants
-    data_activities = db.send_request('''SELECT * FROM Activity''')
-    data_restaurants = db.send_request('''SELECT * FROM Restaurant''')
+    data_activities = json.loads(db.send_request('''SELECT * FROM Activity'''))
+    data_restaurants = json.loads(db.send_request('''SELECT * FROM Restaurant'''))
 
+def preprocessing(data):
+    for element in data:
+        element["schedule"] = [1 for i in range(14)] if (element["schedule"] == 'NA')\
+                                                    else [int(c) for c in list(element["schedule"])]
+        element["schedule"] = [int(c) for c in list(element["schedule"])]
+        element["coordinate"] = [float(n) for n in element["coordinate"].split(",")]
+    return data
+
+def decode(token):
+    return jwt.decode(token, "secret", algorithms=["HS256"])
+
+def encode(label, token):
+    assert type(label) is str, "label should be a string"
+    
+    return jwt.encode({label: token}, "secret", algorithm="HS256")
 
 def random_selection(mid_day, data, hist):
     """
@@ -80,22 +96,22 @@ def random_selection(mid_day, data, hist):
     assert type(mid_day) is int, "Received wrong type"
     choices = []
     for element in data:
-        if element["opened"][mid_day]:
+        if element["schedule"][mid_day]:
             choices.append(element)
 
     while len(choices) > 0:
         rand_id = random.randint(0, len(choices)-1)
         result = choices.pop(rand_id)
-        if result["recordid"] not in hist:
-            hist.append(result["recordid"])
+        if result["activityid"] not in hist:
+            hist.append(result["activityid"])
             res = {
-            "name" : result["fields"]["nom_complet"],
-            "adress" : result["fields"]["adresse"],
-            "categorie" : result["fields"]["categorie"]
+            "name" : result["name"],
+            "adress" : result["address"],
+            "categorie" : result["category"]
         }
-            return res
+            return res, hist
 
-    return "bof"
+    return "bof", hist
 
 
 def selection_by_distance(mid_day, pos, r, data, hist):
@@ -113,24 +129,24 @@ def selection_by_distance(mid_day, pos, r, data, hist):
     assert type(mid_day) is int, "Received wrong type"
     choices = []
     for element in data:
-        if element["opened"][mid_day]:
-            dist = get_distance(pos[0], pos[1], element["fields"]["localisation"][0], element["fields"]["localisation"][1])
+        if element["schedule"][mid_day]:
+            dist = get_distance(pos[0], pos[1], element["coordinate"][0], element["coordinate"][1])
             if dist <= r:
                 choices.append(element)
     
     while len(choices) > 0:
         rand_id = random.randint(0, len(choices)-1)
         result = choices.pop(rand_id)
-        if result["recordid"] not in hist:
-            hist.append(result["recordid"])
+        if result["activityid"] not in hist:
+            hist.append(result["activityid"])
             res = {
-            "name" : result["fields"]["nom_complet"],
-            "adress" : result["fields"]["adresse"],
-            "categorie" : result["fields"]["categorie"]
+            "name" : result["name"],
+            "adress" : result["address"],
+            "categorie" : result["category"]
         }
-            return res
+            return res, hist
 
-    return "bof"
+    return "bof", hist
 
 
 def selection_by_tags_distance(mid_day, pos, r, tags, data, hist):
@@ -153,31 +169,32 @@ def selection_by_tags_distance(mid_day, pos, r, tags, data, hist):
 
     choices = []
     for element in data:
-        if element["opened"][mid_day]:
-            dist = get_distance(pos[0], pos[1], element["fields"]["localisation"][0], element["fields"]["localisation"][1])
-            if (dist <= r) & (element["fields"]["categorie"] in tags):
+        if element["schedule"][mid_day]:
+            dist = get_distance(pos[0], pos[1], element["coordinate"][0], element["coordinate"][1])
+            if (dist <= r) & (element["category"] in tags):
                 choices.append(element)
 
     while len(choices) > 0:
         rand_id = random.randint(0, len(choices)-1)
         result = choices.pop(rand_id)
-        if result["recordid"] not in hist:
-            hist.append(result["recordid"])
+        if result["activityid"] not in hist:
+            hist.append(result["activityid"])
             res = {
-            "name" : result["fields"]["nom_complet"],
-            "adress" : result["fields"]["adresse"],
-            "categorie" : result["fields"]["categorie"]
+            "name" : result["name"],
+            "adress" : result["address"],
+            "categorie" : result["category"]
         }
-            return res
+            return res, hist
 
-    return "bof"
+    return "bof", hist
 
 
-def basic_agenda(day):
+def basic_agenda(day, hist):
     """
     Create a basic agenda consisting of randomly selected activities and restaurant for
     the first half and second half of the day and for lunch and dinner.
     :param day: int, ranging from 0 to 6, the day for which the function aims at creating an agenda
+    :param hist: list of dict, the history of previously selected elements
     :return: list of dict, list of elements consisting of activities and restaurants, ordered by
     appearance in the day.
     """
@@ -188,15 +205,23 @@ def basic_agenda(day):
 
     fst_half = 2*day
     scd_half = 2*day+1
-    day_agenda.append(random_selection(fst_half, data_activities, hist_activities))
-    day_agenda.append(random_selection(fst_half, data_restaurants, hist_restaurants))
-    day_agenda.append(random_selection(scd_half, data_activities, hist_activities))
-    day_agenda.append(random_selection(scd_half, data_restaurants, hist_restaurants))
 
-    return day_agenda
+    activity1, hist = random_selection(fst_half, data_activities, hist)
+    day_agenda.append(activity1)
+
+    restaurant1, hist = random_selection(fst_half, data_restaurants, hist)
+    day_agenda.append(restaurant1)
+
+    activity2, hist = random_selection(scd_half, data_activities, hist)
+    day_agenda.append(activity2)
+
+    restaurant2, hist = random_selection(scd_half, data_restaurants, hist)
+    day_agenda.append(restaurant2)
+
+    return day_agenda, hist 
 
 
-def by_distance_agenda(day, pos, r):
+def by_distance_agenda(day, pos, r, hist):
     """
     Create an agenda respecting a distance criterion consisting of randomly
     selected activities and restaurant for the first half and second half of the day and 
@@ -204,6 +229,7 @@ def by_distance_agenda(day, pos, r):
     :param day: int, ranging from 0 to 6, the day for which the function aims at creating an agenda
     :param pos: tuple(float, float), a tuple containing the latitude and the longitude of the user such that pos = (lat, long)
     :param r:  int, the max distance from the user to the point of interest in km
+    :param hist: list of dict, the history of previously selected elements
     :return: list of dict, list of elements consisting of activities and restaurants, ordered by
     appearance in the day.
     """
@@ -214,15 +240,23 @@ def by_distance_agenda(day, pos, r):
 
     fst_half = 2*day
     scd_half = 2*day+1
-    day_agenda.append(selection_by_distance(fst_half, pos, r, data_activities, hist_activities))
-    day_agenda.append(selection_by_distance(fst_half, pos, r, data_restaurants, hist_restaurants))
-    day_agenda.append(selection_by_distance(scd_half, pos, r, data_activities, hist_activities))
-    day_agenda.append(selection_by_distance(scd_half, pos, r, data_restaurants, hist_restaurants))
 
-    return day_agenda
+    activity1, hist = selection_by_distance(fst_half, pos, r, data_activities, hist)
+    day_agenda.append(activity1)
+
+    restaurant1, hist = selection_by_distance(fst_half, pos, r, data_restaurants, hist)
+    day_agenda.append(restaurant1)
+
+    activity2, hist = selection_by_distance(scd_half, pos, r, data_activities, hist)
+    day_agenda.append(activity2)
+
+    restaurant2, hist = selection_by_distance(scd_half, pos, r, data_restaurants, hist)
+    day_agenda.append(restaurant2)
+
+    return day_agenda, hist
 
 
-def by_tags_distance_agenda(day, pos, r, tags):
+def by_tags_distance_agenda(day, pos, r, tags, hist):
     """
     Create an agenda respecting a distance criterion and tags criteria, consisting of randomly
     selected activities and restaurant for the first half and second half of the day and 
@@ -231,6 +265,7 @@ def by_tags_distance_agenda(day, pos, r, tags):
     :param pos: tuple(float, float), a tuple containing the latitude and the longitude of the user such that pos = (lat, long)
     :param r:  int, the max distance from the user to the point of interest in km
     :param tags: list[string], the list of tags the user wants the activities to belong to
+    :param hist: list of dict, the history of previously selected elements
     :return: list of dict, list of elements consisting of activities and restaurants, ordered by
     appearance in the day.
     
@@ -242,12 +277,20 @@ def by_tags_distance_agenda(day, pos, r, tags):
 
     fst_half = 2*day
     scd_half = 2*day+1
-    day_agenda.append(selection_by_tags_distance(fst_half, pos, r, tags, data_activities, hist_activities))
-    day_agenda.append(selection_by_tags_distance(fst_half, pos, r, tags, data_restaurants, hist_restaurants))
-    day_agenda.append(selection_by_tags_distance(scd_half, pos, r, tags, data_activities, hist_activities))
-    day_agenda.append(selection_by_tags_distance(scd_half, pos, r, tags, data_restaurants, hist_restaurants))
 
-    return day_agenda
+    activity1, hist = selection_by_tags_distance(fst_half, pos, r, tags, data_activities, hist)
+    day_agenda.append(activity1)
+
+    restaurant1, hist = selection_by_tags_distance(fst_half, pos, r, tags, data_restaurants, hist)
+    day_agenda.append(restaurant1)
+
+    activity2, hist = selection_by_tags_distance(scd_half, pos, r, tags, data_activities, hist)
+    day_agenda.append(activity2)
+
+    restaurant2, hist = selection_by_tags_distance(scd_half, pos, r, tags, data_restaurants, hist)
+    day_agenda.append(restaurant2)
+
+    return day_agenda, hist 
 
 
 def get_distance(lat_x, long_x, lat_y, long_y):
@@ -270,6 +313,7 @@ def home():
     res = {
         "bonjour": "bonjour"
     }
+
     return make_response(res, 200)
 
 
@@ -277,12 +321,16 @@ def home():
 @app.route("/activity", methods=['GET'])
 def get_activity():
     time = int(request.args.get('time'))
-    activity = random_selection(time, data_activities, hist_activities)
+    hist = request.headers.get('hist')
+    hist = decode(hist)['history'] if (hist != "") else []
+
+    activity, hist = random_selection(time, data_activities, hist)
     if activity == "bof":
-        result = {"error": "no more activity not already seen"}
+        result = {"hist": encode("hist", hist), "activity": {"error": "no more activity not already seen"}}
         return make_response(result,400)
     else:
-        return make_response(activity,200)
+        result = {"hist": encode("hist", hist), "activity": activity}
+        return make_response(result,200)
 
 
 @swag_from("./docs/swagger_activity_distance.yml")
@@ -292,12 +340,16 @@ def get_activity_by_distance():
     lat = float(request.args.get('lat'))
     long = float(request.args.get('long'))
     r = int(request.args.get('r'))
-    activity = selection_by_distance(time, (lat,long), r, data_activities, hist_activities)
+    hist = request.headers.get('hist')
+    hist = decode(hist)['history'] if (hist != "") else []
+
+    activity = selection_by_distance(time, (lat,long), r, data_activities, hist)
     if activity == "bof":
-        result = {"error": "no more activity not already seen"}
+        result = {"hist": encode("hist", hist), "activity": {"error": "no more activity not already seen"}}
         return make_response(result,400)
     else:
-        return make_response(activity,200)
+        result = {"hist": encode("hist", hist), "activity": activity}
+        return make_response(result,200)
 
 
 @swag_from("./docs/swagger_activity_tags_distance.yml")
@@ -309,24 +361,32 @@ def get_activity_by_tags_distance():
     r = int(request.args.get('r'))
     tags = request.args.get('tags')
     tags = tags.split(",")
-    activity = selection_by_tags_distance(time, (lat,long), r, tags, data_activities, hist_activities)
+    hist = request.headers.get('hist')
+    hist = decode(hist)['history'] if (hist != "") else []
+
+    activity = selection_by_tags_distance(time, (lat,long), r, tags, data_activities, hist)
     if activity == "bof":
-        result = {"error": "no more activity not already seen"}
+        result = {"hist": encode("hist", hist), "activity": {"error": "no more activity not already seen"}}
         return make_response(result,400)
     else:
-        return make_response(activity,200)
+        result = {"hist": encode("hist", hist), "activity": activity}
+        return make_response(result,200)
 
 
 @swag_from("./docs/swagger_restaurant.yml")
 @app.route("/restaurant", methods=['GET'])
 def get_restaurant():
     time = int(request.args.get('time'))
-    restaurant = random_selection(time, data_restaurants, hist_restaurants)
+    hist = request.headers.get('hist')
+    hist = decode(hist)['history'] if (hist != "") else []
+
+    restaurant = random_selection(time, data_restaurants, hist)
     if restaurant == "bof":
-        result = {"error":"no more restaurant not already seen"}
+        result = {"hist": encode("hist", hist), "restaurant":{"error":"no more restaurant not already seen"}}
         return make_response(result, 400)
     else:
-        return make_response(restaurant, 200)
+        result = {"hist": encode("hist", hist), "restaurant":restaurant}
+        return make_response(result, 200)
 
 
 @swag_from("./docs/swagger_restaurant_distance.yml")
@@ -336,12 +396,16 @@ def get_restaurant_by_distance():
     lat = float(request.args.get('lat'))
     long = float(request.args.get('long'))
     r = int(request.args.get('r'))
-    activity = selection_by_distance(time, (lat,long), r, data_restaurants, hist_restaurants)
-    if activity == "bof":
-        result = {"error": "no more activity not already seen"}
-        return make_response(result,400)
+    hist = request.headers.get('hist')
+    hist = decode(hist)['history'] if (hist != "") else []
+
+    activity = selection_by_distance(time, (lat,long), r, data_restaurants, hist)
+    if restaurant == "bof":
+        result = {"hist": encode("hist", hist), "restaurant":{"error":"no more restaurant not already seen"}}
+        return make_response(result, 400)
     else:
-        return make_response(activity,200)
+        result = {"hist": encode("hist", hist), "restaurant":restaurant}
+        return make_response(result, 200)
 
 
 @swag_from("./docs/swagger_restaurant_tags_distance.yml")
@@ -353,23 +417,31 @@ def get_restaurant_by_tags_distance():
     r = int(request.args.get('r'))
     tags = request.args.get('tags')
     tags = tags.split(",")
-    activity = selection_by_tags_distance(time, (lat,long), r, tags, data_restaurants, hist_restaurants)
-    if activity == "bof":
-        result = {"error": "no more activity not already seen"}
-        return make_response(result,400)
+    hist = request.headers.get('hist')
+    hist = decode(hist)['history'] if (hist != "") else []
+
+    restaurant = selection_by_tags_distance(time, (lat,long), r, tags, data_restaurants, hist)
+    if restaurant == "bof":
+        result = {"hist": encode("hist", hist), "restaurant":{"error":"no more restaurant not already seen"}}
+        return make_response(result, 400)
     else:
-        return make_response(activity,200)
+        result = {"hist": encode("hist", hist), "restaurant":restaurant}
+        return make_response(result, 200)
 
 
 @swag_from("./docs/swagger_agenda.yml")
 @app.route("/agenda", methods=['GET'])
 def get_agenda():
     time = int(request.args.get('time'))
-    agenda = basic_agenda(time)
+    hist = request.headers.get('hist')
+    hist = decode(hist)['history'] if (hist != "") else []
+
+    agenda, hist = basic_agenda(time, hist)
+    result = {"hist": encode("hist", hist), "agenda": agenda}
     if "bof" in agenda:
-        return make_response(agenda, 300)
+        return make_response(result, 300)
     else:
-        return make_response(agenda,200)
+        return make_response(result,200)
 
 
 @swag_from("./docs/swagger_agenda_distance.yml")
@@ -379,12 +451,15 @@ def get_agenda_by_distance():
     lat = float(request.args.get('lat'))
     long = float(request.args.get('long'))
     r = int(request.args.get('r'))
+    hist = request.headers.get('hist')
+    hist = decode(hist)['history'] if (hist != "") else []
 
-    agenda = by_distance_agenda(time, (lat,long), r)
+    agenda, hist = by_distance_agenda(time, (lat,long), r, hist)
+    result = {"hist": encode("hist", hist), "agenda": agenda}
     if "bof" in agenda:
-        return make_response(agenda, 300)
+        return make_response(result, 300)
     else:
-        return make_response(agenda, 200)
+        return make_response(result,200)
 
 @swag_from("./docs/swagger_agenda_tags_distance.yml")
 @app.route("/agenda_tags_distance", methods=['GET'])
@@ -395,12 +470,15 @@ def get_agenda_by_tags_distance():
     r = int(request.args.get('r'))
     tags = request.args.get('tags')
     tags = tags.split(",")
+    hist = request.headers.get('hist')
+    hist = decode(hist)['history'] if (hist != "") else []
 
-    agenda = by_tags_distance_agenda(time, (lat,long), r, tags)
+    agenda, hist = by_tags_distance_agenda(time, (lat,long), r, tags, hist)
+    result = {"hist": encode("hist", hist), "agenda": agenda}
     if "bof" in agenda:
-        return make_response(agenda, 300)
+        return make_response(result, 300)
     else:
-        return make_response(agenda, 200)
+        return make_response(result,200)
 
 
 @swag_from("./docs/swagger_tags.yml")
@@ -409,8 +487,10 @@ def get_tags():
     return make_response({"tags": tag_list}, 200)
 
 
-
-
 if __name__ == "__main__":
-    load_data()
+    load_data_from_db()
+    print(data_restaurants[0])
+    preprocessing(data_activities)
+    preprocessing(data_restaurants)
+
     app.run(host=HOST, port=PORT)
