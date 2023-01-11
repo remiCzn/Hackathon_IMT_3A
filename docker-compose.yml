@@ -6,6 +6,7 @@ services:
       - "3001:3001"
     networks:
       - backend
+      - wan
 
   frontend:
     build: ./service/frontend
