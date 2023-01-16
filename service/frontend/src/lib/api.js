@@ -3,7 +3,7 @@ import {historyStore} from "$lib/historyStore.js";
 
 const client = axios.create({
     //TODO: change to http://backend:3001
-    baseURL: "http://backend:3001"
+    baseURL: "https://chillpaper.fr/api"
 });
 
 
