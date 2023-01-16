@@ -46,7 +46,6 @@ export function getRestaurant(day, historyToken) {
 }
 
 export function getAgenda(day, historyToken, lat, long, r) {
-    console.log(historyToken, lat, long, r)
     return client.get("/agenda_distance", {
         params: {
             time: dateToDay(day),
