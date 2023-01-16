@@ -53,12 +53,20 @@
 
 	<h2 class="my-5">Where ?</h2>
 
-	<button
-		class="bg-soft-pink px-10 py-8 mb-0 mt-5 rounded-3xl lg:w-10/12 xl:w-11/12"
-		on:click={() => (getPosition = true)}
-	>
-		<h3 class="text-white">Partager ma position</h3>
-	</button>
+	<div class="flex gap-3">
+		<button
+			class="bg-soft-pink px-10 py-8 mb-0 mt-5 rounded-3xl lg:w-10/12 xl:w-11/12"
+			on:click={() => (getPosition = true)}
+		>
+			<h3 class="text-white">Partager ma position</h3>
+		</button>
+		<button
+			class="bg-soft-blue px-2 py-1 mb-0 mt-5 rounded-3xl"
+			on:click={() => (coord = [47.218371, -1.553621])}
+		>
+			<h3 class="text-white text-xs">Se placer au centre de Nantes</h3>
+		</button>
+	</div>
 
 	<Geolocation
 		{getPosition}

@@ -1,6 +1,7 @@
 <script>
 	import LikeOrDislike from "../Buttons/LikeOrDislike.svelte";
 	import GpsIcon from "../svg/GpsIcon.svelte";
+	import { getActivity, getRestaurant } from "../../lib/api.js";
 
 	export let title = "Déjeuner";
 	export let description = "Brunch luxe gucci tier";
