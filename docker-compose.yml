@@ -16,7 +16,6 @@ services:
     ports:
       - "3000:3000"
     networks:
-      - default
       - back
 
   nginx:
@@ -36,7 +35,6 @@ services:
     networks:
       - back
       - outside
-      - default
 
   mariadb:
     image: 'mariadb:10'
@@ -50,6 +48,7 @@ services:
       - mariadb_new:/var/lib/mysql
     networks:
       - back
+      - outside
 
 volumes:
   nginx_secrets:
