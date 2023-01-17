@@ -2,7 +2,7 @@ import json
 import requests
 import googleData
 import majDB
-import tqdm
+from tqdm import tqdm
 
 URL = "https://data.nantesmetropole.fr/explore/dataset/234400034_070-008_offre-touristique-restaurants-rpdl@paysdelaloire/download/?format=json&timezone=Europe/Berlin&lang=fr"
 
