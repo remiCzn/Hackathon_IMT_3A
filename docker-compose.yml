@@ -6,17 +6,11 @@ services:
       - "3001:3001"
     depends_on:
       - mariadb
-    networks:
-      - backend
-      - wan
 
   frontend:
     build: ./service/frontend
     ports:
       - "3000:3000"
-    networks:
-      - backend
-      - wan
 
   nginx:
     image: jonasal/nginx-certbot:latest
@@ -29,9 +23,6 @@ services:
     volumes:
       - nginx_secrets:/etc/letsencrypt
       - ./service/nginx/user_conf.d:/etc/nginx/user_conf.d
-    networks:
-      - backend
-      - wan
 
   mariadb:
     image: 'mariadb:10'
@@ -46,18 +37,7 @@ services:
       - "3306:3306"
     volumes:
       - mariadb:/var/lib/mysql
-    networks:
-      - backend
-      - wan
 
 volumes:
   nginx_secrets:
   mariadb:
-
-networks:
-    backend:
-      name: backend
-      external: true
-    wan:
-      name: wan
-      external: true
