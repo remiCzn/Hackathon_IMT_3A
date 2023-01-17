@@ -35,9 +35,9 @@ fn query(eml: String, pool: web::Data<Pool>) -> Result<Invitation, crate::errors
     let new_invitation: Invitation = eml.into();
     let conn = &pool.get()?;
 
-    let inserted_invitation = diesel::insert_into(invitations)
+     diesel::insert_into(invitations)
         .values(&new_invitation)
-        .get_result(conn)?;
+        .execute(conn)?;
 
-    Ok(inserted_invitation)
+    Ok(new_invitation)
 }

@@ -1,4 +1,4 @@
-from flask import Flask, make_response, request
+from flask import Flask, make_response, request, escape
 from flasgger import Swagger, LazyString, LazyJSONEncoder
 from flasgger import swag_from
 #from flask_cors import CORS
@@ -9,6 +9,7 @@ import json
 import db
 
 app = Flask(__name__)
+app.debug = False
 app.json_encoder = LazyJSONEncoder
 #CORS(app)
 
@@ -99,7 +100,7 @@ def decode(token):
     :param token: string, a jwt token
     :return a dict containing a list of the previous activities seen
     """
-    return jwt.decode(token, "secret", algorithms=["HS256"])
+    return jwt.decode(token, "sfvmndxvnu1gi6jjdumaivvkj2ok6kzrdv6yap9r3el6jy45fb9dhuo5flleudig", algorithms=["HS256"])
 
 
 def encode(label, token):
@@ -112,7 +113,7 @@ def encode(label, token):
     """
     assert type(label) is str, "label should be a string"
     
-    return jwt.encode({label: token}, "secret", algorithm="HS256")
+    return jwt.encode({label: token}, "sfvmndxvnu1gi6jjdumaivvkj2ok6kzrdv6yap9r3el6jy45fb9dhuo5flleudig", algorithm="HS256")
 
 
 def get_tag_list():
@@ -363,8 +364,8 @@ def home():
 @app.route("/activity", methods=['GET'])
 def get_activity():
     time = int(request.args.get('time'))
-    hist = request.headers.get('hist')
-    hist = decode(hist)['hist'] if (hist != "") else []
+    hist = escape(request.headers.get('hist'))
+    hist = escape(decode(hist)['hist']) if (hist != "") else []
 
     activity, hist = random_selection(time, data_activities, hist)
     if activity == "bof":
@@ -382,8 +383,9 @@ def get_activity_by_distance():
     lat = float(request.args.get('lat'))
     long = float(request.args.get('long'))
     r = int(request.args.get('r'))
-    hist = request.headers.get('hist')
-    hist = decode(hist)['hist'] if (hist != "") else []
+
+    hist = escape(request.headers.get('hist'))
+    hist = escape(decode(hist)['hist']) if (hist != "") else []
 
     activity, hist = selection_by_distance(time, (lat,long), r, data_activities, hist)
     if activity == "bof":
@@ -401,10 +403,12 @@ def get_activity_by_tags_distance():
     lat = float(request.args.get('lat'))
     long = float(request.args.get('long'))
     r = int(request.args.get('r'))
-    tags = request.args.get('tags')
+
+    tags = escape(request.args.get('tags'))
     tags = tags.split(",")
-    hist = request.headers.get('hist')
-    hist = decode(hist)['hist'] if (hist != "") else []
+    hist = escape(request.headers.get('hist'))
+    hist = escape(decode(hist)['hist']) if (hist != "") else []
+    
 
     activity, hist = selection_by_tags_distance(time, (lat,long), r, tags, data_activities, hist)
     if activity == "bof":
@@ -419,8 +423,9 @@ def get_activity_by_tags_distance():
 @app.route("/restaurant", methods=['GET'])
 def get_restaurant():
     time = int(request.args.get('time'))
-    hist = request.headers.get('hist')
-    hist = decode(hist)['hist'] if (hist != "") else []
+
+    hist = escape(request.headers.get('hist'))
+    hist = escape(decode(hist)['hist']) if (hist != "") else []
 
     restaurant, hist = random_selection(time, data_restaurants, hist)
     if restaurant == "bof":
@@ -438,8 +443,9 @@ def get_restaurant_by_distance():
     lat = float(request.args.get('lat'))
     long = float(request.args.get('long'))
     r = int(request.args.get('r'))
-    hist = request.headers.get('hist')
-    hist = decode(hist)['hist'] if (hist != "") else []
+
+    hist = escape(request.headers.get('hist'))
+    hist = escape(decode(hist)['hist']) if (hist != "") else []
 
     restaurant, hist = selection_by_distance(time, (lat,long), r, data_restaurants, hist)
     if restaurant == "bof":
@@ -457,10 +463,15 @@ def get_restaurant_by_tags_distance():
     lat = float(request.args.get('lat'))
     long = float(request.args.get('long'))
     r = int(request.args.get('r'))
-    tags = request.args.get('tags')
+
+    tags = escape(request.args.get('tags'))
+    print(tags)
     tags = tags.split(",")
     hist = request.headers.get('hist')
-    hist = decode(hist)['hist'] if (hist != "") else []
+    print(hist)
+    hist = escape(decode(hist)['hist']) if (hist != "") else []
+
+    
 
     restaurant, hist = selection_by_tags_distance(time, (lat,long), r, tags, data_restaurants, hist)
     if restaurant == "bof":
@@ -475,8 +486,9 @@ def get_restaurant_by_tags_distance():
 @app.route("/agenda", methods=['GET'])
 def get_agenda():
     time = int(request.args.get('time'))
-    hist = request.headers.get('hist')
-    hist = decode(hist)['hist'] if (hist != "") else []
+
+    hist = escape(request.headers.get('hist'))
+    hist = escape(decode(hist)['hist']) if (hist != "") else []
 
     agenda, hist = basic_agenda(time, hist)
     result = {"hist": encode("hist", hist), "agenda": agenda}
@@ -493,8 +505,9 @@ def get_agenda_by_distance():
     lat = float(request.args.get('lat'))
     long = float(request.args.get('long'))
     r = int(request.args.get('r'))
-    hist = request.headers.get('hist')
-    hist = decode(hist)['hist'] if (hist != "") else []
+
+    hist = escape(request.headers.get('hist'))
+    hist = escape(decode(hist)['hist']) if (hist != "") else []
 
     agenda, hist = by_distance_agenda(time, (lat,long), r, hist)
     result = {"hist": encode("hist", hist), "agenda": agenda}
@@ -510,10 +523,12 @@ def get_agenda_by_tags_distance():
     lat = float(request.args.get('lat'))
     long = float(request.args.get('long'))
     r = int(request.args.get('r'))
-    tags = request.args.get('tags')
+
+    tags = escape(request.args.get('tags'))
+
     tags = tags.split(",")
-    hist = request.headers.get('hist')
-    hist = decode(hist)['hist'] if (hist != "") else []
+    hist = escape(request.headers.get('hist'))
+    hist = escape(decode(hist)['hist']) if (hist != "") else []
 
     agenda, hist = by_tags_distance_agenda(time, (lat,long), r, tags, hist)
     result = {"hist": encode("hist", hist), "agenda": agenda}
@@ -530,10 +545,11 @@ def get_tags():
 
 
 if __name__ == "__main__":
-    load_data_from_db()
-    print(data_restaurants[0])
-    preprocessing(data_activities)
-    preprocessing(data_restaurants)
-    tag_list = get_tag_list()
+    #load_data_from_db()
+    #print(data_restaurants[0])
+    #preprocessing(data_activities)
+    #preprocessing(data_restaurants)
+    #tag_list = get_tag_list()
+    load_data()
 
     app.run(host=HOST, port=PORT)

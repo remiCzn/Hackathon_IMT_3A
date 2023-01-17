@@ -34,7 +34,7 @@ fn query(
 
     let conn = &pool.get()?;
     invitations
-        .filter(id.eq(invitation_id))
+        .filter(id.eq(invitation_id.to_string()))
         .filter(email.eq(&user_data.email))
         .load::<Invitation>(conn)
         .map_err(|_db_error| ServiceError::BadRequest("Invalid Invitation".into()))
@@ -45,10 +45,9 @@ fn query(
                     // try hashing the password, else return the error that will be converted to ServiceError
                     let password: String = hash_password(&user_data.password)?;
                     let user = User::from_details(invitation.email, password);
-                    let inserted_user: User =
-                        diesel::insert_into(users).values(&user).get_result(conn)?;
-                    dbg!(&inserted_user);
-                    return Ok(inserted_user.into());
+                    diesel::insert_into(users).values(&user).execute(conn)?;
+                    dbg!(&user);
+                    return Ok(user.into());
                 }
             }
             Err(ServiceError::BadRequest("Invalid Invitation".into()))

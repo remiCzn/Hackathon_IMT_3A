@@ -1,9 +1,9 @@
 use super::schema::*;
-use diesel::{r2d2::ConnectionManager, PgConnection};
+use diesel::{r2d2::ConnectionManager, MysqlConnection};
 use serde::{Deserialize, Serialize};
 
 // type alias to use in multiple places
-pub type Pool = r2d2::Pool<ConnectionManager<PgConnection>>;
+pub type Pool = r2d2::Pool<ConnectionManager<MysqlConnection>>;
 
 #[derive(Debug, Serialize, Deserialize, Queryable, Insertable)]
 #[table_name = "users"]
@@ -26,7 +26,7 @@ impl User {
 #[derive(Debug, Serialize, Deserialize, Queryable, Insertable)]
 #[table_name = "invitations"]
 pub struct Invitation {
-    pub id: uuid::Uuid,
+    pub id: String,
     pub email: String,
     pub expires_at: chrono::NaiveDateTime,
 }
@@ -38,7 +38,7 @@ where
 {
     fn from(email: T) -> Self {
         Invitation {
-            id: uuid::Uuid::new_v4(),
+            id: uuid::Uuid::new_v4().to_string(),
             email: email.into(),
             expires_at: chrono::Local::now().naive_local() + chrono::Duration::hours(24),
         }
