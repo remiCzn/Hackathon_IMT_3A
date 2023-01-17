@@ -365,7 +365,7 @@ def home():
 def get_activity():
     time = int(request.args.get('time'))
     hist = escape(request.headers.get('hist'))
-    hist = decode(hist)['hist'] if (hist != "") else []
+    hist = escape(decode(hist)['hist']) if (hist != "") else []
 
     activity, hist = random_selection(time, data_activities, hist)
     if activity == "bof":
@@ -385,7 +385,7 @@ def get_activity_by_distance():
     r = int(request.args.get('r'))
 
     hist = escape(request.headers.get('hist'))
-    hist = decode(hist)['hist'] if (hist != "") else []
+    hist = escape(decode(hist)['hist']) if (hist != "") else []
 
     activity, hist = selection_by_distance(time, (lat,long), r, data_activities, hist)
     if activity == "bof":
@@ -407,7 +407,8 @@ def get_activity_by_tags_distance():
     tags = escape(request.args.get('tags'))
     tags = tags.split(",")
     hist = escape(request.headers.get('hist'))
-    hist = decode(hist)['hist'] if (hist != "") else []
+    hist = escape(decode(hist)['hist']) if (hist != "") else []
+    
 
     activity, hist = selection_by_tags_distance(time, (lat,long), r, tags, data_activities, hist)
     if activity == "bof":
@@ -424,7 +425,7 @@ def get_restaurant():
     time = int(request.args.get('time'))
 
     hist = escape(request.headers.get('hist'))
-    hist = decode(hist)['hist'] if (hist != "") else []
+    hist = escape(decode(hist)['hist']) if (hist != "") else []
 
     restaurant, hist = random_selection(time, data_restaurants, hist)
     if restaurant == "bof":
@@ -444,7 +445,7 @@ def get_restaurant_by_distance():
     r = int(request.args.get('r'))
 
     hist = escape(request.headers.get('hist'))
-    hist = decode(hist)['hist'] if (hist != "") else []
+    hist = escape(decode(hist)['hist']) if (hist != "") else []
 
     restaurant, hist = selection_by_distance(time, (lat,long), r, data_restaurants, hist)
     if restaurant == "bof":
@@ -468,7 +469,7 @@ def get_restaurant_by_tags_distance():
     tags = tags.split(",")
     hist = request.headers.get('hist')
     print(hist)
-    hist = decode(hist)['hist'] if (hist != "") else []
+    hist = escape(decode(hist)['hist']) if (hist != "") else []
 
     
 
@@ -487,7 +488,7 @@ def get_agenda():
     time = int(request.args.get('time'))
 
     hist = escape(request.headers.get('hist'))
-    hist = decode(hist)['hist'] if (hist != "") else []
+    hist = escape(decode(hist)['hist']) if (hist != "") else []
 
     agenda, hist = basic_agenda(time, hist)
     result = {"hist": encode("hist", hist), "agenda": agenda}
@@ -506,7 +507,7 @@ def get_agenda_by_distance():
     r = int(request.args.get('r'))
 
     hist = escape(request.headers.get('hist'))
-    hist = decode(hist)['hist'] if (hist != "") else []
+    hist = escape(decode(hist)['hist']) if (hist != "") else []
 
     agenda, hist = by_distance_agenda(time, (lat,long), r, hist)
     result = {"hist": encode("hist", hist), "agenda": agenda}
@@ -527,7 +528,7 @@ def get_agenda_by_tags_distance():
 
     tags = tags.split(",")
     hist = escape(request.headers.get('hist'))
-    hist = decode(hist)['hist'] if (hist != "") else []
+    hist = escape(decode(hist)['hist']) if (hist != "") else []
 
     agenda, hist = by_tags_distance_agenda(time, (lat,long), r, tags, hist)
     result = {"hist": encode("hist", hist), "agenda": agenda}
