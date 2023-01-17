@@ -2,10 +2,12 @@ version: "3.9"
 services:
   backend:
     build: ./service/backend/
+    ports:
+      - "3001:3001"
     depends_on:
       - mariadb
     networks:
-      - back
+      - db
       - outside
     environment:
       DECODE: sfvmndxvnu1gi6jjdumaivvkj2ok6kzrdv6yap9r3el6jy45fb9dhuo5flleudig
@@ -15,7 +17,7 @@ services:
     ports:
       - "3000:3000"
     networks:
-      - back
+      - outside
 
   nginx:
     image: jonasal/nginx-certbot:latest
@@ -32,7 +34,7 @@ services:
       - backend
       - frontend
     networks:
-      - back
+      - db
       - outside
 
   mariadb:
@@ -46,7 +48,7 @@ services:
     volumes:
       - mariadb_new:/var/lib/mysql
     networks:
-      - back
+      - db
       - outside
 
 volumes:
@@ -55,5 +57,5 @@ volumes:
 
 networks:
   outside:
-  back:
+  db:
     internal: true
