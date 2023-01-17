@@ -26,7 +26,7 @@ async fn main() -> std::io::Result<()> {
     let database_url = std::env::var("DATABASE_URL").expect("DATABASE_URL must be set");
 
     // create db connection pool
-    let manager = ConnectionManager::<PgConnection>::new(database_url);
+    let manager = ConnectionManager::<MysqlConnection>::new(database_url);
     let pool: models::Pool = r2d2::Pool::builder()
         .build(manager)
         .expect("Failed to create pool.");
@@ -48,7 +48,7 @@ async fn main() -> std::io::Result<()> {
             ))
             .app_data(web::JsonConfig::default().limit(4096))
             .service(
-                web::scope("/auth")
+                web::scope("/api")
                     .service(
                         web::resource("/invitation")
                             .route(web::post().to(invitation_handler::post_invitation)),

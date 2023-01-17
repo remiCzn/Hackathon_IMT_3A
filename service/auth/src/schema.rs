@@ -1,12 +1,14 @@
-table! {
+// @generated automatically by Diesel CLI.
+
+diesel::table! {
     invitations (id) {
-        id -> Uuid,
+        id -> Varchar,
         email -> Varchar,
         expires_at -> Timestamp,
     }
 }
 
-table! {
+diesel::table! {
     users (email) {
         email -> Varchar,
         hash -> Varchar,
@@ -14,4 +16,7 @@ table! {
     }
 }
 
-allow_tables_to_appear_in_same_query!(invitations, users,);
+diesel::allow_tables_to_appear_in_same_query!(
+    invitations,
+    users,
+);
