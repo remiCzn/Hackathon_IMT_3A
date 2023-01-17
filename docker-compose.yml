@@ -57,5 +57,5 @@ volumes:
 
 networks:
   outside:
-    external: true
   back:
+    internal: true
