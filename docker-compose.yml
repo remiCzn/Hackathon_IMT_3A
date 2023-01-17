@@ -8,7 +8,6 @@ services:
       - mariadb
     networks:
       - back
-      - default
     environment:
       DECODE: sfvmndxvnu1gi6jjdumaivvkj2ok6kzrdv6yap9r3el6jy45fb9dhuo5flleudig
 
@@ -18,6 +17,7 @@ services:
       - "3000:3000"
     networks:
       - default
+      - back
 
   nginx:
     image: jonasal/nginx-certbot:latest
