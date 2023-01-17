@@ -1,7 +1,7 @@
 import googleData
 import requests
 import majDB
-import tqdm
+from tqdm import tqdm
 
 URL = "https://data.nantesmetropole.fr/api/records/1.0/search/?dataset=244400404_equipements-publics-nantes-metropole&q=&rows=10000&facet=theme&facet=categorie&facet=type&facet=commune&refine.theme="
 
@@ -32,7 +32,7 @@ def formatData(elem):
         elem["fields"]["adresse"] = "NA"
         return elem
     adresse = idJson["address"]
-    horaire, weekday = horaires.get_horaires(id)
+    horaire, weekday = googleData.get_horaires(id)
     #Si on a pas d'horaire d'ouverture, on considère qu'il est fermé
     if(horaire=="NA"):
         elem["fields"]["horaire"] = "00000000000000"
