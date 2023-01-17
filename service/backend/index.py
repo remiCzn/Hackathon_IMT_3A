@@ -8,12 +8,13 @@ import jwt as jwt
 import json
 import db
 import os
+import datetime
 
 app = Flask(__name__)
 app.debug = False
 app.json_encoder = LazyJSONEncoder
 #CORS(app)
-DECODE = os.getenv('DECODE')
+DECODE = str(os.getenv('DECODE'))
 
 
 swagger_template = dict(
@@ -116,8 +117,8 @@ def encode(label, token):
     """
     assert type(label) is str, "label should be a string"
     global DECODE
-    
-    return jwt.encode({label: token}, DECODE, algorithm="HS256")
+    payload = {"exp": datetime.now(tz=timezone.utc)+datetime.timedelta(hours=4),label: token}
+    return jwt.encode(payload, DECODE, algorithm="HS256")
 
 
 def get_tag_list():
@@ -369,8 +370,9 @@ def home():
 def get_activity():
     time = int(request.args.get('time'))
     hist = escape(request.headers.get('hist'))
-    hist = escape(decode(hist)['hist']) if (hist != "") else []
-
+    print(hist)
+    hist = decode(hist)['hist'] if (hist != "") else []
+    print(hist)
     activity, hist = random_selection(time, data_activities, hist)
     if activity == "bof":
         result = {"hist": encode("hist", hist), "activity": {"error": "no more activity not already seen"}}
@@ -550,11 +552,10 @@ def get_tags():
 
 if __name__ == "__main__":
     print(DECODE)
-    #load_data_from_db()
+    load_data_from_db()
     #print(data_restaurants[0])
-    #preprocessing(data_activities)
-    #preprocessing(data_restaurants)
-    #tag_list = get_tag_list()
-    load_data()
+    preprocessing(data_activities)
+    preprocessing(data_restaurants)
+    tag_list = get_tag_list()
 
     app.run(host=HOST, port=PORT)
