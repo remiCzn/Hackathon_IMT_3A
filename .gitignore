@@ -1,7 +1,8 @@
 .idea/
-./vscode
+.vscode
 Hackathon.iml
 node_modules/
 package-lock.json
 venv/
 mariadb/
+./vscode
