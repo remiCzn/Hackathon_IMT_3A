@@ -6,11 +6,16 @@ services:
       - "3001:3001"
     depends_on:
       - mariadb
+    networks:
+      - default
+      - back
 
   frontend:
     build: ./service/frontend
     ports:
       - "3000:3000"
+    networks:
+      - default
 
   nginx:
     image: jonasal/nginx-certbot:latest
@@ -26,6 +31,9 @@ services:
     depends_on:
       - backend
       - frontend
+    networks:
+      - back
+      - default
 
   mariadb:
     image: 'mariadb:10'
@@ -37,7 +45,15 @@ services:
       - "3306:3306"
     volumes:
       - mariadb_new:/var/lib/mysql
+    networks:
+      - back
 
 volumes:
   nginx_secrets:
   mariadb_new:
+
+networks:
+  default:
+    external: true
+  back:
+    internal: true
