@@ -39,8 +39,8 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - mariadb:/var/lib/mysql
+      - mariadb_new:/var/lib/mysql
 
 volumes:
   nginx_secrets:
-  mariadb:
+  mariadb_new:
