@@ -7,11 +7,13 @@ import random
 import jwt as jwt
 import json
 import db
+import os
 
 app = Flask(__name__)
 app.debug = False
 app.json_encoder = LazyJSONEncoder
 #CORS(app)
+DECODE = os.getenv('DECODE')
 
 
 swagger_template = dict(
@@ -100,7 +102,8 @@ def decode(token):
     :param token: string, a jwt token
     :return a dict containing a list of the previous activities seen
     """
-    return jwt.decode(token, "sfvmndxvnu1gi6jjdumaivvkj2ok6kzrdv6yap9r3el6jy45fb9dhuo5flleudig", algorithms=["HS256"])
+    global DECODE
+    return jwt.decode(token, DECODE, algorithms=["HS256"])
 
 
 def encode(label, token):
@@ -112,8 +115,9 @@ def encode(label, token):
     :return string, a jwt token
     """
     assert type(label) is str, "label should be a string"
+    global DECODE
     
-    return jwt.encode({label: token}, "sfvmndxvnu1gi6jjdumaivvkj2ok6kzrdv6yap9r3el6jy45fb9dhuo5flleudig", algorithm="HS256")
+    return jwt.encode({label: token}, DECODE, algorithm="HS256")
 
 
 def get_tag_list():
@@ -545,6 +549,7 @@ def get_tags():
 
 
 if __name__ == "__main__":
+    print(DECODE)
     #load_data_from_db()
     #print(data_restaurants[0])
     #preprocessing(data_activities)
