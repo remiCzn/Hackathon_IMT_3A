@@ -23,6 +23,9 @@ services:
     volumes:
       - nginx_secrets:/etc/letsencrypt
       - ./service/nginx/user_conf.d:/etc/nginx/user_conf.d
+    depends_on:
+      - backend
+      - frontend
 
   mariadb:
     image: 'mariadb:10'
