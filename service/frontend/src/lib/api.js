@@ -3,7 +3,7 @@ import {historyStore} from "$lib/historyStore.js";
 
 const client = axios.create({
     //TODO: change to http://backend:3001
-    baseURL: "http://chillpaper.fr:3001"
+    baseURL: "https://chillpaper.fr/api"
 });
 
 
@@ -46,7 +46,6 @@ export function getRestaurant(day, historyToken) {
 }
 
 export function getAgenda(day, historyToken, lat, long, r) {
-    console.log(historyToken, lat, long, r)
     return client.get("/agenda_distance", {
         params: {
             time: dateToDay(day),

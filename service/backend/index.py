@@ -53,6 +53,9 @@ swagger = Swagger(app, template=swagger_template,
 
 
 def load_data():
+    """
+    Load data from local files for developement purpose
+    """
     global data_activities
     global data_restaurants
     with open('dummy.json', 'r') as activity_file:
@@ -62,13 +65,26 @@ def load_data():
 
 
 def load_data_from_db():
+    """
+    Load data from database
+    """
     db.db_connect()
     global data_activities
     global data_restaurants
     data_activities = json.loads(db.send_request('''SELECT * FROM Activity'''))
     data_restaurants = json.loads(db.send_request('''SELECT * FROM Restaurant'''))
 
+
 def preprocessing(data):
+    """
+    Perform preprocessing on the data.
+    - If the schedule is not provided (i.e. 'NA') then we consider it to be always open.
+    Else we turn each element of it into int.
+    - Transform each relevant element in the corresponding type.
+
+    :param data: list of dict, the data on which perform the preprocessing
+    :return data: list of dict, the data preprocessed
+    """
     for element in data:
         element["schedule"] = [1 for i in range(14)] if (element["schedule"] == 'NA')\
                                                     else [int(c) for c in list(element["schedule"])]
@@ -76,13 +92,28 @@ def preprocessing(data):
         element["coordinate"] = [float(n) for n in element["coordinate"].split(",")]
     return data
 
+
 def decode(token):
+    """
+    Decode a jwt token
+    :param token: string, a jwt token
+    :return a dict containing a list of the previous activities seen
+    """
     return jwt.decode(token, "secret", algorithms=["HS256"])
 
+
 def encode(label, token):
+    """
+    Encode an history into a jwt token
+
+    :param label: string, the label to be use for the {label: token} dict
+    :param token: list, the history of the previous activities seen
+    :return string, a jwt token
+    """
     assert type(label) is str, "label should be a string"
     
     return jwt.encode({label: token}, "secret", algorithm="HS256")
+
 
 def get_tag_list():
 

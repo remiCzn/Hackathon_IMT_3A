@@ -5,10 +5,9 @@ import {get} from "svelte/store"
 
 export async function load({url}) {
     const date = new Date(url.searchParams.get("date"));
-    const lat = url.searchParams.get("latit");
-    const long = url.searchParams.get("long");
-    const range = url.searchParams.get("rayon");
-    console.log(lat, long, range);
+    const lat = parseFloat(url.searchParams.get("latit"));
+    const long = parseFlaot(url.searchParams.get("long"));
+    const range = parseInt(url.searchParams.get("rayon"));
     // Fetch data on chillpaper.fr/api
     const agenda = await getAgenda(date, get(historyStore), lat, long, range);
     return {
