@@ -6,6 +6,8 @@ services:
       - "3001:3001"
     depends_on:
       - mariadb
+    environment:
+      DECODE: sfvmndxvnu1gi6jjdumaivvkj2ok6kzrdv6yap9r3el6jy45fb9dhuo5flleudig
 
   frontend:
     build: ./service/frontend
