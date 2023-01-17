@@ -32,10 +32,7 @@ services:
     restart: always
     hostname: db
     environment:
-      MYSQL_USER: user
-      MYSQL_PASSWORD: 1234
-      MYSQL_DATABASE: main_database
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: e92]sPW6FXhZ5y_)
     ports:
       - "3306:3306"
     volumes:
