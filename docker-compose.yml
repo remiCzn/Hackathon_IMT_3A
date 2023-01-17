@@ -7,8 +7,8 @@ services:
     depends_on:
       - mariadb
     networks:
-      - default
       - back
+      - default
     environment:
       DECODE: sfvmndxvnu1gi6jjdumaivvkj2ok6kzrdv6yap9r3el6jy45fb9dhuo5flleudig
 
@@ -35,6 +35,7 @@ services:
       - frontend
     networks:
       - back
+      - outside
       - default
 
   mariadb:
@@ -55,7 +56,6 @@ volumes:
   mariadb_new:
 
 networks:
-  default:
+  outside:
     external: true
   back:
-    internal: true
