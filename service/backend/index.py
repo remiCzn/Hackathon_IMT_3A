@@ -13,7 +13,7 @@ import datetime
 app = Flask(__name__)
 app.debug = False
 app.json_encoder = LazyJSONEncoder
-#CORS(app)
+CORS(app)
 DECODE = str(os.getenv('DECODE'))
 
 
