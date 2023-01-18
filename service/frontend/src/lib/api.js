@@ -7,8 +7,7 @@ const client = axios.create({
 
 const auth = axios.create({
     //TODO: change to http://auth:3069
-    baseURL: "http://localhost:8080/api",
-    withCredentials: true
+    baseURL: "http://auth:3069/api"
 });
 
 

@@ -19,6 +19,13 @@ services:
     networks:
       - outside
 
+  auth:
+    build: ./service/auth
+    ports:
+      - "3069:3069"
+    networks:
+      - outside
+
   nginx:
     image: jonasal/nginx-certbot:latest
     restart: unless-stopped
