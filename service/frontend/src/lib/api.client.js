@@ -17,15 +17,23 @@ export function dateToDay(day) {
 }
 
 export async function getActivity(day) {
-    console.log("suu")
     day = new Date(day)
     const data = await fetch(`${baseURL}/activity?time=${dateToHalfday(day)}`,defaultheader);
     const data_json = await data.json();
-    return data_json
+    const activity = data_json.activity;
+    if (!activity.hasOwnProperty("adress")) {
+        activity["adress"] = "NA"
+    }
+    return activity
 }
 
 export async function getRestaurant(day) {
+    day = new Date(day)
     const data = await fetch(`${baseURL}/restaurant?time=${dateToHalfday(day)}`,defaultheader);
     const data_json = await data.json();
-    return data_json
+    const activity = data_json.restaurant;
+    if (!activity.hasOwnProperty("adress")) {
+        activity["adress"] = "NA"
+    }
+    return activity
 }

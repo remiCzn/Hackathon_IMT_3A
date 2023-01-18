@@ -28,8 +28,7 @@
 		} else {
 			data = await getActivity(2);
 		}
-		console.log(data);
-		actualiseCard(data.activity.adress, data.activity.name);
+		actualiseCard(data.adress, data.name);
 	};
 </script>
 
