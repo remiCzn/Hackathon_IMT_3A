@@ -23,21 +23,25 @@
 				title="Matin"
 				description={data.agenda[0].name}
 				location={data.agenda[0].adress}
+				activityType="activity"
 			/>
 			<ActivityItem
 				title="Déjeuner"
 				description={data.agenda[1].name}
 				location={data.agenda[1].adress}
+				activityType="restaurant"
 			/>
 			<ActivityItem
 				title="Après-midi"
 				description={data.agenda[2].name}
 				location={data.agenda[2].adress}
+				activityType="activity"
 			/>
 			<ActivityItem
 				title="Diner"
 				description={data.agenda[3].name}
 				location={data.agenda[3].adress}
+				activityType="restaurant"
 			/>
 		</div>
 		<div class="flex justify-center">

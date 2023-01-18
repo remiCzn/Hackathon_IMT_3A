@@ -3,15 +3,19 @@
 	import Cross from "../svg/Cross.svelte";
 
 	export let like = true;
+	export let callback = () => {};
 </script>
 
-<div class="circleBase custom-shadow flex items-center justify-center">
+<button
+	class="circleBase custom-shadow flex items-center justify-center"
+	on:click={callback}
+>
 	{#if like}
 		<Heart />
 	{:else}
 		<Cross />
 	{/if}
-</div>
+</button>
 
 <style>
 	.circleBase {
