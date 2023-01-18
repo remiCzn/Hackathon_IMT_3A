@@ -1,7 +1,7 @@
 from flask import Flask, make_response, request, escape
 from flasgger import Swagger, LazyString, LazyJSONEncoder
 from flasgger import swag_from
-#from flask_cors import CORS
+from flask_cors import CORS
 import numpy as np
 import random
 import jwt as jwt
@@ -570,7 +570,6 @@ def get_tags():
 
 if __name__ == "__main__":
     load_data_from_db()
-    #print(data_restaurants[0])
     preprocessing(data_activities)
     preprocessing(data_restaurants)
     tag_list = get_tag_list()
