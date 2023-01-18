@@ -1,6 +1,7 @@
 #[macro_use]
 extern crate diesel;
 
+use actix_cors::Cors;
 use actix_identity::{CookieIdentityPolicy, IdentityService};
 use actix_web::{middleware, web, App, HttpServer};
 use diesel::prelude::*;
@@ -37,6 +38,7 @@ async fn main() -> std::io::Result<()> {
         App::new()
             .app_data(web::Data::new(pool.clone()))
             // enable logger
+            .wrap(Cors::permissive())
             .wrap(middleware::Logger::default())
             .wrap(IdentityService::new(
                 CookieIdentityPolicy::new(utils::SECRET_KEY.as_bytes())

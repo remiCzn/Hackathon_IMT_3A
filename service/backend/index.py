@@ -104,11 +104,13 @@ def decode(token):
     :return a dict containing a list of the previous activities seen
     """
     global DECODE
-    return jwt.decode(token, DECODE, algorithms=["HS256"])
+    result = {"hist": []} if token == "" else jwt.decode(token, DECODE, algorithms=["HS256"])
+    return result
 
 
 def encode(label, token):
     """
+    /!\ TO DO: remove param label, could cause bugs
     Encode an history into a jwt token
 
     :param label: string, the label to be use for the {label: token} dict
@@ -117,7 +119,7 @@ def encode(label, token):
     """
     assert type(label) is str, "label should be a string"
     global DECODE
-    payload = {"exp": datetime.now(tz=timezone.utc)+datetime.timedelta(hours=4),label: token}
+    payload = {"exp": datetime.datetime.now(tz=datetime.timezone.utc)+datetime.timedelta(hours=4),label: token}
     return jwt.encode(payload, DECODE, algorithm="HS256")
 
 
@@ -370,15 +372,16 @@ def home():
 def get_activity():
     time = int(request.args.get('time'))
     hist = escape(request.headers.get('hist'))
-    print(hist)
-    hist = decode(hist)['hist'] if (hist != "") else []
-    print(hist)
+    hist = decode(hist)['hist']
+
     activity, hist = random_selection(time, data_activities, hist)
+    _encoded = escape(encode("hist", hist))
+
     if activity == "bof":
-        result = {"hist": encode("hist", hist), "activity": {"error": "no more activity not already seen"}}
+        result = {"hist": _encoded, "activity": {"error": "no more activity not already seen"}}
         return make_response(result,400)
     else:
-        result = {"hist": encode("hist", hist), "activity": activity}
+        result = {"hist": _encoded, "activity": activity}
         return make_response(result,200)
 
 
@@ -391,14 +394,16 @@ def get_activity_by_distance():
     r = int(request.args.get('r'))
 
     hist = escape(request.headers.get('hist'))
-    hist = escape(decode(hist)['hist']) if (hist != "") else []
+    hist = decode(hist)['hist']
 
     activity, hist = selection_by_distance(time, (lat,long), r, data_activities, hist)
+    _encoded = escape(encode("hist", hist))
+
     if activity == "bof":
-        result = {"hist": encode("hist", hist), "activity": {"error": "no more activity not already seen"}}
+        result = {"hist": _encoded, "activity": {"error": "no more activity not already seen"}}
         return make_response(result,400)
     else:
-        result = {"hist": encode("hist", hist), "activity": activity}
+        result = {"hist": _encoded, "activity": activity}
         return make_response(result,200)
 
 
@@ -413,15 +418,17 @@ def get_activity_by_tags_distance():
     tags = escape(request.args.get('tags'))
     tags = tags.split(",")
     hist = escape(request.headers.get('hist'))
-    hist = escape(decode(hist)['hist']) if (hist != "") else []
+    hist = decode(hist)['hist']
     
 
     activity, hist = selection_by_tags_distance(time, (lat,long), r, tags, data_activities, hist)
+    _encoded = escape(encode("hist", hist))
+
     if activity == "bof":
-        result = {"hist": encode("hist", hist), "activity": {"error": "no more activity not already seen"}}
+        result = {"hist": _encoded, "activity": {"error": "no more activity not already seen"}}
         return make_response(result,400)
     else:
-        result = {"hist": encode("hist", hist), "activity": activity}
+        result = {"hist": _encoded, "activity": activity}
         return make_response(result,200)
 
 
@@ -431,14 +438,16 @@ def get_restaurant():
     time = int(request.args.get('time'))
 
     hist = escape(request.headers.get('hist'))
-    hist = escape(decode(hist)['hist']) if (hist != "") else []
+    hist = decode(hist)['hist']
 
     restaurant, hist = random_selection(time, data_restaurants, hist)
+    _encoded = escape(encode("hist", hist))
+
     if restaurant == "bof":
-        result = {"hist": encode("hist", hist), "restaurant":{"error":"no more restaurant not already seen"}}
+        result = {"hist": _encoded, "restaurant":{"error":"no more restaurant not already seen"}}
         return make_response(result, 400)
     else:
-        result = {"hist": encode("hist", hist), "restaurant":restaurant}
+        result = {"hist": _encoded, "restaurant":restaurant}
         return make_response(result, 200)
 
 
@@ -451,14 +460,16 @@ def get_restaurant_by_distance():
     r = int(request.args.get('r'))
 
     hist = escape(request.headers.get('hist'))
-    hist = escape(decode(hist)['hist']) if (hist != "") else []
+    hist = decode(hist)['hist']
 
     restaurant, hist = selection_by_distance(time, (lat,long), r, data_restaurants, hist)
+    _encoded = escape(encode("hist", hist))
+
     if restaurant == "bof":
-        result = {"hist": encode("hist", hist), "restaurant":{"error":"no more restaurant not already seen"}}
+        result = {"hist": _encoded, "restaurant":{"error":"no more restaurant not already seen"}}
         return make_response(result, 400)
     else:
-        result = {"hist": encode("hist", hist), "restaurant":restaurant}
+        result = {"hist": _encoded, "restaurant":restaurant}
         return make_response(result, 200)
 
 
@@ -471,20 +482,20 @@ def get_restaurant_by_tags_distance():
     r = int(request.args.get('r'))
 
     tags = escape(request.args.get('tags'))
-    print(tags)
     tags = tags.split(",")
     hist = request.headers.get('hist')
-    print(hist)
-    hist = escape(decode(hist)['hist']) if (hist != "") else []
+    hist = decode(hist)['hist']
 
     
 
     restaurant, hist = selection_by_tags_distance(time, (lat,long), r, tags, data_restaurants, hist)
+    _encoded = escape(encode("hist", hist))
+
     if restaurant == "bof":
-        result = {"hist": encode("hist", hist), "restaurant":{"error":"no more restaurant not already seen"}}
+        result = {"hist": _encoded, "restaurant":{"error":"no more restaurant not already seen"}}
         return make_response(result, 400)
     else:
-        result = {"hist": encode("hist", hist), "restaurant":restaurant}
+        result = {"hist": _encoded, "restaurant":restaurant}
         return make_response(result, 200)
 
 
@@ -494,10 +505,12 @@ def get_agenda():
     time = int(request.args.get('time'))
 
     hist = escape(request.headers.get('hist'))
-    hist = escape(decode(hist)['hist']) if (hist != "") else []
+    hist = decode(hist)['hist']
 
     agenda, hist = basic_agenda(time, hist)
-    result = {"hist": encode("hist", hist), "agenda": agenda}
+    _encoded = escape(encode("hist", hist))
+
+    result = {"hist": _encoded, "agenda": agenda}
     if "bof" in agenda:
         return make_response(result, 300)
     else:
@@ -513,14 +526,17 @@ def get_agenda_by_distance():
     r = int(request.args.get('r'))
 
     hist = escape(request.headers.get('hist'))
-    hist = escape(decode(hist)['hist']) if (hist != "") else []
+    hist = decode(hist)['hist']
 
     agenda, hist = by_distance_agenda(time, (lat,long), r, hist)
-    result = {"hist": encode("hist", hist), "agenda": agenda}
+    _encoded = escape(encode("hist", hist))
+
+    result = {"hist": _encoded, "agenda": agenda}
     if "bof" in agenda:
         return make_response(result, 300)
     else:
         return make_response(result,200)
+
 
 @swag_from("./docs/swagger_agenda_tags_distance.yml")
 @app.route("/agenda_tags_distance", methods=['GET'])
@@ -534,10 +550,12 @@ def get_agenda_by_tags_distance():
 
     tags = tags.split(",")
     hist = escape(request.headers.get('hist'))
-    hist = escape(decode(hist)['hist']) if (hist != "") else []
+    hist = decode(hist)['hist']
 
     agenda, hist = by_tags_distance_agenda(time, (lat,long), r, tags, hist)
-    result = {"hist": encode("hist", hist), "agenda": agenda}
+    _encoded = escape(encode("hist", hist))
+
+    result = {"hist": _encoded, "agenda": agenda}
     if "bof" in agenda:
         return make_response(result, 300)
     else:
@@ -551,7 +569,6 @@ def get_tags():
 
 
 if __name__ == "__main__":
-    print(DECODE)
     load_data_from_db()
     #print(data_restaurants[0])
     preprocessing(data_activities)
