@@ -20,10 +20,12 @@ export async function getActivity(day) {
     console.log("suu")
     day = new Date(day)
     const data = await fetch(`${baseURL}/activity?time=${dateToHalfday(day)}`,defaultheader);
-    return data;
+    const data_json = await data.json();
+    return data_json
 }
 
 export async function getRestaurant(day) {
     const data = await fetch(`${baseURL}/restaurant?time=${dateToHalfday(day)}`,defaultheader);
-    return data;
+    const data_json = await data.json();
+    return data_json
 }
