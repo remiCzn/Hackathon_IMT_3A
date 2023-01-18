@@ -1,14 +1,27 @@
 <script>
 	import LikeOrDislike from "../Buttons/LikeOrDislike.svelte";
 	import GpsIcon from "../svg/GpsIcon.svelte";
-	import { getActivity, getRestaurant } from "../../lib/api.js";
 
+	export let activityType = "restaurant";
 	export let title = "Déjeuner";
 	export let description = "Brunch luxe gucci tier";
 	export let location = "114 rue de la briquetterie";
 
 	let googleMapsSearchLink = function (location) {
 		return "https://www.google.com/maps/search/?api=1&query=" + location;
+	};
+
+	// Callback on dislike
+	import { getActivity, getRestaurant } from "../../lib/api.client.js";
+
+	let dislikeCallback = async () => {
+		if (activityType === "restaurant") {
+			let restaurant = await getRestaurant(2);
+			console.log(restaurant);
+		} else {
+			let activity = await getActivity(2);
+			console.log(activity);
+		}
 	};
 </script>
 
@@ -35,6 +48,6 @@
 	</div>
 	<div class="flex flex-row justify-around">
 		<LikeOrDislike like={true} />
-		<LikeOrDislike like={false} />
+		<LikeOrDislike like={false} callback={dislikeCallback} />
 	</div>
 </div>
