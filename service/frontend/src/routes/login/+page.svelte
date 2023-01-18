@@ -1,26 +1,3 @@
-<script>
-    import {login} from "$lib/api.js";
-    import { redirect } from '@sveltejs/kit';
-    import {goto} from "$app/navigation";
-
-    /** @type {import('./$types').PageData} */
-
-    export let data;
-
-     async function onSubmit(e) {
-         const formData = new FormData(e.target);
-         let email = formData.get("email");
-         let password = formData.get("password");
-         let l = await login(email, password)
-         console.log(l);
-         // console.log(cookies.get('auth'))
-         return goto("/");
-
-
-     }
-</script>
-
-
 <section class="h-screen">
     <div class="px-6 h-full text-gray-800">
         <div
@@ -36,14 +13,14 @@
                 />
             </div>
             <div class="xl:ml-20 xl:w-5/12 lg:w-5/12 md:w-8/12 mb-12 md:mb-0">
-                <form name="loginForm" on:submit|preventDefault={onSubmit}>
+                <form>
 
                     <!-- Email input -->
                     <div class="mb-6">
                         <input
                                 type="text"
                                 class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                                name="email"
+                                id="email"
                                 placeholder="Email address"
                         />
                     </div>
@@ -53,7 +30,7 @@
                         <input
                                 type="password"
                                 class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                                name="password"
+                                id="password"
                                 placeholder="Password"
                         />
                     </div>
@@ -61,7 +38,7 @@
 
                     <div class="text-center lg:text-left">
                         <button
-                                type="submit"
+                                type="button"
                                 class="inline-block px-7 py-3 bg-blue-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
                         >
                             Login

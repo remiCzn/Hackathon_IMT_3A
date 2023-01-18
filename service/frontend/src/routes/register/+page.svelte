@@ -2,7 +2,6 @@
     import {sendInvite} from "$lib/api.js";
 
     let submited = false;
-    let _email = '';
 
     function onSubmit(e) {
         const formData = new FormData(e.target);
@@ -10,7 +9,6 @@
         if(!new RegExp('^[\\w\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$').test(email)) {
             alert("Wrong email address")
         } else {
-            _email = email.toLowerCase();
             console.log(sendInvite(email));
             submited = true;
 
@@ -68,7 +66,7 @@
                         </div>
                     </form>
                 {:else}
-                    <h1>Une invitation a été envoyée à <b class="text-blue-400">{_email}</b></h1>
+                    <p>Yey</p>
                 {/if}
             </div>
         </div>

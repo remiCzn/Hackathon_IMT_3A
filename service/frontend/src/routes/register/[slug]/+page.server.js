@@ -1,9 +1,8 @@
-import { page } from '$app/stores'
+import {get} from "svelte/store"
 
 /** @type {import('./$types').PageServerLoad} */
-
-export async function load({ params, url}) {
-    const email = url.searchParams.get("email");
-    const uuid = params.slug;
+export async function load({params}) {
+    const email = "dqzd"; //params.searchParams.get("email");
+    const uuid = params;
     return {uuid: uuid, email: email};
 }
