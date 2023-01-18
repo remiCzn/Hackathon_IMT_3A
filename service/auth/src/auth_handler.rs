@@ -48,7 +48,7 @@ pub async fn login(
 
     let user_string = serde_json::to_string(&user)?;
     id.remember(user_string);
-    Ok(HttpResponse::Ok().finish())
+    Ok(HttpResponse::Ok().json(user.id))
 }
 
 pub async fn get_me(logged_user: LoggedUser) -> HttpResponse {

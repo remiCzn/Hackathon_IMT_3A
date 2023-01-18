@@ -7,7 +7,8 @@ const client = axios.create({
 
 const auth = axios.create({
     //TODO: change to http://auth:3069
-    baseURL: "http://localhost:8080/api"
+    baseURL: "http://localhost:8080/api",
+    withCredentials: true
 });
 
 
@@ -68,11 +69,11 @@ export function getAgenda(day, historyToken, lat, long, r) {
     });
 }
 
-export function register(id, email) {
-    return auth.post("/register/" + id, {email: email, password: password},   {headers: {
+export function register(uuid, email, password) {
+    return auth.post("/register/" + uuid, {email: email, password: password},   {headers: {
         'Content-Type': 'application/json'
     }}).then((res) => {
-        return res.data;
+        return res.json;
     });
 }
 
@@ -80,20 +81,15 @@ export function sendInvite(email) {
     return auth.post("/invitation", {email: email},   {headers: {
             'Content-Type': 'application/json'
         }}).then((res) => {
-        return res.data;
+        return res.json;
     });
 }
 
 export function login(email, password) {
-    return auth.get("/activity", {
-        params: {
-            time: dateToHalfday(day)
-        },
-        headers: {
-            hist: historyToken
-        }
-    }).then((res) => {
-        historyStore.set(res.data.hist);
-        return res.data.activity;
+    return auth.post("/auth", {email: email, password: password},   {headers: {
+            'Content-Type': 'application/json',
+            withCredentials: true
+        }}).then((res) => {
+        return res;
     });
 }

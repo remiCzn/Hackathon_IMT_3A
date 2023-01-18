@@ -14,7 +14,7 @@ pub fn send_invitation(invitation: &Invitation) -> Result<(), ServiceError> {
     let sending_email =
         std::env::var("SENDING_EMAIL_ADDRESS").expect("SENDING_EMAIL_ADDRESS must be set");
     // new email message with sender name and email
-    let mut email = Message::new(EmailAddress::new(sending_email, "Let's Organise"));
+    let mut email = Message::new(EmailAddress::new(sending_email, "Register on chillpaper.fr"));
 
     let options = Options {
         open_tracking: false,
@@ -29,10 +29,70 @@ pub fn send_invitation(invitation: &Invitation) -> Result<(), ServiceError> {
     let recipient: Recipient = invitation.email.as_str().into();
 
     let email_body = format!(
-        "Please click on the link below to complete registration. <br/>
-         <a href=\"https://chillpaper.fr/register?id={}&email={}\">
-         Chillpaper.fr/register</a> <br>
-         your Invitation expires on <strong>{}</strong>",
+
+        "
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
+  <title>Registration Confirmation</title>
+  <style>
+    body {{
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }}
+    table {{
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }}
+    td {{
+      padding: 10px 20px;
+    }}
+    td, th {{
+      border: 1px solid #ddd;
+      text-align: left;
+    }}
+    th {{
+      background-color: #f2f2f2;
+    }}
+    h1 {{
+      color: #333;
+    }}
+    .container {{
+      background-color: #f2f2f2;
+      padding: 20px;
+      border-radius: 5px;
+      text-align: center;
+    }}
+    /* Add some border radius */
+    .btn {{
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+      text-decoration: none;
+    }}
+    /* Add some text color */
+    .btn:hover {{
+      background-color: #45a049;
+    }}
+  </style>
+</head>
+<body>
+<h1>Registration Confirmation</h1>
+<div class=\"container\">
+  <p>Thank you for registering with our site! Your account has been created and you can now log in.</p>
+  <a href=\"https://chillpaper.fr/register/{}?email={}\" class=\"btn\">Log In</a>
+    your Invitation expires on <strong>{}</strong>
+
+</div>
+</body>
+</html>
+         ",
         invitation.id,
         invitation.email,
         invitation
@@ -45,7 +105,7 @@ pub fn send_invitation(invitation: &Invitation) -> Result<(), ServiceError> {
     email
         .add_recipient(recipient)
         .options(options)
-        .subject("You have been invited to join Simple-Auth-Server Rust")
+        .subject("You have been invited to register on chillpaper.fr")
         .html(email_body);
 
     let result = tm.send(&email);
