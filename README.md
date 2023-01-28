@@ -16,9 +16,9 @@
     Solution proposée durant l'UE Hackaton de l'option LOGIN à l'IMT Atlantique
     <br />
     <br />
-    <a href="https://github.com/mgloc/hackine/issues">Signaler un problème</a>
+    <a href="https://github.com/remiCzn/Hackathon_IMT_3A/issues">Signaler un problème</a>
     ·
-    <a href="https://github.com/mgloc/hackine/issues">Proposer une amélioration</a>
+    <a href="https://github.com/remiCzn/Hackathon_IMT_3A/issues">Proposer une amélioration</a>
   </p>
 </div>
 
@@ -105,14 +105,14 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/mgloc/hackine.svg?style=for-the-badge
-[contributors-url]: https://github.com/mgloc/hackine/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/mgloc/hackine.svg?style=for-the-badge
-[forks-url]: https://github.com/mgloc/hackine/network/members
-[issues-shield]: https://img.shields.io/github/issues/mgloc/hackine.svg?style=for-the-badge
-[issues-url]: https://github.com/mgloc/hackine/issues
-[license-shield]: https://img.shields.io/github/license/mgloc/hackine.svg?style=for-the-badge
-[license-url]: https://github.com/mgloc/hackine/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/remiCzn/Hackathon_IMT_3A.svg?style=for-the-badge
+[contributors-url]: https://github.com/remiCzn/Hackathon_IMT_3A/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/remiCzn/Hackathon_IMT_3A.svg?style=for-the-badge
+[forks-url]: https://github.com/remiCzn/Hackathon_IMT_3A/network/members
+[issues-shield]: https://img.shields.io/github/issues/remiCzn/Hackathon_IMT_3A.svg?style=for-the-badge
+[issues-url]: https://github.com/remiCzn/Hackathon_IMT_3A/issues
+[license-shield]: https://img.shields.io/github/license/remiCzn/Hackathon_IMT_3A.svg?style=for-the-badge
+[license-url]: https://github.com/remiCzn/Hackathon_IMT_3A/blob/master/LICENSE.txt
 [basic-shield]: https://img.shields.io/badge/Prix%20du%20public-555555?style=for-the-badge
 [svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
 [svelte-url]: https://svelte.dev/
