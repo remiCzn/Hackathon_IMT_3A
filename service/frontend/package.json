@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "@sveltejs/adapter-node": "^1.0.0",
-    "axios": "1.2.2",
+    "axios": "1.2.3",
     "svelte-local-storage-store": "0.4.0"
   },
   "type": "module"

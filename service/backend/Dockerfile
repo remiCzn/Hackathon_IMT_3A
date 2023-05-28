@@ -1,4 +1,4 @@
-FROM debian:latest
+FROM debian:11
 WORKDIR /app
 COPY requirements.txt /app
 RUN apt update && apt upgrade
