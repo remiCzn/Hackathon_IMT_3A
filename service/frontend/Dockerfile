@@ -1,4 +1,4 @@
-FROM node:current-slim
+FROM node:20.3.0-slim
 WORKDIR /app
 COPY package.json /app
 RUN npm install
